@@ -481,10 +481,10 @@
    "antigo": "AZUL4",
    "novo": "AZUL3",
    "tipo": "incorporacao",
-   "fator": null,
+   "fator": 0.0005,
    "desde": "2026-04-20",
    "origem": "Fatos relevantes da Azul (2025-2026)",
-   "obs": "AZUL4 → AZUL54 (23/12/2025, cotado por lote de 10 mil) → preferenciais convertidas em ordinárias AZUL53 → grupamento de 150.000 para 1 → AZUL3 (20/04/2026). Proporção final a confirmar."
+   "obs": "AZUL4 → AZUL54 em 23/12/2025 (mesma quantidade, cotado por lote de 10 mil) → cada AZUL54 virou 75 ações ordinárias AZUL53 (posição de 12/01/2026, crédito em 14/01/2026) → grupamento de 150.000 para 1, AZUL3 a partir de 20/04/2026. No total, 1 AZUL4 = 75 ÷ 150.000 = 0,0005 AZUL3."
   },
   {
    "antigo": "TIET11",
@@ -599,6 +599,51 @@
    "obs": "OPA de fechamento de capital (Dalpe / Grupo Hindiana): R$ 33,82 por ação já corrigido pela Selic, leilão em 27/05/2026, pago em 29/05/2026. Remanescentes puderam vender pelo mesmo preço até 29/06/2026. Registro cancelado em 14/07/2026.",
    "valorSaida": 33.82,
    "pagoEm": "2026-05-29"
+  },
+  {
+   "antigo": "AZUL54",
+   "novo": "AZUL3",
+   "tipo": "incorporacao",
+   "fator": 0.0005,
+   "desde": "2026-04-20",
+   "origem": "B3 (Ofício 004/2026-VNC) e fatos relevantes da Azul",
+   "obs": "75 AZUL53 por AZUL54 (12/01/2026) e grupamento de 150.000 para 1 (20/04/2026)."
+  },
+  {
+   "antigo": "AZUL53",
+   "novo": "AZUL3",
+   "tipo": "incorporacao",
+   "fator": 6.6666666667e-06,
+   "desde": "2026-04-20",
+   "origem": "Fato relevante da Azul (grupamento, 20/04/2026)",
+   "obs": "Grupamento de 150.000 ações AZUL53 para 1 AZUL3."
+  },
+  {
+   "antigo": "CVBI11",
+   "novo": "PCIP11",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": "2025-09-24",
+   "origem": "Fato relevante do fundo (mudança de nome e código)",
+   "obs": "VBI CRI → Patria Crédito Imobiliário Índice de Preços (mesmo fundo, mesma quantidade de cotas)."
+  },
+  {
+   "antigo": "PLCR11",
+   "novo": "PCIP11",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": "2025-09-01",
+   "origem": "Relatório do CVBI11 (set/2025)",
+   "obs": "Os ativos do PLCR11 foram levados ao CVBI11 (hoje PCIP11) na 8ª emissão, concluída em 01/09/2025; os cotistas receberam cotas e dinheiro. Proporção a confirmar."
+  },
+  {
+   "antigo": "GALG11",
+   "novo": "GARE11",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": "2024-02-08",
+   "origem": "Relatório gerencial do fundo (fev/2024)",
+   "obs": "Guardian Logística → Guardian Real Estate (mesmo fundo, mesma quantidade de cotas)."
   }
  ]
 }
