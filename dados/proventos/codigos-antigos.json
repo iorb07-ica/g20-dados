@@ -214,6 +214,18 @@
    }
   },
   {
+   "antigo": "IRDM11",
+   "novo": "IRIM11",
+   "tipo": "incorporacao",
+   "fator": 0.884794245,
+   "desde": "2025-11-27",
+   "origem": "Fato relevante da Iridium (liquidação do IRDM11, 27/11/2025)",
+   "obs": "Por cota de IRDM11: 0,884794245 cota de IRIM11 (recibos IRIM15 entregues em 02/12/2025, convertidos em IRIM11 em 10/12/2025) + R$ 4,306051918 em dinheiro (valor bruto, pago em 09/12/2025; o IR é descontado conforme o custo médio informado). Valor total de R$ 78,09312078 por cota. Custo de aquisição das cotas de IRIM11 recebidas: R$ 83,3946076 por cota.",
+   "dinheiro": 4.306051918,
+   "dinheiroPago": "2025-12-09",
+   "custoNovo": 83.3946076
+  },
+  {
    "antigo": "NTCO3",
    "novo": "NATU3",
    "tipo": "incorporacao",
