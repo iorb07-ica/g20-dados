@@ -644,6 +644,15 @@
    "desde": "2024-02-08",
    "origem": "Relatório gerencial do fundo (fev/2024)",
    "obs": "Guardian Logística → Guardian Real Estate (mesmo fundo, mesma quantidade de cotas)."
+  },
+  {
+   "antigo": "CCPR3",
+   "novo": "SYNE3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "Carteira G20 (Israel) e troca pública de código",
+   "obs": "Cyrela Commercial Properties → SYN Prop & Tech (mesma empresa, código novo). A base já guarda no SYNE3 o histórico de proventos desde 2008."
   }
  ]
 }
