@@ -1,0 +1,388 @@
+{
+ "atualizado": "2026-10-19",
+ "sobre": "Códigos antigos da B3. tipo: troca (mesmo ativo, código novo, fator 1), conversao (classe convertida 1 por 1), incorporacao (fator = ações/cotas novas por antiga; null = proporção a cadastrar no admin), saiu (deixou a B3). Os cadastros manuais do admin (Firestore) têm prioridade sobre esta tabela.",
+ "codigos": [
+  {
+   "antigo": "VVAR3",
+   "novo": "BHIA3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Via Varejo → Via (VIIA3) → Grupo Casas Bahia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "VIIA3",
+   "novo": "BHIA3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Via → Grupo Casas Bahia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "BRDT3",
+   "novo": "VBBR3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "BR Distribuidora → Vibra Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "KROT3",
+   "novo": "COGN3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Kroton → Cogna. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ELET3",
+   "novo": "AXIA3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Eletrobras → Axia Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ELET5",
+   "novo": "AXIA5",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Eletrobras → Axia Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ELET6",
+   "novo": "AXIA6",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Eletrobras → Axia Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "CCRO3",
+   "novo": "MOTV3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "CCR → Motiva. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "TRPL3",
+   "novo": "ISAE3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "ISA CTEEP → ISA Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "TRPL4",
+   "novo": "ISAE4",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "ISA CTEEP → ISA Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "EMBR3",
+   "novo": "EMBJ3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Embraer. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "WIZS3",
+   "novo": "WIZC3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Wiz. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "MRFG3",
+   "novo": "MBRF3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Marfrig → MBRF. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ARZZ3",
+   "novo": "AZZA3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Arezzo → Azzas 2154. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ALSC3",
+   "novo": "ALOS3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Aliansce → Aliansce Sonae (ALSO3) → Allos. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "ALSO3",
+   "novo": "ALOS3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Aliansce Sonae → Allos. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "BTOW3",
+   "novo": "AMER3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "B2W → Americanas S.A.. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "RRRP3",
+   "novo": "BRAV3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "3R Petroleum → Brava Energia. A base já guarda o histórico de proventos no código novo."
+  },
+  {
+   "antigo": "BBPO11",
+   "novo": "TVRI11",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": "2023-10-02",
+   "origem": "Carteira G20 (CG20_EVENTOS)",
+   "obs": "BB Progressivo II → Tivio Renda Imobiliária (mesmo fundo)"
+  },
+  {
+   "antigo": "PCAR4",
+   "novo": "PCAR3",
+   "tipo": "conversao",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "GPA: preferenciais convertidas em ordinárias, 1 por 1. A base tem os dois códigos separados."
+  },
+  {
+   "antigo": "VIVT4",
+   "novo": "VIVT3",
+   "tipo": "conversao",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Telefônica Brasil: preferenciais convertidas em ordinárias, 1 por 1. A base tem os dois códigos separados."
+  },
+  {
+   "antigo": "TIMP3",
+   "novo": "TIMS3",
+   "tipo": "conversao",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "TIM Participações incorporada pela TIM S.A., 1 por 1. A base tem os dois códigos separados."
+  },
+  {
+   "antigo": "BCFF11",
+   "novo": "BTHF11",
+   "tipo": "incorporacao",
+   "fator": 0.8,
+   "desde": "2024-12-16",
+   "origem": "Carteira G20 (CG20_EVENTOS, fato relevante)",
+   "obs": "0,80 cota de BTHF11 por cota de BCFF11. Antes houve desdobramento de 1 para 8 em 28/11/2023 (data com), que a base ainda não tem.",
+   "desdobramentoExtra": {
+    "dataCom": "2023-11-28",
+    "fator": 8
+   }
+  },
+  {
+   "antigo": "NTCO3",
+   "novo": "NATU3",
+   "tipo": "incorporacao",
+   "fator": 1,
+   "desde": "2025-07-02",
+   "origem": "Carteira G20 (CG20_EVENTOS, fato relevante)",
+   "obs": "1 NATU3 por NTCO3. A base não tem arquivo do NTCO3."
+  },
+  {
+   "antigo": "PETZ3",
+   "novo": "AUAU3",
+   "tipo": "incorporacao",
+   "fator": 1,
+   "desde": "2026-01-05",
+   "origem": "Carteira G20 (CG20_EVENTOS, fato relevante)",
+   "obs": "1 AUAU3 por PETZ3 + resgate em dinheiro de R$ 0,7110617293 por ação (data com 02/01/2026, pago 23/01/2026). A base não tem arquivo do PETZ3."
+  },
+  {
+   "antigo": "BRFS3",
+   "novo": "MBRF3",
+   "tipo": "incorporacao",
+   "fator": 0.8521,
+   "desde": "2025-09-22",
+   "origem": "base B3 (evento INCORPORACAO, fator 85,21%)",
+   "obs": "BRF incorporada pela Marfrig"
+  },
+  {
+   "antigo": "FRRN3",
+   "novo": "RAIL3",
+   "tipo": "incorporacao",
+   "fator": 0.693,
+   "desde": "2025-08-14",
+   "origem": "base B3 (evento INCORPORACAO, fator 69,3%)",
+   "obs": "Rumo Malha Paulista incorporada pela Rumo"
+  },
+  {
+   "antigo": "FRRN5",
+   "novo": "RAIL3",
+   "tipo": "incorporacao",
+   "fator": 0.693,
+   "desde": "2025-08-14",
+   "origem": "base B3 (evento INCORPORACAO, fator 69,3%)",
+   "obs": "Rumo Malha Paulista incorporada pela Rumo"
+  },
+  {
+   "antigo": "FRRN6",
+   "novo": "RAIL3",
+   "tipo": "incorporacao",
+   "fator": 0.693,
+   "desde": "2025-08-14",
+   "origem": "base B3 (evento INCORPORACAO, fator 69,3%)",
+   "obs": "Rumo Malha Paulista incorporada pela Rumo"
+  },
+  {
+   "antigo": "JSLG3",
+   "novo": "SIMH3",
+   "tipo": "incorporacao",
+   "fator": 1,
+   "desde": "2020-09-17",
+   "origem": "base B3 (evento INCORPORACAO, fator 100%)",
+   "obs": "JSL → Simpar"
+  },
+  {
+   "antigo": "BRML3",
+   "novo": "ALOS3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": "2023-01-06",
+   "origem": "base B3 (data com do evento)",
+   "obs": "BRMalls incorporada pela Aliansce Sonae (ações + dinheiro). Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "IGTA3",
+   "novo": "IGTI11",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": "2021-11-19",
+   "origem": "base B3 (data com do evento)",
+   "obs": "Iguatemi: troca por units da nova Iguatemi S.A. Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "LAME3",
+   "novo": "AMER3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Lojas Americanas incorporada pela Americanas S.A. Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "LAME4",
+   "novo": "AMER3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Lojas Americanas incorporada pela Americanas S.A. Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "SULA11",
+   "novo": "RDOR3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "SulAmérica incorporada pela Rede D’Or (ações + dinheiro). Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "GNDI3",
+   "novo": "HAPV3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "NotreDame Intermédica incorporada pela Hapvida (ações + dinheiro). Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "HGTX3",
+   "novo": "AZZA3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Cia. Hering → Grupo Soma (SOMA3) → Azzas 2154. Proporções a cadastrar no admin."
+  },
+  {
+   "antigo": "SOMA3",
+   "novo": "AZZA3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Grupo Soma incorporado pela Arezzo (Azzas 2154). Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "ENAT3",
+   "novo": "BRAV3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Enauta incorporada pela 3R (Brava Energia). Proporção a cadastrar no admin."
+  },
+  {
+   "antigo": "BIDI3",
+   "novo": "INTR",
+   "tipo": "saiu",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Banco Inter migrou para a Inter&Co (Nasdaq: INTR). Passa a ser ativo dos EUA."
+  },
+  {
+   "antigo": "BIDI4",
+   "novo": "INTR",
+   "tipo": "saiu",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Banco Inter migrou para a Inter&Co (Nasdaq: INTR). Passa a ser ativo dos EUA."
+  },
+  {
+   "antigo": "BIDI11",
+   "novo": "INTR",
+   "tipo": "saiu",
+   "fator": null,
+   "desde": null,
+   "origem": "troca pública",
+   "obs": "Banco Inter migrou para a Inter&Co (Nasdaq: INTR). Passa a ser ativo dos EUA."
+  }
+ ]
+}
