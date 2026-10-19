@@ -653,6 +653,31 @@
    "desde": null,
    "origem": "Carteira G20 (Israel) e troca pública de código",
    "obs": "Cyrela Commercial Properties → SYN Prop & Tech (mesma empresa, código novo). A base já guarda no SYNE3 o histórico de proventos desde 2008."
+  },
+  {
+   "antigo": "CLSA3",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2025-04-01",
+   "origem": "Fatos relevantes da ClearSale (out/2024 e 01/04/2025)",
+   "obs": "Incorporada pela Serasa Experian em 01/04/2025. Opções por ação: A) R$ 10,56 em dinheiro (a escolhida pela maioria); B) o equivalente em BDRs da Experian (EXPB31); C) mistura de dinheiro, BDRs e um valor futuro (earn-out). Quantidade de BDRs por ação a confirmar.",
+   "valorSaida": 10.56,
+   "pagoEm": "2025-04-01",
+   "opcoes": [
+    {
+     "acoes": 0,
+     "dinheiro": 10.56
+    },
+    {
+     "acoes": null,
+     "dinheiro": 0
+    },
+    {
+     "acoes": null,
+     "dinheiro": null
+    }
+   ]
   }
  ]
 }
