@@ -1,0 +1,56 @@
+name: Preços do Tesouro Direto
+# out/2026: grava em dados/tesouro/ o preço oficial do Tesouro (Tesouro Transparente),
+# usado pela Minha Carteira para mostrar o Tesouro a mercado, igual ao app do banco.
+# Roda sozinho em dias úteis (horário de Brasília: 07h30, 12h30 e 19h30) e também
+# pelo botão "Run workflow" na aba Actions. Só grava e publica se o preço mudou.
+on:
+  schedule:
+    - cron: '30 10 * * 1-6'
+    - cron: '30 15 * * 1-5'
+    - cron: '30 22 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  precos:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Baixar preços oficiais
+        run: python scripts/tesouro_precos.py
+      - name: Gravar no repositório (só se mudou)
+        id: gravar
+        run: |
+          git config user.name "G20 Preços do Tesouro"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados/tesouro
+          if git diff --cached --quiet; then
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
+            echo "Preços iguais aos já gravados."
+          else
+            git commit -m "Preços do Tesouro: $(python -c "import json;print(json.load(open('dados/tesouro/hoje.json'))['base'])")"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
+          fi
+      # Envio feito por esta tarefa não dispara o deploy normal: publica aqui mesmo
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/configure-pages@v4
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - if: steps.gravar.outputs.mudou == 'sim'
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# Um deploy por vez: se dois envios chegarem juntos, o segundo espera o primeiro
+# terminar, em vez de falhar (é a configuração do modelo oficial do GitHub Pages).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+# out/2026: ferramentas atualizadas para as versões oficiais que rodam em Node 24
+# (o GitHub aposentou o Node 20) e máquina fixa em Ubuntu 24.04, para a troca
+# do "ubuntu-latest" para o Ubuntu 26 (a partir de 19/10/2026) não mudar nada aqui.
+# Arquivos ocultos (.github, .gitignore) não vão para o site, como já deveria ser.
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v5

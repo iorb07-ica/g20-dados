@@ -1,0 +1,63 @@
+name: Índices do Banco Central
+# out/2026: grava em dados/bcb/ as séries do Banco Central (CDI, Selic, IPCA, IGP-M,
+# poupança, dólar PTAX). As páginas leem esses arquivos direto, pelo g20-sidebar.js,
+# sem chamar a Vercel. Se o BCB falhar numa série, o arquivo dela fica como estava
+# e a rodada do dia seguinte tenta de novo.
+# Roda sozinha uma vez por dia, de segunda a sexta, às 20h30 (horário de Brasília),
+# e também pelo botão "Run workflow" na aba Actions.
+on:
+  schedule:
+    - cron: '30 23 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  indices:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Baixar as séries do Banco Central
+        id: baixar
+        run: python scripts/bcb_indices.py
+      - name: Gravar no repositório (só se mudou)
+        id: gravar
+        run: |
+          git config user.name "G20 Índices do Banco Central"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p dados/bcb
+          git add dados/bcb
+          if git diff --cached --quiet; then
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
+            echo "Nada novo para gravar."
+          else
+            git commit -m "Índices do Banco Central: $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
+          fi
+      # Envio feito por esta tarefa não dispara o deploy normal: publica aqui mesmo
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/configure-pages@v4
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - if: steps.gravar.outputs.mudou == 'sim'
+        id: deployment
+        uses: actions/deploy-pages@v4
+      # Fica vermelho na aba Actions quando alguma série falhou (o que deu certo já foi publicado)
+      - if: steps.baixar.outputs.falhas != '0'
+        run: |
+          echo "::error::${{ steps.baixar.outputs.falhas }} série(s) do Banco Central falharam hoje. Os arquivos delas ficaram como estavam; a rodada de amanhã tenta de novo."
+          exit 1
