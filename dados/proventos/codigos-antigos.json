@@ -395,6 +395,96 @@
    "desde": null,
    "origem": "troca pública",
    "obs": "Banco Inter migrou para a Inter&Co (Nasdaq: INTR). Passa a ser ativo dos EUA."
+  },
+  {
+   "antigo": "IRIM15",
+   "novo": "IRIM11",
+   "tipo": "conversao",
+   "fator": 1,
+   "desde": "2025-12-10",
+   "origem": "Relatório da Iridium (nov/2025)",
+   "obs": "Recibo das cotas de IRIM11 entregues aos cotistas do IRDM11 em 02/12/2025, convertido em IRIM11 em 10/12/2025."
+  },
+  {
+   "antigo": "MALL11",
+   "novo": "PMLL11",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Malls Brasil Plural → Pátria Malls (mesmo fundo). A base já guarda o histórico no código novo."
+  },
+  {
+   "antigo": "CNTO3",
+   "novo": "SBFG3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Centauro → Grupo SBF (mesma empresa)."
+  },
+  {
+   "antigo": "GUAR3",
+   "novo": "RIAA3",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": null,
+   "origem": "troca pública de código",
+   "obs": "Guararapes (Riachuelo): mesma empresa, código novo. A base já guarda o histórico no código novo."
+  },
+  {
+   "antigo": "GOLL4",
+   "novo": "GOLL54",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": "2025-06-12",
+   "origem": "Fato relevante da GOL (06/06/2025)",
+   "obs": "Fim do Chapter 11. Mesma quantidade de ações, mas o GOLL54 é cotado em reais por lote de 1.000 ações (lote padrão de 1.000)."
+  },
+  {
+   "antigo": "GOLL3",
+   "novo": "GOLL53",
+   "tipo": "troca",
+   "fator": 1,
+   "desde": "2025-06-12",
+   "origem": "Fato relevante da GOL (06/06/2025)",
+   "obs": "Mesma quantidade de ações; GOLL53 cotado em reais por lote de 1.000 ações."
+  },
+  {
+   "antigo": "JBSS3",
+   "novo": "JBSS32",
+   "tipo": "incorporacao",
+   "fator": 0.5,
+   "desde": "2025-06-06",
+   "origem": "Fato relevante da JBS (dupla listagem, 06/06/2025)",
+   "obs": "Último pregão do JBSS3 em 06/06/2025. Cada 2 ações JBSS3 viraram 1 BDR JBSS32 (1 Class A Share da JBS N.V., listada na NYSE). Os dividendos seguintes são do BDR."
+  },
+  {
+   "antigo": "OIBR3",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2026-09-16",
+   "origem": "Fato relevante da Oi (18/09/2026)",
+   "obs": "Falência confirmada em 25/08/2026 (negociação suspensa). B3 cancelou a listagem em 16/09/2026. As ações seguem no escriturador (Banco do Brasil), sem negociação e sem valor de mercado."
+  },
+  {
+   "antigo": "OIBR4",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2026-09-16",
+   "origem": "Fato relevante da Oi (18/09/2026)",
+   "obs": "Mesmo caso do OIBR3."
+  },
+  {
+   "antigo": "AZUL4",
+   "novo": "AZUL3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": "2026-04-20",
+   "origem": "Fatos relevantes da Azul (2025-2026)",
+   "obs": "AZUL4 → AZUL54 (23/12/2025, cotado por lote de 10 mil) → preferenciais convertidas em ordinárias AZUL53 → grupamento de 150.000 para 1 → AZUL3 (20/04/2026). Proporção final a confirmar."
   }
  ]
 }
