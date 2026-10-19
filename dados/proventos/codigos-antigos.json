@@ -485,6 +485,120 @@
    "desde": "2026-04-20",
    "origem": "Fatos relevantes da Azul (2025-2026)",
    "obs": "AZUL4 → AZUL54 (23/12/2025, cotado por lote de 10 mil) → preferenciais convertidas em ordinárias AZUL53 → grupamento de 150.000 para 1 → AZUL3 (20/04/2026). Proporção final a confirmar."
+  },
+  {
+   "antigo": "TIET11",
+   "novo": "AESB3",
+   "tipo": "incorporacao",
+   "fator": 1,
+   "desde": "2021-03-26",
+   "origem": "Fato relevante da AES Tietê / AES Brasil (mar/2021)",
+   "obs": "Cada unit TIET11 (1 ON + 4 PN) virou 1 ação AESB3; último pregão em 26/03/2021, AESB3 a partir de 29/03/2021."
+  },
+  {
+   "antigo": "TIET3",
+   "novo": "AESB3",
+   "tipo": "incorporacao",
+   "fator": 0.2,
+   "desde": "2021-03-26",
+   "origem": "Fato relevante da AES Tietê / AES Brasil (mar/2021)",
+   "obs": "5 ações da AES Tietê = 1 ação AESB3."
+  },
+  {
+   "antigo": "TIET4",
+   "novo": "AESB3",
+   "tipo": "incorporacao",
+   "fator": 0.2,
+   "desde": "2021-03-26",
+   "origem": "Fato relevante da AES Tietê / AES Brasil (mar/2021)",
+   "obs": "5 ações da AES Tietê = 1 ação AESB3."
+  },
+  {
+   "antigo": "AESB3",
+   "novo": "AURE3",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": null,
+   "origem": "Fato relevante Auren / AES Brasil (15/05/2024)",
+   "obs": "Cada acionista escolheu uma opção por ação AESB3 (valores anunciados em 15/05/2024, corrigidos até o fechamento): 1) 0,686138613861 AURE3 + R$ 1,115; 2) 0,381188118811 AURE3 + R$ 5,775; 3) R$ 11,55 em dinheiro. Data de fechamento e valores finais a confirmar.",
+   "opcoes": [
+    {
+     "acoes": 0.686138613861,
+     "dinheiro": 1.115
+    },
+    {
+     "acoes": 0.381188118811,
+     "dinheiro": 5.775
+    },
+    {
+     "acoes": 0,
+     "dinheiro": 11.55
+    }
+   ]
+  },
+  {
+   "antigo": "BPAN4",
+   "novo": "BPAC11",
+   "tipo": "incorporacao",
+   "fator": 0.2157,
+   "desde": "2026-01-23",
+   "origem": "Comunicado do BTG Pactual / Banco Pan (jan/2026)",
+   "obs": "Incorporação de ações do Pan pelo BTG: 0,2157 unit BPAC11 por ação BPAN4 (posição de 23/01/2026). BPAN4 deixou a B3 em 26/01/2026."
+  },
+  {
+   "antigo": "ENBR3",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2023-07-11",
+   "origem": "Edital e fato relevante da OPA da EDP (2023)",
+   "obs": "OPA de saída do Novo Mercado a R$ 23,73 por ação (leilão 11/07/2023, liquidação 14/07/2023). Quem não vendeu no leilão pôde vender até 11/10/2023 pelo mesmo preço corrigido pela Selic.",
+   "valorSaida": 23.73,
+   "pagoEm": "2023-07-14"
+  },
+  {
+   "antigo": "BRPR3",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2023-10-16",
+   "origem": "Fato relevante da BR Properties (out/2023)",
+   "obs": "OPA de cancelamento de registro a R$ 115,16 por ação (leilão 16/10/2023); as ações restantes foram resgatadas compulsoriamente pelo mesmo valor.",
+   "valorSaida": 115.16
+  },
+  {
+   "antigo": "CRFB3",
+   "novo": "CAFR31",
+   "tipo": "incorporacao",
+   "fator": null,
+   "desde": "2025-05-30",
+   "origem": "Fatos relevantes do Carrefour Brasil (2025)",
+   "obs": "Último pregão em 30/05/2025. Opções por ação: A) R$ 8,50 em dinheiro; B) R$ 4,25 + BDRs CAFR31 do Carrefour S.A.; C) 100% em BDRs (padrão para quem não escolheu). Dinheiro pago em 10/06/2025. Quantidade de BDRs por ação a confirmar.",
+   "opcoes": [
+    {
+     "acoes": 0,
+     "dinheiro": 8.5
+    },
+    {
+     "acoes": null,
+     "dinheiro": 4.25
+    },
+    {
+     "acoes": null,
+     "dinheiro": 0
+    }
+   ]
+  },
+  {
+   "antigo": "NGRD3",
+   "novo": null,
+   "tipo": "saiu",
+   "fator": null,
+   "desde": "2026-05-27",
+   "origem": "Fatos relevantes da Neogrid (2026)",
+   "obs": "OPA de fechamento de capital (Dalpe / Grupo Hindiana): R$ 33,82 por ação já corrigido pela Selic, leilão em 27/05/2026, pago em 29/05/2026. Remanescentes puderam vender pelo mesmo preço até 29/06/2026. Registro cancelado em 14/07/2026.",
+   "valorSaida": 33.82,
+   "pagoEm": "2026-05-29"
   }
  ]
 }
