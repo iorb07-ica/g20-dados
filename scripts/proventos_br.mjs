@@ -273,6 +273,19 @@ async function processarEmpresa(emp, soTickers) {
     if (!base.length && !rec.length && !eventos.length) continue;
     let bp = null;
     try { bp = await brapiProventos(ticker); } catch (e) { aviso(`${ticker}: brapi falhou (${e.message})`); }
+    // out/2026: auditoria (TICKERS com a palavra AUDITORIA): guarda o que a B3 e a brapi
+    // devolveram, sem tratamento, para conferir parcela por parcela
+    if (TICKERS.includes('AUDITORIA')) {
+      try {
+        fs.mkdirSync(path.join(SAIDA, '..', 'auditoria'), { recursive: true });
+        fs.writeFileSync(path.join(SAIDA, '..', 'auditoria', ticker + '.json'), JSON.stringify({
+          ticker, em: HOJE,
+          b3Historico: hist.filter(x => classeNorm(x.typeStock) === classe).map(x => ({ tipo: x.corporateAction, dataCom: iso(x.lastDatePriorEx), aprovado: iso(x.dateApproval), valor: num(x.valueCash), lote: num(x.quotedPerShares) || 1 })),
+          b3Recente: (sup?.cashDividends || []).filter(x => classeIsin(x.isinCode) === classe).map(x => ({ tipo: x.label, dataCom: iso(x.lastDatePrior), pagamento: iso(x.paymentDate), valor: num(x.rate), aprovado: iso(x.approvedOn) })),
+          brapi: bp || null
+        }, null, 1));
+      } catch (e) { aviso(`${ticker}: auditoria não gravada (${e.message})`); }
+    }
     const minRec = rec.length ? rec.map(x => x.com).sort()[0] : '9999';
     const cands = (lista, x, regs) => {
       let c = lista.filter(y => y.com === x.dataCom && y.t === x.tipo);

@@ -56,6 +56,7 @@ jobs:
           git config user.name "G20 Proventos BR"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dados/proventos/br 2>/dev/null || true
+          git add dados/proventos/auditoria 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "mudou=nao" >> "$GITHUB_OUTPUT"
             echo "Nada novo para gravar."
