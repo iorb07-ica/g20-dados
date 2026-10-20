@@ -241,7 +241,8 @@
    "fator": 1,
    "desde": "2026-01-05",
    "origem": "Carteira G20 (CG20_EVENTOS, fato relevante)",
-   "obs": "1 AUAU3 por PETZ3 + resgate em dinheiro de R$ 0,7110617293 por ação (data com 02/01/2026, pago 23/01/2026). A base não tem arquivo do PETZ3."
+   "obs": "1 AUAU3 por PETZ3 + resgate em dinheiro de R$ 0,7110617293 por ação (data com 02/01/2026, pago 23/01/2026). A base não tem arquivo do PETZ3.",
+   "dinheiro": 0.7110617293
   },
   {
    "antigo": "BRFS3",
