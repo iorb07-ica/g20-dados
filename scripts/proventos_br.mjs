@@ -49,12 +49,12 @@ const relatorio = { modo: MODO, inicio: new Date().toISOString(), gravados: [], 
 const aviso = s => { relatorio.avisos.push(s); console.log('AVISO', s); };
 
 // ── utilidades ───────────────────────────────────────────────────────────
-async function pedir(url, { headers = {}, json = true, pausa = 1100, tentativas = 3 } = {}) {
+async function pedir(url, { headers = {}, json = true, pausa = 1100, tentativas = 3, limite = 30000 } = {}) {
   await espera(pausa);
   let ultimo;
   for (let t = 0; t < tentativas; t++) {
     try {
-      const r = await fetch(url, { headers, signal: AbortSignal.timeout(30000) });
+      const r = await fetch(url, { headers, signal: AbortSignal.timeout(limite) });
       const txt = await r.text();
       if (r.status === 404) return null;
       if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -340,7 +340,8 @@ async function sessaoFnet() {
   const sc = r.headers.getSetCookie ? r.headers.getSetCookie() : [r.headers.get('set-cookie') || ''];
   cookie = sc.map(c => c.split(';')[0]).filter(Boolean).join('; ');
 }
-const fnet = (url, json = true) => pedir(url, { json, pausa: 700, headers: { 'User-Agent': UA, Accept: json ? 'application/json, text/javascript, */*' : '*/*', 'X-Requested-With': 'XMLHttpRequest', Referer: FN + 'abrirGerenciadorDocumentosCVM', ...(cookie ? { Cookie: cookie } : {}) } });
+// out/2026: o FundosNET às vezes fica lento e cada pedido travado esperava 30 s três vezes; 15 s basta
+const fnet = (url, json = true) => pedir(url, { json, pausa: 700, limite: 15000, headers: { 'User-Agent': UA, Accept: json ? 'application/json, text/javascript, */*' : '*/*', 'X-Requested-With': 'XMLHttpRequest', Referer: FN + 'abrirGerenciadorDocumentosCVM', ...(cookie ? { Cookie: cookie } : {}) } });
 function cnpjValido(c) {
   c = String(c || '').replace(/\D/g, '');
   if (c.length !== 14 || /^(\d)\1+$/.test(c)) return false;
