@@ -336,9 +336,17 @@ async function processarEmpresa(emp, soTickers) {
 // ── FIIs ─────────────────────────────────────────────────────────────────
 let cookie = '';
 async function sessaoFnet() {
-  const r = await fetch(FN + 'abrirGerenciadorDocumentosCVM', { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
-  const sc = r.headers.getSetCookie ? r.headers.getSetCookie() : [r.headers.get('set-cookie') || ''];
-  cookie = sc.map(c => c.split(';')[0]).filter(Boolean).join('; ');
+  // out/2026: o FundosNET às vezes demora a responder; antes uma única falha derrubava a rodada inteira
+  let ultimo;
+  for (let t = 0; t < 5; t++) {
+    try {
+      const r = await fetch(FN + 'abrirGerenciadorDocumentosCVM', { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(60000) });
+      const sc = r.headers.getSetCookie ? r.headers.getSetCookie() : [r.headers.get('set-cookie') || ''];
+      cookie = sc.map(c => c.split(';')[0]).filter(Boolean).join('; ');
+      return;
+    } catch (e) { ultimo = e; aviso(`FundosNET não respondeu (tentativa ${t + 1} de 5): ${e.message}`); await espera(20000 * (t + 1)); }
+  }
+  throw ultimo;
 }
 // out/2026: o FundosNET às vezes fica lento e cada pedido travado esperava 30 s três vezes; 15 s basta
 const fnet = (url, json = true) => pedir(url, { json, pausa: 700, limite: 15000, headers: { 'User-Agent': UA, Accept: json ? 'application/json, text/javascript, */*' : '*/*', 'X-Requested-With': 'XMLHttpRequest', Referer: FN + 'abrirGerenciadorDocumentosCVM', ...(cookie ? { Cookie: cookie } : {}) } });
