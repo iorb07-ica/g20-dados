@@ -1,0 +1,556 @@
+{
+ "ticker": "VULC3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-22",
+   "aprovado": "2025-12-17",
+   "valor": 0.65,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-27",
+   "aprovado": "2025-08-14",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-17",
+   "aprovado": "2025-08-14",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-04",
+   "aprovado": "2025-10-30",
+   "valor": 2.2,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-10-20",
+   "aprovado": "2025-08-14",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-09-17",
+   "aprovado": "2025-05-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-09-08",
+   "aprovado": "2025-08-14",
+   "valor": 1.10429,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-08-18",
+   "aprovado": "2025-05-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-07-17",
+   "aprovado": "2025-05-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-06-18",
+   "aprovado": "2025-03-11",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-05-20",
+   "aprovado": "2025-03-11",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-04-17",
+   "aprovado": "2025-03-11",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-03-18",
+   "aprovado": "2024-11-05",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-02-17",
+   "aprovado": "2024-11-05",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-01-21",
+   "aprovado": "2024-11-05",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-12-16",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-11-18",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-10-17",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-09-19",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-08-19",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-08-12",
+   "aprovado": "2024-08-06",
+   "valor": 0.125,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-05-14",
+   "aprovado": "2024-05-07",
+   "valor": 0.15,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-03-13",
+   "aprovado": "2024-03-07",
+   "valor": 0.75,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-01-25",
+   "aprovado": "2024-01-22",
+   "valor": 1,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-01-25",
+   "aprovado": "2024-01-22",
+   "valor": 0.5,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-11-08",
+   "aprovado": "2023-10-31",
+   "valor": 0.15,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-10-13",
+   "aprovado": "2023-10-09",
+   "valor": 0.4,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-08-30",
+   "aprovado": "2023-08-01",
+   "valor": 0.15,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-05-22",
+   "aprovado": "2023-05-02",
+   "valor": 0.15,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-04-03",
+   "aprovado": "2023-03-01",
+   "valor": 0.08449301975,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-11-10",
+   "aprovado": "2022-11-01",
+   "valor": 0.37,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-11-03",
+   "aprovado": "2021-09-08",
+   "valor": 0.35,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2011-04-25",
+   "aprovado": "2011-04-25",
+   "valor": 0.10372,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2010-04-30",
+   "aprovado": "2010-04-30",
+   "valor": 0.391579,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2009-06-01",
+   "aprovado": "2009-06-01",
+   "valor": 0.67113421,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2008-04-28",
+   "aprovado": "2008-04-28",
+   "valor": 0.135648228,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2007-05-11",
+   "aprovado": "2007-05-11",
+   "valor": 0.14151417,
+   "lote": 1000
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-22",
+   "pagamento": "2025-12-30",
+   "valor": 0.65,
+   "aprovado": "2025-12-17"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-27",
+   "pagamento": "2025-12-29",
+   "valor": 0.125,
+   "aprovado": "2025-08-14"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-17",
+   "pagamento": "2025-12-01",
+   "valor": 0.125,
+   "aprovado": "2025-08-14"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-11-04",
+   "pagamento": "2025-12-15",
+   "valor": 2.2,
+   "aprovado": "2025-10-30"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-10-20",
+   "pagamento": "2025-11-03",
+   "valor": 0.125,
+   "aprovado": "2025-08-14"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2025-12-22",
+   "pag": "2025-12-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.65
+  },
+  {
+   "com": "2025-11-17",
+   "pag": "2025-12-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-11-04",
+   "pag": "2025-12-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 2.2
+  },
+  {
+   "com": "2025-10-20",
+   "pag": "2025-11-03",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-09-17",
+   "pag": "2025-10-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-09-08",
+   "pag": "2025-09-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.10429
+  },
+  {
+   "com": "2025-08-18",
+   "pag": "2025-09-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-07-17",
+   "pag": "2025-08-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-06-18",
+   "pag": "2025-07-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-05-20",
+   "pag": "2025-06-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-04-17",
+   "pag": "2025-05-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-03-18",
+   "pag": "2025-04-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-02-17",
+   "pag": "2025-03-06",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2025-01-21",
+   "pag": "2025-02-03",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-12-16",
+   "pag": "2025-01-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-11-18",
+   "pag": "2024-12-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-10-17",
+   "pag": "2024-11-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-09-19",
+   "pag": "2024-10-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-08-19",
+   "pag": "2024-09-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-08-12",
+   "pag": "2024-08-23",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.125
+  },
+  {
+   "com": "2024-05-14",
+   "pag": "2024-05-29",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.15
+  },
+  {
+   "com": "2024-03-13",
+   "pag": "2024-03-25",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.75
+  },
+  {
+   "com": "2024-01-25",
+   "pag": "2024-04-17",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.5
+  },
+  {
+   "com": "2024-01-25",
+   "pag": "2024-02-08",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1
+  },
+  {
+   "com": "2023-11-08",
+   "pag": "2023-11-24",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.15
+  },
+  {
+   "com": "2023-10-13",
+   "pag": "2023-11-24",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.4
+  },
+  {
+   "com": "2023-08-30",
+   "pag": "2023-09-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.15
+  },
+  {
+   "com": "2023-05-22",
+   "pag": "2023-06-06",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.15
+  },
+  {
+   "com": "2023-04-03",
+   "pag": "2023-04-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.08449301975
+  },
+  {
+   "com": "2022-11-10",
+   "pag": "2022-11-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.37
+  },
+  {
+   "com": "2021-11-03",
+   "pag": "2021-11-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.35
+  },
+  {
+   "com": "2011-04-25",
+   "pag": "2011-06-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.10372
+  },
+  {
+   "com": "2010-04-30",
+   "pag": "2010-05-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.391579
+  },
+  {
+   "com": "2009-06-01",
+   "pag": "2010-05-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.67113423
+  },
+  {
+   "com": "2008-04-28",
+   "pag": "2008-06-13",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.13564822
+  },
+  {
+   "com": "2007-05-11",
+   "pag": "2007-06-29",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.14151417
+  }
+ ]
+}

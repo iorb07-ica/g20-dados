@@ -1,0 +1,198 @@
+{
+ "ticker": "CVCB3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2019-12-23",
+   "aprovado": "2019-12-11",
+   "valor": 0.417377802,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2019-04-30",
+   "aprovado": "2019-04-30",
+   "valor": 0.026099731,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2018-12-10",
+   "aprovado": "2018-12-05",
+   "valor": 0.416478763,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-04-27",
+   "aprovado": "2018-04-27",
+   "valor": 0.083618709,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2017-12-18",
+   "aprovado": "2017-12-13",
+   "valor": 0.289234501,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-04-28",
+   "aprovado": "2017-04-28",
+   "valor": 0.165806805,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2016-12-08",
+   "aprovado": "2016-12-07",
+   "valor": 0.167138623,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2016-04-26",
+   "aprovado": "2016-04-26",
+   "valor": 0.74154758,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2015-12-18",
+   "aprovado": "2015-12-17",
+   "valor": 0.11459142,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-04-15",
+   "aprovado": "2015-04-15",
+   "valor": 0.15301279,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-04-15",
+   "aprovado": "2015-04-15",
+   "valor": 0.47833235,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2014-12-09",
+   "aprovado": "2014-12-09",
+   "valor": 0.110274978,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2014-04-28",
+   "aprovado": "2014-04-28",
+   "valor": 0.113694076,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [],
+ "brapi": [
+  {
+   "com": "2019-12-23",
+   "pag": "2020-01-08",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.4173778025
+  },
+  {
+   "com": "2019-04-30",
+   "pag": "2019-05-28",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.026099731
+  },
+  {
+   "com": "2018-12-10",
+   "pag": "2018-12-20",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.416478763
+  },
+  {
+   "com": "2018-04-27",
+   "pag": "2018-06-26",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.083618709
+  },
+  {
+   "com": "2017-12-18",
+   "pag": "2017-12-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.289234501
+  },
+  {
+   "com": "2017-04-28",
+   "pag": "2017-06-26",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.165806805
+  },
+  {
+   "com": "2016-12-08",
+   "pag": "2016-12-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.167138623
+  },
+  {
+   "com": "2016-04-26",
+   "pag": "2016-06-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.190299783
+  },
+  {
+   "com": "2016-04-26",
+   "pag": "2016-06-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.551247796
+  },
+  {
+   "com": "2015-12-18",
+   "pag": "2015-12-29",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.11459142
+  },
+  {
+   "com": "2015-04-15",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.1530128
+  },
+  {
+   "com": "2015-04-15",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.47833234
+  },
+  {
+   "com": "2014-12-09",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.11027498
+  },
+  {
+   "com": "2014-04-28",
+   "pag": "2014-05-09",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.11369408
+  }
+ ]
+}

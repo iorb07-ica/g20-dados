@@ -1,0 +1,1305 @@
+{
+ "ticker": "VALE3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-08-11",
+   "aprovado": "2026-07-30",
+   "valor": 0.462016093,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-08-11",
+   "aprovado": "2026-07-30",
+   "valor": 1.568705805,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-11-27",
+   "valor": 1.244102486,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-11-27",
+   "valor": 0.768133538,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-11-27",
+   "valor": 1.569535033,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-08-12",
+   "aprovado": "2025-07-31",
+   "valor": 1.895387417,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-03-07",
+   "aprovado": "2025-02-19",
+   "valor": 2.141847479,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2024-12-11",
+   "aprovado": "2024-11-28",
+   "valor": 0.520530743,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2024-08-02",
+   "aprovado": "2024-07-25",
+   "valor": 2.093798142,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-03-11",
+   "aprovado": "2024-02-22",
+   "valor": 2.738548374,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-11-21",
+   "aprovado": "2023-10-26",
+   "valor": 1.565890809,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2023-11-21",
+   "aprovado": "2023-10-26",
+   "valor": 0.765770758,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2023-08-11",
+   "aprovado": "2023-07-27",
+   "valor": 1.918471798,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-03-13",
+   "aprovado": "2023-02-16",
+   "valor": 1.827646129,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2022-12-12",
+   "aprovado": "2022-12-01",
+   "valor": 0.292012688,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-08-11",
+   "aprovado": "2022-07-28",
+   "valor": 2.032680337,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2022-08-11",
+   "aprovado": "2022-07-28",
+   "valor": 1.539376229,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-03-08",
+   "aprovado": "2022-02-24",
+   "valor": 3.719256588,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-09-22",
+   "aprovado": "2021-09-16",
+   "valor": 8.197239442,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-06-23",
+   "aprovado": "2021-06-17",
+   "valor": 0.720404889,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-06-23",
+   "aprovado": "2021-06-17",
+   "valor": 1.469265175,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-03-04",
+   "aprovado": "2021-02-25",
+   "valor": 3.425910336,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2021-03-04",
+   "aprovado": "2021-02-25",
+   "valor": 0.835736883,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2020-09-21",
+   "aprovado": "2020-09-10",
+   "valor": 1.410166173,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2020-09-21",
+   "aprovado": "2020-09-10",
+   "valor": 0.997344547,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2019-12-26",
+   "aprovado": "2019-12-19",
+   "valor": 1.414364369,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-08-02",
+   "aprovado": "2018-07-25",
+   "valor": 0.171747417,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2018-08-02",
+   "aprovado": "2018-07-25",
+   "valor": 1.308614127,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2018-03-06",
+   "aprovado": "2018-02-27",
+   "valor": 0.488511766,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2017-12-21",
+   "aprovado": "2017-12-14",
+   "valor": 0.419912462,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2017-04-20",
+   "aprovado": "2017-04-20",
+   "valor": 0.905571689,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2016-12-01",
+   "aprovado": "2016-11-28",
+   "valor": 0.166293936,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-10-15",
+   "aprovado": "2015-10-15",
+   "valor": 0.373609533,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2015-04-14",
+   "aprovado": "2015-04-14",
+   "valor": 0.601760991,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2014-10-16",
+   "aprovado": "2014-10-16",
+   "valor": 0.34004124,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2014-10-16",
+   "aprovado": "2014-10-16",
+   "valor": 0.650835627,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2014-04-14",
+   "aprovado": "2014-04-14",
+   "valor": 0.898904129,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2013-10-17",
+   "aprovado": "2013-10-17",
+   "valor": 0.823732032,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2013-10-17",
+   "aprovado": "2013-10-17",
+   "valor": 0.12060543,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2013-04-16",
+   "aprovado": "2013-04-16",
+   "valor": 0.710437345,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2013-04-16",
+   "aprovado": "2013-04-16",
+   "valor": 0.153608075,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2012-10-16",
+   "aprovado": "2012-10-16",
+   "valor": 0.525868977,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2012-10-16",
+   "aprovado": "2012-10-16",
+   "valor": 0.660654435,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2012-04-13",
+   "aprovado": "2012-04-13",
+   "valor": 0.432994787,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2012-04-13",
+   "aprovado": "2012-04-13",
+   "valor": 0.642281758,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2011-10-14",
+   "aprovado": "2011-10-14",
+   "valor": 0.634329383,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2011-10-14",
+   "aprovado": "2011-10-14",
+   "valor": 0.38933462,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2011-08-11",
+   "aprovado": "2011-08-11",
+   "valor": 0.933403176,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2011-04-13",
+   "aprovado": "2011-04-13",
+   "valor": 0.608246495,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2011-01-14",
+   "aprovado": "2011-01-14",
+   "valor": 0.320048038,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2010-10-14",
+   "aprovado": "2010-10-14",
+   "valor": 0.555154105,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2010-04-14",
+   "aprovado": "2010-04-14",
+   "valor": 0.421660513,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2009-10-15",
+   "aprovado": "2009-10-15",
+   "valor": 0.492036226,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2009-04-15",
+   "aprovado": "2009-04-15",
+   "valor": 0.524586151,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2008-10-16",
+   "aprovado": "2008-10-16",
+   "valor": 0.514741153,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2008-10-16",
+   "aprovado": "2008-10-16",
+   "valor": 0.138519743,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2008-04-10",
+   "aprovado": "2008-04-10",
+   "valor": 0.238079862,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2008-04-10",
+   "aprovado": "2008-04-10",
+   "valor": 0.198505251,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2007-10-18",
+   "aprovado": "2007-10-18",
+   "valor": 0.309657273,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2007-10-18",
+   "aprovado": "2007-10-18",
+   "valor": 0.072213735,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2007-10-18",
+   "aprovado": "2007-10-18",
+   "valor": 0.012238248,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2007-04-17",
+   "aprovado": "2007-04-17",
+   "valor": 0.257284656,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2007-04-17",
+   "aprovado": "2007-04-17",
+   "valor": 0.433494535,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2006-10-19",
+   "aprovado": "2006-10-19",
+   "valor": 0.55873008,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2006-10-19",
+   "aprovado": "2006-10-19",
+   "valor": 0.015327829,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2006-04-12",
+   "aprovado": "2006-04-12",
+   "valor": 0.479159025,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2006-04-12",
+   "aprovado": "2006-04-12",
+   "valor": 0.666133869,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2005-10-14",
+   "aprovado": "2005-10-14",
+   "valor": 0.679102489,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2005-10-14",
+   "aprovado": "2005-10-14",
+   "valor": 0.303381656,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2005-10-14",
+   "aprovado": "2005-10-14",
+   "valor": 0.589490487,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2005-04-14",
+   "aprovado": "2005-04-14",
+   "valor": 1.11,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2004-10-13",
+   "aprovado": "2004-10-13",
+   "valor": 1.03,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2004-10-13",
+   "aprovado": "2004-10-13",
+   "valor": 0.24,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2004-04-14",
+   "aprovado": "2004-04-14",
+   "valor": 2.06,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2003-10-15",
+   "aprovado": "2003-10-15",
+   "valor": 1.48,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2003-08-27",
+   "aprovado": "2003-08-27",
+   "valor": 1.94,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2003-04-16",
+   "aprovado": "2003-04-16",
+   "valor": 1.62,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2002-11-13",
+   "aprovado": "2002-11-13",
+   "valor": 2.68,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2001-11-22",
+   "aprovado": "2001-11-22",
+   "valor": 2.305,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2001-11-22",
+   "aprovado": "2001-11-22",
+   "valor": 2.305,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2000-12-28",
+   "aprovado": "2000-12-28",
+   "valor": 3.33,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1999-12-28",
+   "aprovado": "1999-12-28",
+   "valor": 1.17,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1999-08-06",
+   "aprovado": "1999-08-04",
+   "valor": 1.11,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1998-12-30",
+   "aprovado": "1998-12-30",
+   "valor": 0.5,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1998-10-28",
+   "aprovado": "1998-10-28",
+   "valor": 0.65,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1998-08-05",
+   "aprovado": "1998-08-05",
+   "valor": 0.75,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1998-04-23",
+   "aprovado": "1998-04-23",
+   "valor": 1.005421,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1997-07-23",
+   "aprovado": "1997-07-23",
+   "valor": 0.32457,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "1997-04-10",
+   "aprovado": "1997-04-10",
+   "valor": 0.50816,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "1996-08-30",
+   "aprovado": "1996-08-30",
+   "valor": 0.173546,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "1996-04-10",
+   "aprovado": "1996-04-10",
+   "valor": 0.00161,
+   "lote": 1000
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-08-11",
+   "pagamento": "2026-09-02",
+   "valor": 0.462016093,
+   "aprovado": "2026-07-30"
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-08-11",
+   "pagamento": "2026-09-02",
+   "valor": 1.568705805,
+   "aprovado": "2026-07-30"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2026-01-07",
+   "valor": 1.244102486,
+   "aprovado": "2025-11-27"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2026-03-04",
+   "valor": 0.768133538,
+   "aprovado": "2025-11-27"
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2026-03-04",
+   "valor": 1.569535033,
+   "aprovado": "2025-11-27"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-08-11",
+   "pag": "2026-09-02",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.568705805
+  },
+  {
+   "com": "2026-08-11",
+   "pag": "2026-09-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.462016093
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2026-03-04",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.768133538
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2026-03-04",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.569535033
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2026-01-07",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.244102486
+  },
+  {
+   "com": "2025-08-12",
+   "pag": "2025-09-03",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.895387417
+  },
+  {
+   "com": "2025-03-07",
+   "pag": "2025-03-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 2.141847479
+  },
+  {
+   "com": "2024-12-11",
+   "pag": "2025-03-14",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.520530743
+  },
+  {
+   "com": "2024-08-02",
+   "pag": "2024-09-04",
+   "prazo": false,
+   "t": "JCP",
+   "v": 2.093798142
+  },
+  {
+   "com": "2024-03-11",
+   "pag": "2024-03-19",
+   "prazo": false,
+   "t": "DIV",
+   "v": 2.738548374
+  },
+  {
+   "com": "2023-11-21",
+   "pag": "2023-12-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.565890809
+  },
+  {
+   "com": "2023-11-21",
+   "pag": "2023-12-01",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.765770758
+  },
+  {
+   "com": "2023-08-11",
+   "pag": "2023-09-01",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.918471798
+  },
+  {
+   "com": "2023-03-13",
+   "pag": "2023-03-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.8276461291
+  },
+  {
+   "com": "2022-12-12",
+   "pag": "2023-03-22",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.292012688
+  },
+  {
+   "com": "2022-08-11",
+   "pag": "2022-09-01",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.539376229
+  },
+  {
+   "com": "2022-08-11",
+   "pag": "2022-09-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 2.032680337
+  },
+  {
+   "com": "2022-03-08",
+   "pag": "2022-03-16",
+   "prazo": false,
+   "t": "DIV",
+   "v": 3.701840165
+  },
+  {
+   "com": "2021-09-22",
+   "pag": "2021-09-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 8.197239442
+  },
+  {
+   "com": "2021-06-23",
+   "pag": "2021-06-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 2.177096137
+  },
+  {
+   "com": "2021-03-04",
+   "pag": "2021-03-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 3.426505027
+  },
+  {
+   "com": "2021-03-04",
+   "pag": "2021-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.835881956
+  },
+  {
+   "com": "2020-09-21",
+   "pag": "2020-09-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.4101661
+  },
+  {
+   "com": "2020-09-21",
+   "pag": "2020-09-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.99734455
+  },
+  {
+   "com": "2019-12-26",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.414364369
+  },
+  {
+   "com": "2018-08-02",
+   "pag": "2018-09-20",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.308614127
+  },
+  {
+   "com": "2018-08-02",
+   "pag": "2018-09-20",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.171747417
+  },
+  {
+   "com": "2018-03-06",
+   "pag": "2018-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.488511766
+  },
+  {
+   "com": "2017-12-21",
+   "pag": "2018-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.419912462
+  },
+  {
+   "com": "2017-04-20",
+   "pag": "2017-04-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.905571689
+  },
+  {
+   "com": "2016-12-01",
+   "pag": "2016-12-16",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.166293936
+  },
+  {
+   "com": "2015-10-15",
+   "pag": "2015-10-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.37360954
+  },
+  {
+   "com": "2015-04-14",
+   "pag": "2015-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.601761
+  },
+  {
+   "com": "2014-10-16",
+   "pag": "2014-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.65083563
+  },
+  {
+   "com": "2014-10-16",
+   "pag": "2014-10-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.34004125
+  },
+  {
+   "com": "2014-04-14",
+   "pag": "2014-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.89890414
+  },
+  {
+   "com": "2013-10-17",
+   "pag": "2013-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.823732
+  },
+  {
+   "com": "2013-10-17",
+   "pag": "2013-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.12060543
+  },
+  {
+   "com": "2013-04-16",
+   "pag": "2013-04-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.15360807
+  },
+  {
+   "com": "2013-04-16",
+   "pag": "2013-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.71043736
+  },
+  {
+   "com": "2012-10-16",
+   "pag": "2012-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.6606544
+  },
+  {
+   "com": "2012-10-16",
+   "pag": "2012-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.52586895
+  },
+  {
+   "com": "2012-04-13",
+   "pag": "2012-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.43299478
+  },
+  {
+   "com": "2012-04-13",
+   "pag": "2012-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.6422818
+  },
+  {
+   "com": "2011-10-14",
+   "pag": "2011-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.6343294
+  },
+  {
+   "com": "2011-10-14",
+   "pag": "2011-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.38933462
+  },
+  {
+   "com": "2011-08-11",
+   "pag": "2011-08-26",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.9334032
+  },
+  {
+   "com": "2011-04-13",
+   "pag": "2011-04-29",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.6082465
+  },
+  {
+   "com": "2011-01-14",
+   "pag": "2011-01-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.32004803
+  },
+  {
+   "com": "2010-10-14",
+   "pag": "2010-10-29",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.5551541
+  },
+  {
+   "com": "2010-04-14",
+   "pag": "2010-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.4216605
+  },
+  {
+   "com": "2009-10-15",
+   "pag": "2009-10-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.49203622
+  },
+  {
+   "com": "2009-04-15",
+   "pag": "2009-04-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.52458614
+  },
+  {
+   "com": "2008-10-16",
+   "pag": "2008-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.13851975
+  },
+  {
+   "com": "2008-10-16",
+   "pag": "2008-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.5147412
+  },
+  {
+   "com": "2008-04-10",
+   "pag": "2008-04-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.19850525
+  },
+  {
+   "com": "2008-04-10",
+   "pag": "2008-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.23807986
+  },
+  {
+   "com": "2007-10-18",
+   "pag": "2007-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.30965728
+  },
+  {
+   "com": "2007-10-18",
+   "pag": "2007-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.012238248
+  },
+  {
+   "com": "2007-10-18",
+   "pag": "2007-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.07221373
+  },
+  {
+   "com": "2007-04-17",
+   "pag": "2007-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.25728464
+  },
+  {
+   "com": "2007-04-17",
+   "pag": "2007-04-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.43349454
+  },
+  {
+   "com": "2006-10-19",
+   "pag": "2006-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.55873007
+  },
+  {
+   "com": "2006-10-19",
+   "pag": "2006-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.015327829
+  },
+  {
+   "com": "2006-04-12",
+   "pag": "2006-04-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.6661339
+  },
+  {
+   "com": "2006-04-12",
+   "pag": "2006-04-28",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.47915903
+  },
+  {
+   "com": "2005-10-14",
+   "pag": "2005-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.6791025
+  },
+  {
+   "com": "2005-10-14",
+   "pag": "2005-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.5894905
+  },
+  {
+   "com": "2005-10-14",
+   "pag": "2005-10-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.30338165
+  },
+  {
+   "com": "2005-04-14",
+   "pag": "2005-04-29",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.11
+  },
+  {
+   "com": "2004-10-13",
+   "pag": "2004-10-29",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.24
+  },
+  {
+   "com": "2004-10-13",
+   "pag": "2004-10-29",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.03
+  },
+  {
+   "com": "2004-04-14",
+   "pag": "2004-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 2.06
+  },
+  {
+   "com": "2003-10-15",
+   "pag": "2003-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.48
+  },
+  {
+   "com": "2003-08-27",
+   "pag": "2003-10-31",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.94
+  },
+  {
+   "com": "2003-04-16",
+   "pag": "2003-04-30",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.62
+  },
+  {
+   "com": "2002-11-13",
+   "pag": "2002-12-10",
+   "prazo": false,
+   "t": "JCP",
+   "v": 2.68
+  },
+  {
+   "com": "2001-11-22",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 2.305
+  },
+  {
+   "com": "2000-12-28",
+   "pag": "2001-02-20",
+   "prazo": false,
+   "t": "JCP",
+   "v": 3.33
+  },
+  {
+   "com": "1999-12-28",
+   "pag": "2000-03-01",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.17
+  },
+  {
+   "com": "1999-08-06",
+   "pag": "1999-08-20",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.11
+  },
+  {
+   "com": "1998-12-30",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.5
+  },
+  {
+   "com": "1998-10-28",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.65
+  },
+  {
+   "com": "1998-08-05",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.75
+  },
+  {
+   "com": "1998-04-23",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 1.005421
+  },
+  {
+   "com": "1997-07-23",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.32457
+  },
+  {
+   "com": "1997-04-10",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.50816
+  },
+  {
+   "com": "1996-08-30",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.173546
+  },
+  {
+   "com": "1996-04-10",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.00161
+  }
+ ]
+}

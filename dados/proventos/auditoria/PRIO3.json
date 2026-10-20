@@ -1,0 +1,23 @@
+{
+ "ticker": "PRIO3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-12-13",
+   "aprovado": "2023-12-08",
+   "valor": 0.0726435,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [],
+ "brapi": [
+  {
+   "com": "2023-12-13",
+   "pag": "2023-12-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.0726435
+  }
+ ]
+}

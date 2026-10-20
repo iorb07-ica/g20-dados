@@ -1,0 +1,255 @@
+{
+ "ticker": "MGLU3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-04-24",
+   "aprovado": "2026-04-23",
+   "valor": 0.0813001921,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-04-25",
+   "aprovado": "2025-04-24",
+   "valor": 0.30517546913,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2021-07-05",
+   "aprovado": "2021-06-30",
+   "valor": 0.0154942583,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2020-12-29",
+   "aprovado": "2020-12-22",
+   "valor": 0.0263019985,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2020-07-30",
+   "aprovado": "2020-07-27",
+   "valor": 0.0941659675,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2019-12-30",
+   "aprovado": "2019-12-23",
+   "valor": 0.0357891574,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2019-10-07",
+   "aprovado": "2019-09-30",
+   "valor": 0.0736066061,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2019-04-15",
+   "aprovado": "2019-04-12",
+   "valor": 0.370259884,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2018-12-28",
+   "aprovado": "2018-12-21",
+   "valor": 0.5927048898,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-04-16",
+   "aprovado": "2018-04-13",
+   "valor": 0.2644651264,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2017-12-19",
+   "aprovado": "2017-12-13",
+   "valor": 0.3961030474,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-04-25",
+   "aprovado": "2017-04-20",
+   "valor": 1.01726149661,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-04-27",
+   "aprovado": "2015-04-27",
+   "valor": 0.10947154,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2015-01-14",
+   "aprovado": "2014-12-30",
+   "valor": 0.07816785,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2014-04-22",
+   "aprovado": "2014-04-17",
+   "valor": 0.107358645,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2014-02-20",
+   "aprovado": "2014-01-30",
+   "valor": 0.065683434,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2012-04-30",
+   "aprovado": "2012-04-30",
+   "valor": 0.014857,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-04-24",
+   "pagamento": "2026-05-08",
+   "valor": 0.0813001921,
+   "aprovado": "2026-04-23"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-04-24",
+   "pag": "2026-05-08",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.0813001921
+  },
+  {
+   "com": "2025-04-25",
+   "pag": "2025-05-05",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.30517546913
+  },
+  {
+   "com": "2021-07-05",
+   "pag": "2022-05-06",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.0154942583
+  },
+  {
+   "com": "2020-12-29",
+   "pag": "2021-05-05",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.0263019985
+  },
+  {
+   "com": "2020-07-30",
+   "pag": "2020-08-19",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.0941659675
+  },
+  {
+   "com": "2019-12-30",
+   "pag": "2020-08-19",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.0357891574
+  },
+  {
+   "com": "2019-10-07",
+   "pag": "2020-08-19",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.0736066061
+  },
+  {
+   "com": "2019-04-15",
+   "pag": "2019-04-26",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.370259884
+  },
+  {
+   "com": "2018-12-28",
+   "pag": "2019-04-26",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.5927048898
+  },
+  {
+   "com": "2018-04-16",
+   "pag": "2018-04-25",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.2644651264
+  },
+  {
+   "com": "2017-12-19",
+   "pag": "2018-04-25",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.3961030474
+  },
+  {
+   "com": "2017-04-25",
+   "pag": "2017-05-05",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.017261496617
+  },
+  {
+   "com": "2015-04-27",
+   "pag": "2015-05-08",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.10947154
+  },
+  {
+   "com": "2015-01-14",
+   "pag": "2015-05-08",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.07816785
+  },
+  {
+   "com": "2014-04-22",
+   "pag": "2014-04-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.10735864
+  },
+  {
+   "com": "2014-02-20",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.06568343
+  },
+  {
+   "com": "2012-04-30",
+   "pag": "2012-05-23",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.014857
+  }
+ ]
+}

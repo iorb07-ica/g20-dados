@@ -1,0 +1,143 @@
+{
+ "ticker": "VIVA3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-19",
+   "aprovado": "2025-12-15",
+   "valor": 0.69765914173,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-04-22",
+   "aprovado": "2025-04-22",
+   "valor": 0.660163064,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-04-29",
+   "aprovado": "2024-04-29",
+   "valor": 0.3728496479,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-04-27",
+   "aprovado": "2023-04-27",
+   "valor": 0.364192307,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-04-29",
+   "aprovado": "2022-04-29",
+   "valor": 0.05385262114,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2021-12-27",
+   "aprovado": "2021-12-21",
+   "valor": 0.27519311582,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-04-30",
+   "aprovado": "2021-04-30",
+   "valor": 0.052843983,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2020-12-29",
+   "aprovado": "2020-12-22",
+   "valor": 0.1058435061,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2019-12-27",
+   "aprovado": "2019-12-20",
+   "valor": 0.1693496,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-19",
+   "pagamento": "2025-12-30",
+   "valor": 0.69765914173,
+   "aprovado": "2025-12-15"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2025-12-19",
+   "pag": "2025-12-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.69765914173
+  },
+  {
+   "com": "2025-04-22",
+   "pag": "2025-05-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.660163064
+  },
+  {
+   "com": "2024-04-29",
+   "pag": "2024-05-28",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.3728496479
+  },
+  {
+   "com": "2023-04-27",
+   "pag": "2023-05-26",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.364192307
+  },
+  {
+   "com": "2022-04-29",
+   "pag": "2022-05-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.05385262114
+  },
+  {
+   "com": "2021-12-27",
+   "pag": "2022-05-13",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.27519311582
+  },
+  {
+   "com": "2021-04-30",
+   "pag": "2021-05-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.052843983
+  },
+  {
+   "com": "2020-12-29",
+   "pag": "2021-05-14",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.1058435061
+  },
+  {
+   "com": "2019-12-27",
+   "pag": "2020-12-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.16934960973
+  }
+ ]
+}

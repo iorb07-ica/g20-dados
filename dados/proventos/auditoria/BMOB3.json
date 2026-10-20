@@ -1,0 +1,220 @@
+{
+ "ticker": "BMOB3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-08-14",
+   "aprovado": "2026-08-11",
+   "valor": 0.19178292,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-05-15",
+   "aprovado": "2026-05-12",
+   "valor": 0.18818727094,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-12-08",
+   "valor": 0.500122,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-12-08",
+   "valor": 0.708817,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "aprovado": "2025-12-08",
+   "valor": 0.381616,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-08-21",
+   "aprovado": "2025-08-14",
+   "valor": 0.35551784,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-04-24",
+   "aprovado": "2025-04-24",
+   "valor": 0.69457324,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-12-17",
+   "aprovado": "2024-12-11",
+   "valor": 0.19857444,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2024-12-17",
+   "aprovado": "2024-12-11",
+   "valor": 0.44527052,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2023-12-18",
+   "aprovado": "2023-12-11",
+   "valor": 0.52193343,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-03-23",
+   "aprovado": "2023-03-16",
+   "valor": 0.23330815999,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-03-21",
+   "aprovado": "2022-03-16",
+   "valor": 0.20235653,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-08-14",
+   "pagamento": "2026-08-28",
+   "valor": 0.19178292,
+   "aprovado": "2026-08-11"
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-05-15",
+   "pagamento": "2026-05-27",
+   "valor": 0.18818727094,
+   "aprovado": "2026-05-12"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2025-12-22",
+   "valor": 0.708817,
+   "aprovado": "2025-12-08"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2025-12-22",
+   "valor": 0.381616,
+   "aprovado": "2025-12-08"
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2025-12-11",
+   "pagamento": "2025-12-22",
+   "valor": 0.500122,
+   "aprovado": "2025-12-08"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-08-14",
+   "pag": "2026-08-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.19178292
+  },
+  {
+   "com": "2026-05-15",
+   "pag": "2026-05-27",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.18818727094
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2025-12-22",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.500122
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2025-12-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.381616
+  },
+  {
+   "com": "2025-12-11",
+   "pag": "2025-12-22",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.708817
+  },
+  {
+   "com": "2025-08-21",
+   "pag": "2025-09-01",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.35551784
+  },
+  {
+   "com": "2025-04-24",
+   "pag": "2025-05-09",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.69457324
+  },
+  {
+   "com": "2024-12-17",
+   "pag": "2025-01-07",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.19857444
+  },
+  {
+   "com": "2024-12-17",
+   "pag": "2025-01-07",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.44527052
+  },
+  {
+   "com": "2023-12-18",
+   "pag": "2024-05-02",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.52193343
+  },
+  {
+   "com": "2023-03-23",
+   "pag": "2023-04-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.23330815999
+  },
+  {
+   "com": "2022-03-21",
+   "pag": "2022-04-12",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.202356
+  },
+  {
+   "com": "2022-03-21",
+   "pag": "2022-04-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.20235653
+  }
+ ]
+}

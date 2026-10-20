@@ -1,0 +1,297 @@
+{
+ "ticker": "INTB3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-09-21",
+   "aprovado": "2026-09-16",
+   "valor": 0.06112261897,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-08-03",
+   "aprovado": "2026-07-28",
+   "valor": 0.28563649015,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-15",
+   "aprovado": "2025-12-10",
+   "valor": 0.91657597402,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-08-01",
+   "aprovado": "2025-07-28",
+   "valor": 0.21165130246,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-03-05",
+   "aprovado": "2025-02-25",
+   "valor": 0.27456862232,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-08-01",
+   "aprovado": "2024-07-26",
+   "valor": 0.18588380878,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2024-03-22",
+   "aprovado": "2024-03-19",
+   "valor": 0.12318488193,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-03-04",
+   "aprovado": "2024-02-27",
+   "valor": 0.178742674,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2023-12-26",
+   "aprovado": "2023-12-20",
+   "valor": 0.16025097561,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-08-01",
+   "aprovado": "2023-07-26",
+   "valor": 0.165552439,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2023-03-29",
+   "aprovado": "2023-03-24",
+   "valor": 0.118723243,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-03-02",
+   "aprovado": "2023-02-27",
+   "valor": 0.08976965077,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2022-12-28",
+   "aprovado": "2022-12-23",
+   "valor": 0.197380963,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-08-01",
+   "aprovado": "2022-07-27",
+   "valor": 0.126559108,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2022-06-28",
+   "aprovado": "2022-06-23",
+   "valor": 0.060693544,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-03-10",
+   "aprovado": "2022-02-24",
+   "valor": 0.1457556154,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2022-03-10",
+   "aprovado": "2022-02-24",
+   "valor": 0.03185086223,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-08-03",
+   "aprovado": "2021-07-27",
+   "valor": 0.13453505682,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2021-08-03",
+   "aprovado": "2021-07-27",
+   "valor": 0.03002968791,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2026-09-21",
+   "pagamento": "2027-03-15",
+   "valor": 0.06112261897,
+   "aprovado": "2026-09-16"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-08-03",
+   "pagamento": "2026-08-14",
+   "valor": 0.28563649015,
+   "aprovado": "2026-07-28"
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-12-15",
+   "pagamento": "2025-12-23",
+   "valor": 0.91657597402,
+   "aprovado": "2025-12-10"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-09-21",
+   "pag": "2027-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.06112261897
+  },
+  {
+   "com": "2026-08-03",
+   "pag": "2026-08-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.28563649015
+  },
+  {
+   "com": "2025-12-15",
+   "pag": "2025-12-23",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.91657597402
+  },
+  {
+   "com": "2025-08-01",
+   "pag": "2025-08-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.21165130246
+  },
+  {
+   "com": "2025-03-05",
+   "pag": "2025-03-17",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.27456862232
+  },
+  {
+   "com": "2024-08-01",
+   "pag": "2024-08-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.18588380878
+  },
+  {
+   "com": "2024-03-22",
+   "pag": "2024-08-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.12318488193
+  },
+  {
+   "com": "2024-03-04",
+   "pag": "2024-03-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.178742674
+  },
+  {
+   "com": "2023-12-26",
+   "pag": "2024-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.16025097561
+  },
+  {
+   "com": "2023-08-01",
+   "pag": "2023-08-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.165552439
+  },
+  {
+   "com": "2023-03-29",
+   "pag": "2023-08-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.118723243
+  },
+  {
+   "com": "2023-03-02",
+   "pag": "2023-03-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.08976965077
+  },
+  {
+   "com": "2022-12-28",
+   "pag": "2023-03-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.197380963
+  },
+  {
+   "com": "2022-08-01",
+   "pag": "2022-08-15",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.126559108
+  },
+  {
+   "com": "2022-06-28",
+   "pag": "2022-08-15",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.060693544
+  },
+  {
+   "com": "2022-03-10",
+   "pag": "2022-03-21",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.03185086223
+  },
+  {
+   "com": "2022-03-10",
+   "pag": "2022-03-21",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.1457556154
+  },
+  {
+   "com": "2021-08-03",
+   "pag": "2021-08-10",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.03002968791
+  },
+  {
+   "com": "2021-08-03",
+   "pag": "2021-08-10",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.13453505682
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "ticker": "BRKM5",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-04-19",
+   "aprovado": "2022-04-19",
+   "valor": 1.69634883832,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-12-08",
+   "aprovado": "2021-12-02",
+   "valor": 7.5390487919,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2019-10-03",
+   "aprovado": "2019-10-03",
+   "valor": 0.83862002783,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-04-30",
+   "aprovado": "2018-04-30",
+   "valor": 1.88573806195,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-12-01",
+   "aprovado": "2017-11-28",
+   "valor": 1.25671792825,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2016-10-03",
+   "aprovado": "2016-09-27",
+   "valor": 1.25715870797,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2016-04-06",
+   "aprovado": "2016-04-06",
+   "valor": 1.25671835741,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-04-09",
+   "aprovado": "2015-04-09",
+   "valor": 0.6062497232,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2014-04-09",
+   "aprovado": "2014-04-09",
+   "valor": 0.606188802,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2012-04-27",
+   "aprovado": "2012-04-27",
+   "valor": 0.605085049,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2011-04-29",
+   "aprovado": "2011-04-29",
+   "valor": 0.83324714,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2008-03-26",
+   "aprovado": "2008-03-26",
+   "valor": 0.644625,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2007-03-28",
+   "aprovado": "2007-03-28",
+   "valor": 0.159017,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2006-04-07",
+   "aprovado": "2006-04-07",
+   "valor": 0.154305,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2005-12-29",
+   "aprovado": "2005-12-13",
+   "valor": 0.746145,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2004-12-30",
+   "aprovado": "2004-12-14",
+   "valor": 2.255638,
+   "lote": 1000
+  }
+ ],
+ "b3Recente": [],
+ "brapi": [
+  {
+   "com": "2022-04-19",
+   "pag": "2022-05-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.696348838321
+  },
+  {
+   "com": "2021-12-08",
+   "pag": "2021-12-20",
+   "prazo": false,
+   "t": "DIV",
+   "v": 7.539048791898
+  },
+  {
+   "com": "2019-10-03",
+   "pag": "2019-12-30",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.838620027834
+  },
+  {
+   "com": "2018-04-30",
+   "pag": "2018-05-10",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.885738061958
+  },
+  {
+   "com": "2017-12-01",
+   "pag": "2017-12-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.256717928252
+  },
+  {
+   "com": "2016-10-03",
+   "pag": "2016-10-11",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.257158707975
+  },
+  {
+   "com": "2016-04-06",
+   "pag": "2016-04-14",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.2567184
+  },
+  {
+   "com": "2015-04-09",
+   "pag": "2015-04-23",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.60624975
+  },
+  {
+   "com": "2014-04-09",
+   "pag": "2014-04-23",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.6061888
+  },
+  {
+   "com": "2012-04-27",
+   "pag": "2012-11-20",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.6050851
+  },
+  {
+   "com": "2011-04-29",
+   "pag": "2011-05-10",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.8332471
+  },
+  {
+   "com": "2008-03-26",
+   "pag": "2008-04-07",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.644625
+  },
+  {
+   "com": "2007-03-28",
+   "pag": "2007-04-09",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.159017
+  },
+  {
+   "com": "2006-04-07",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.154305
+  },
+  {
+   "com": "2005-12-29",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.746145
+  },
+  {
+   "com": "2004-12-30",
+   "pag": "",
+   "prazo": false,
+   "t": "JCP",
+   "v": 2.255638
+  }
+ ]
+}

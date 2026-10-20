@@ -1,0 +1,87 @@
+{
+ "ticker": "SBFG3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-04-24",
+   "aprovado": "2026-04-24",
+   "valor": 0.54285111913,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-04-25",
+   "aprovado": "2025-04-25",
+   "valor": 0.54836592131,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2024-04-26",
+   "aprovado": "2024-04-26",
+   "valor": 0.17352481511,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-04-28",
+   "aprovado": "2023-04-28",
+   "valor": 0.13581958861,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-04-29",
+   "aprovado": "2022-04-29",
+   "valor": 0.11784848623,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-04-24",
+   "pagamento": "2026-08-05",
+   "valor": 0.54285111913,
+   "aprovado": "2026-04-24"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-04-24",
+   "pag": "2026-08-05",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.54285111913
+  },
+  {
+   "com": "2025-04-25",
+   "pag": "2025-05-07",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.5483659213
+  },
+  {
+   "com": "2024-04-26",
+   "pag": "2024-06-28",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.17352481511
+  },
+  {
+   "com": "2023-04-28",
+   "pag": "2023-07-03",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.1358195886
+  },
+  {
+   "com": "2022-04-29",
+   "pag": "2022-06-01",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.11784848623
+  }
+ ]
+}

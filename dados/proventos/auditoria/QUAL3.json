@@ -1,0 +1,325 @@
+{
+ "ticker": "QUAL3",
+ "em": "2026-10-20",
+ "b3Historico": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-06-29",
+   "aprovado": "2026-03-30",
+   "valor": 0.008981602,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2025-06-27",
+   "aprovado": "2025-03-28",
+   "valor": 0.005527286,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2023-05-12",
+   "aprovado": "2023-04-28",
+   "valor": 0.0790751,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2022-05-05",
+   "aprovado": "2022-04-29",
+   "valor": 0.255431505,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2021-07-13",
+   "aprovado": "2021-06-30",
+   "valor": 0.062234283,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-05-07",
+   "aprovado": "2021-04-30",
+   "valor": 0.704458324,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2021-05-07",
+   "aprovado": "2021-04-30",
+   "valor": 1.304632478,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2020-12-30",
+   "aprovado": "2020-12-24",
+   "valor": 0.119719,
+   "lote": 1
+  },
+  {
+   "tipo": "JRS CAP PROPRIO",
+   "dataCom": "2020-10-13",
+   "aprovado": "2020-10-02",
+   "valor": 0.1693172805,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2020-04-30",
+   "aprovado": "2020-04-30",
+   "valor": 0.00421291,
+   "lote": 1
+  },
+  {
+   "tipo": "REST CAP DIN",
+   "dataCom": "2019-10-18",
+   "aprovado": "2019-08-15",
+   "valor": 3.491295141,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2019-07-24",
+   "aprovado": "2019-07-19",
+   "valor": 0.647259688,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2019-04-29",
+   "aprovado": "2019-04-29",
+   "valor": 0.659317332,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-06-06",
+   "aprovado": "2018-06-01",
+   "valor": 0.363017046,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2018-04-27",
+   "aprovado": "2018-04-27",
+   "valor": 0.360813698,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-12-21",
+   "aprovado": "2017-12-18",
+   "valor": 0.525371917,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-09-08",
+   "aprovado": "2017-09-04",
+   "valor": 0.350789649,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2017-04-28",
+   "aprovado": "2017-04-28",
+   "valor": 0.492423447,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2016-11-11",
+   "aprovado": "2016-11-07",
+   "valor": 0.897071078,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2016-04-29",
+   "aprovado": "2016-04-29",
+   "valor": 0.796007688,
+   "lote": 1
+  },
+  {
+   "tipo": "REST CAP DIN",
+   "dataCom": "2015-10-19",
+   "aprovado": "2015-08-17",
+   "valor": 1.468959284,
+   "lote": 1
+  },
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2015-04-30",
+   "aprovado": "2015-04-30",
+   "valor": 0.424008737,
+   "lote": 1
+  }
+ ],
+ "b3Recente": [
+  {
+   "tipo": "DIVIDENDO",
+   "dataCom": "2026-06-29",
+   "pagamento": "2026-10-09",
+   "valor": 0.008981602,
+   "aprovado": "2026-03-30"
+  }
+ ],
+ "brapi": [
+  {
+   "com": "2026-06-29",
+   "pag": "2026-10-09",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.008981602
+  },
+  {
+   "com": "2025-06-27",
+   "pag": "2025-12-17",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.005527286
+  },
+  {
+   "com": "2023-05-12",
+   "pag": "2023-12-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.0790751
+  },
+  {
+   "com": "2022-05-05",
+   "pag": "2022-12-12",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.255431505
+  },
+  {
+   "com": "2021-07-13",
+   "pag": "2021-07-28",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.062234283
+  },
+  {
+   "com": "2021-05-07",
+   "pag": "2021-12-28",
+   "prazo": false,
+   "t": "DIV",
+   "v": 1.304632478
+  },
+  {
+   "com": "2021-05-07",
+   "pag": "2021-05-31",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.70517677
+  },
+  {
+   "com": "2020-12-30",
+   "pag": "2021-01-13",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.119719
+  },
+  {
+   "com": "2020-10-13",
+   "pag": "2020-10-26",
+   "prazo": false,
+   "t": "JCP",
+   "v": 0.169317
+  },
+  {
+   "com": "2020-04-30",
+   "pag": "2020-12-21",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.00421291
+  },
+  {
+   "com": "2019-10-18",
+   "pag": "2019-11-05",
+   "prazo": false,
+   "t": "REST CAP DIN",
+   "v": 3.491295141
+  },
+  {
+   "com": "2019-07-24",
+   "pag": "2019-08-02",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.647259688
+  },
+  {
+   "com": "2019-04-29",
+   "pag": "2019-05-10",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.659317332
+  },
+  {
+   "com": "2018-06-06",
+   "pag": "2018-06-19",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.363017046
+  },
+  {
+   "com": "2018-04-27",
+   "pag": "2018-05-10",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.360813698
+  },
+  {
+   "com": "2017-12-21",
+   "pag": "2018-01-16",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.525371917
+  },
+  {
+   "com": "2017-09-08",
+   "pag": "2017-09-19",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.350789649
+  },
+  {
+   "com": "2017-04-28",
+   "pag": "2017-05-25",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.492423447
+  },
+  {
+   "com": "2016-11-11",
+   "pag": "2016-11-25",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.897071078
+  },
+  {
+   "com": "2016-04-29",
+   "pag": "2016-05-25",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.796007688
+  },
+  {
+   "com": "2015-10-19",
+   "pag": "",
+   "prazo": false,
+   "t": "REST CAP DIN",
+   "v": 1.4689593
+  },
+  {
+   "com": "2015-04-30",
+   "pag": "",
+   "prazo": false,
+   "t": "DIV",
+   "v": 0.42400873
+  }
+ ]
+}
