@@ -58,7 +58,7 @@ def num_br(s):
 
 MESES = {'janeiro': 1, 'fevereiro': 2, 'marco': 3, 'abril': 4, 'maio': 5, 'junho': 6, 'julho': 7, 'agosto': 8,
          'setembro': 9, 'outubro': 10, 'novembro': 11, 'dezembro': 12}
-R_DATA = r'(\d{1,2}/\d{1,2}/\d{4}|\d{1,2}\s+de\s+(?:janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+\d{4})'
+R_DATA = r'(\d{1,2}[/.]\d{1,2}[/.]\d{4}|\d{1,2}\s+de\s+(?:janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+\d{4})'
 def data_br(s):
     m = re.search(r'(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})', s)
     if m and m.group(2) in MESES:
@@ -168,12 +168,13 @@ def _dias(a, b):
     except Exception: return 9999
 def consolidar(evs):
     # documento sem nenhum dado útil (comunicado do leilão de frações, pagamento etc.) não vira evento
-    evs = [e for e in evs if e.get('custo') is not None or e.get('percentual') or e.get('dataCom')]
+    # só a data não basta: comunicados de leilão de frações trazem datas que não são a data-com
+    evs = [e for e in evs if e.get('custo') is not None or e.get('percentual')]
     evs.sort(key=lambda e: (e['codigoCVM'], e.get('dataDoc') or ''))
     out = []
     for e in evs:
         a = out[-1] if out else None
-        mesmo = a and a['codigoCVM'] == e['codigoCVM'] and _dias(a['dataDoc'], e['dataDoc']) <= 120 and \
+        mesmo = a and a['codigoCVM'] == e['codigoCVM'] and _dias(a['dataDoc'], e['dataDoc']) <= 180 and \
             (not a.get('dataCom') or not e.get('dataCom') or a['dataCom'] == e['dataCom']) and \
             (not a.get('percentual') or not e.get('percentual') or abs(a['percentual'] - e['percentual']) < 1e-6)
         if not mesmo:
