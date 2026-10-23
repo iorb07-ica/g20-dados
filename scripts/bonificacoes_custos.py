@@ -162,7 +162,7 @@ def main():
         except Exception: pass
     lidos = set(estado.get('lidos', []))
     eventos = {(e['codigoCVM'], e.get('protocolo')): e for e in base.get('eventos', [])}
-    novos = revisar = falhas = baixados = 0
+    novos = revisar = falhas = baixados = achados = 0
     for ano in anos:
         try: linhas = ler_ipe(ano)
         except Exception as e:
@@ -176,12 +176,13 @@ def main():
             cvm = str(r.get('Codigo_CVM') or '').lstrip('0')
             if cvm not in tickers: continue        # só empresas com ação negociada na nossa base
             cand.append(r)
-        print(f'  {ano}: {len(linhas)} documentos, {len(cand)} candidatos')
+        cand.sort(key=lambda r: 0 if 'bonific' in sem_acento(r.get('Assunto')) else 1)
+        print(f'  {ano}: {len(linhas)} documentos, {len(cand)} candidatos ({sum(1 for r in cand if "bonific" in sem_acento(r.get("Assunto")))} com bonificação no assunto)')
         for r in cand:
             if (time.time() - T0) / 60 > LIMITE_MIN: print('Limite de tempo: grava o que fez e continua na próxima rodada.'); break
             prot = (r.get('Protocolo_Entrega') or '') + '-' + (r.get('Versao') or '')
             if prot in lidos: continue
-            if MODO == 'diagnostico' and baixados >= 15: break
+            if MODO == 'diagnostico' and achados >= 15: break
             try:
                 txt = texto_pdf(baixar(r['Link_Download'])); baixados += 1
             except Exception as e:
@@ -189,6 +190,7 @@ def main():
             lidos.add(prot)
             a = analisar(txt)
             if not a: continue
+            achados += 1
             cvm = str(r.get('Codigo_CVM')).lstrip('0')
             st = 'sem-custo' if a['semCusto'] else ('ok' if a['custo'] is not None else 'revisar')
             ev = {'codigoCVM': cvm, 'empresa': r.get('Nome_Companhia'), 'tickers': tickers.get(cvm, []),
@@ -197,12 +199,17 @@ def main():
                   'custo': a['custo'], 'semCusto': a['semCusto'], 'status': st, 'trecho': a['trecho']}
             if MODO == 'diagnostico':
                 print('    DIAG', json.dumps({k: ev[k] for k in ('empresa', 'tickers', 'dataDoc', 'dataCom', 'percentual', 'custo', 'status', 'trecho')}, ensure_ascii=False))
+                if st == 'revisar' or a['percentual'] is None or not a['dataCom']:
+                    tn = re.sub(r'\s+', ' ', sem_acento(txt))
+                    for pal in ('custo', 'bonific', 'posic'):
+                        for m in list(re.finditer(pal, tn))[:3]:
+                            print(f'       [{pal}] ...{tn[max(0, m.start() - 120):m.start() + 220]}...')
                 continue
             eventos[(cvm, prot)] = ev; novos += 1
             if st == 'revisar': revisar += 1
             time.sleep(0.4)
     if MODO == 'diagnostico':
-        print(f'Diagnóstico: {baixados} documentos lidos, nada gravado.'); return 0
+        print(f'Diagnóstico: {baixados} documentos baixados, {achados} falam de bonificação; nada gravado.'); return 0
     lista = sorted(eventos.values(), key=lambda e: (e.get('dataDoc') or '', e['empresa'] or ''))
     os.makedirs(os.path.dirname(SAIDA), exist_ok=True)
     json.dump({'atualizado': hoje.isoformat(), 'fonte': 'CVM, dados abertos (IPE): fatos relevantes e avisos aos acionistas',
