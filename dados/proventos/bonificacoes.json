@@ -1,0 +1,2940 @@
+{
+ "atualizado": "2026-10-23",
+ "fonte": "CVM, dados abertos (IPE): fatos relevantes e avisos aos acionistas",
+ "eventos": [
+  {
+   "codigoCVM": "21091",
+   "empresa": "DEXCO S.A.",
+   "tickers": [
+    "DXCO3"
+   ],
+   "dataDoc": "2016-02-16",
+   "dataCom": "",
+   "percentual": 3.9541346,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2016-02-16",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=501410&numSequencia=44158&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21490",
+   "empresa": "ALUPAR INVESTIMENTO S/A",
+   "tickers": [
+    "ALUP11",
+    "ALUP3",
+    "ALUP4"
+   ],
+   "dataDoc": "2016-04-20",
+   "dataCom": "2016-04-20",
+   "percentual": 6.5,
+   "custo": 4.27,
+   "custoUnit": 12.8,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "ente. 6) custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 4,27 (quatro reais e vin",
+   "documentos": [
+    {
+     "data": "2016-04-20",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=511604&numSequencia=54352&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2016-02-03",
+   "dataCom": "2016-04-20",
+   "percentual": 10.0,
+   "custo": 15.845572693,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "te. vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 15,845572693 por acao, independe",
+   "documentos": [
+    {
+     "data": "2016-02-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=499775&numSequencia=42523&numVersao=1"
+    },
+    {
+     "data": "2016-04-04",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=508844&numSequencia=51592&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "18660",
+   "empresa": "CPFL ENERGIA SA",
+   "tickers": [
+    "CPFE3"
+   ],
+   "dataDoc": "2016-04-29",
+   "dataCom": "2016-04-29",
+   "percentual": 2.507570448,
+   "custo": 15.781680012,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "te. 2.5) custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 15, 781680012 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2016-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=513817&numSequencia=56565&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20770",
+   "empresa": "EZ TEC EMPREEND. E PARTICIPAÇÕES S/A",
+   "tickers": [
+    "EZTC3"
+   ],
+   "dataDoc": "2016-04-29",
+   "dataCom": "2016-04-29",
+   "percentual": 5.0575541722,
+   "custo": 17.21,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "06v2 e) custo das acoes bonificadas : o custo atribuido as acoes bonificadas e de r$ 17,21 (dezessete reais e ",
+   "documentos": [
+    {
+     "data": "2016-04-29",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=513999&numSequencia=56747&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2016-04-29",
+   "dataCom": "2016-04-29",
+   "percentual": 10.0,
+   "custo": 6.04028937,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o de aquisicao das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 6,04028937 por acao, independe",
+   "documentos": [
+    {
+     "data": "2016-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=513637&numSequencia=56385&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2016-06-09",
+   "dataCom": "2016-06-20",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2016-06-09",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=520123&numSequencia=62871&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19909",
+   "empresa": "BR MALLS PARTICIPAÇOES S.A.",
+   "tickers": [
+    "BRML3"
+   ],
+   "dataDoc": "2016-06-29",
+   "dataCom": "",
+   "percentual": 30.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2016-06-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=522022&numSequencia=64770&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "22616",
+   "empresa": "BANCO BTG PACTUAL S/A",
+   "tickers": [
+    "BPAC11",
+    "BPAC3",
+    "BPAC5"
+   ],
+   "dataDoc": "2016-09-09",
+   "dataCom": "2016-09-12",
+   "percentual": null,
+   "custo": 4.8928,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "btg11 . custo das acoes bonificadas : o custo atribuido as acoes bonificadas, em bases totalmente diluidas , e de r$ 4,8928 por pnc para os fin",
+   "documentos": [
+    {
+     "data": "2016-09-09",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=530711&numSequencia=73459&numVersao=3"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19348",
+   "empresa": "ITAÚ UNIBANCO HOLDING S.A.",
+   "tickers": [
+    "ITUB3",
+    "ITUB4"
+   ],
+   "dataDoc": "2016-08-02",
+   "dataCom": "2016-10-17",
+   "percentual": 10.0,
+   "custo": 20.05375764,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o. 1.8. custo das acoes bonificada s: o custo atribuido as acoes bonificadas e de r$ 20,05375764 por acao para os fi",
+   "documentos": [
+    {
+     "data": "2016-08-02",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=525674&numSequencia=68422&numVersao=1"
+    },
+    {
+     "data": "2016-10-10",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=533947&numSequencia=76695&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8451",
+   "empresa": "MARCOPOLO SA",
+   "tickers": [
+    "POMO3",
+    "POMO4"
+   ],
+   "dataDoc": "2016-11-14",
+   "dataCom": "",
+   "percentual": 3.9999999602,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2016-11-14",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=538234&numSequencia=80982&numVersao=5"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2017-02-06",
+   "dataCom": "2017-05-04",
+   "percentual": 10.0,
+   "custo": 14.405066098,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "e. vii. custo das acoes bonifica das: o custo atribuido as acoes bonificadas e de r$14,405066098 por acao, independe",
+   "documentos": [
+    {
+     "data": "2017-02-06",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=546777&numSequencia=89525&numVersao=1"
+    },
+    {
+     "data": "2017-04-18",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=558430&numSequencia=101178&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19739",
+   "empresa": "LOCALIZA RENT A CAR SA",
+   "tickers": [
+    "RENT3",
+    "RENT4"
+   ],
+   "dataDoc": "2017-02-03",
+   "dataCom": "2017-05-08",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2017-02-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=546612&numSequencia=89360&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8133",
+   "empresa": "LOJAS RENNER SA",
+   "tickers": [
+    "LREN3",
+    "LREN4"
+   ],
+   "dataDoc": "2017-02-09",
+   "dataCom": "2017-05-09",
+   "percentual": 10.0,
+   "custo": 16.78,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " 64.355.058 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 16,78. se aprovado na age",
+   "documentos": [
+    {
+     "data": "2017-02-09",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=547585&numSequencia=90333&numVersao=1"
+    },
+    {
+     "data": "2017-05-03",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=562217&numSequencia=104965&numVersao=1"
+    },
+    {
+     "data": "2017-07-21",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=572311&numSequencia=115111&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20028",
+   "empresa": "VALID SOLUÇÕES S.A.",
+   "tickers": [
+    "VLID3"
+   ],
+   "dataDoc": "2017-05-16",
+   "dataCom": "2017-05-19",
+   "percentual": 10.0,
+   "custo": 25.28,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "e a data da referida assembl eia com um custo unitario atribuido de r$ 25,28. as novas acoes ser",
+   "documentos": [
+    {
+     "data": "2017-05-16",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=565207&numSequencia=107955&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2018-02-07",
+   "dataCom": "2018-04-04",
+   "percentual": 10.0,
+   "custo": 13.095514641,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "te. vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$13,095514641 por acao, independe",
+   "documentos": [
+    {
+     "data": "2018-02-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=595727&numSequencia=138523&numVersao=2"
+    },
+    {
+     "data": "2018-03-19",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=601715&numSequencia=144453&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "5410",
+   "empresa": "WEG SA",
+   "tickers": [
+    "WEGE3",
+    "WEGE4"
+   ],
+   "dataDoc": "2018-02-27",
+   "dataCom": "2018-04-27",
+   "percentual": 30.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2018-02-27",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=598210&numSequencia=141006&numVersao=1"
+    },
+    {
+     "data": "2018-04-24",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=612496&numSequencia=152261&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "5380",
+   "empresa": "ELECTRO AÇO ALTONA S/A",
+   "tickers": [
+    "EALT3",
+    "EALT4"
+   ],
+   "dataDoc": "2018-03-28",
+   "dataCom": "2018-05-02",
+   "percentual": 900.0,
+   "custo": 1.1,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "cao, a partir de 27 de abril de 2018. o custo unitario atribuido as acoes bonificadas sera de r$ 1,10 (um real e dez cent",
+   "documentos": [
+    {
+     "data": "2018-03-28",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=604392&numSequencia=146791&numVersao=3"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2018-05-24",
+   "dataCom": "2018-05-30",
+   "percentual": 10.0,
+   "custo": 6.536570679,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o de aquisicao das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 6,536570679 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2018-05-24",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=625446&numSequencia=160586&numVersao=1"
+    },
+    {
+     "data": "2018-05-25",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=625755&numSequencia=160794&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2018-05-30",
+   "dataCom": "2018-06-05",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2018-05-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=626304&numSequencia=161238&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "14664",
+   "empresa": "SCHULZ SA",
+   "tickers": [
+    "SHUL3",
+    "SHUL4"
+   ],
+   "dataDoc": "2018-11-21",
+   "dataCom": "2018-12-07",
+   "percentual": 40.0,
+   "custo": 3.52571046,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o a partir de 05 de dezembro de 2018. o custo unitario atribuido as acoes bonificadas sera de r$ 3,52571046. as acoes bonificad",
+   "documentos": [
+    {
+     "data": "2018-11-21",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=652555&numSequencia=184018&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "17329",
+   "empresa": "ENGIE BRASIL ENERGIA S.A.",
+   "tickers": [
+    "EGIE3",
+    "EGIE5",
+    "EGIE6"
+   ],
+   "dataDoc": "2018-10-31",
+   "dataCom": "2018-12-17",
+   "percentual": 25.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2018-10-31",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=648239&numSequencia=180348&numVersao=1"
+    },
+    {
+     "data": "2018-12-07",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=655049&numSequencia=186060&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "11592",
+   "empresa": "UNIPAR CARBOCLORO S.A.",
+   "tickers": [
+    "UNIP3",
+    "UNIP5",
+    "UNIP6"
+   ],
+   "dataDoc": "2018-12-20",
+   "dataCom": "2018-12-28",
+   "percentual": 9.0909090909,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2018-12-20",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=657815&numSequencia=188677&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "10456",
+   "empresa": "ALPARGATAS SA",
+   "tickers": [
+    "ALPA3",
+    "ALPA4"
+   ],
+   "dataDoc": "2019-03-20",
+   "dataCom": "2019-03-26",
+   "percentual": 25.0,
+   "custo": 7.239904,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,239904 por acao. v. inform",
+   "documentos": [
+    {
+     "data": "2019-03-20",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=672024&numSequencia=200889&numVersao=1"
+    },
+    {
+     "data": "2019-03-20",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=672021&numSequencia=200886&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20770",
+   "empresa": "EZ TEC EMPREEND. E PARTICIPAÇÕES S/A",
+   "tickers": [
+    "EZTC3"
+   ],
+   "dataDoc": "2019-04-26",
+   "dataCom": "2019-04-26",
+   "percentual": 21.2108114007,
+   "custo": 15.82,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "tunamente; e e) custo d e aquisicao das acoes bonificadas : o custo de aquisicao da s acoes bonificadas e de r$ 15,82 (quinze reais e oit",
+   "documentos": [
+    {
+     "data": "2019-04-26",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=682767&numSequencia=210565&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8133",
+   "empresa": "LOJAS RENNER SA",
+   "tickers": [
+    "LREN3",
+    "LREN4"
+   ],
+   "dataDoc": "2019-02-07",
+   "dataCom": "2019-05-07",
+   "percentual": 10.0,
+   "custo": 14.44,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "72.002.4 50 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 14, 44. se aprovado na age",
+   "documentos": [
+    {
+     "data": "2019-02-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=664003&numSequencia=194087&numVersao=1"
+    },
+    {
+     "data": "2019-04-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=684705&numSequencia=212180&numVersao=1"
+    },
+    {
+     "data": "2019-07-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=702337&numSequencia=228261&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2019-02-07",
+   "dataCom": "2019-05-31",
+   "percentual": 20.0,
+   "custo": 5.95250665,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "e . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$5,952506650 por acao, independe",
+   "documentos": [
+    {
+     "data": "2019-02-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=664005&numSequencia=194089&numVersao=1"
+    },
+    {
+     "data": "2019-05-23",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=692081&numSequencia=218761&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "11592",
+   "empresa": "UNIPAR CARBOCLORO S.A.",
+   "tickers": [
+    "UNIP3",
+    "UNIP5",
+    "UNIP6"
+   ],
+   "dataDoc": "2019-06-18",
+   "dataCom": "2019-06-24",
+   "percentual": 16.6666666664,
+   "custo": 15.46,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "erao bonificadas na mesma proporcao . o custo atribuido as acoes bonificadas e de r$ 15,46 (quinze reais e qua",
+   "documentos": [
+    {
+     "data": "2019-06-18",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=696480&numSequencia=222740&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2020-05-06",
+   "dataCom": "2019-09-17",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2020-05-06",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=759604&numSequencia=284358&numVersao=2"
+    },
+    {
+     "data": "2020-05-06",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=759620&numSequencia=284374&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2020-06-30",
+   "dataCom": "2019-09-17",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2020-06-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=772640&numSequencia=297386&numVersao=1"
+    },
+    {
+     "data": "2020-07-27",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=778689&numSequencia=303430&numVersao=1"
+    },
+    {
+     "data": "2020-10-01",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=796645&numSequencia=321383&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2021-03-17",
+   "dataCom": "2019-09-17",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2021-03-17",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=843295&numSequencia=368033&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2021-07-22",
+   "dataCom": "2019-09-17",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2021-07-22",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=885659&numSequencia=410396&numVersao=1"
+    },
+    {
+     "data": "2021-10-07",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=906232&numSequencia=430966&numVersao=1"
+    },
+    {
+     "data": "2022-01-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=932808&numSequencia=457542&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2022-03-18",
+   "dataCom": "2019-09-17",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2022-03-18",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=956030&numSequencia=480764&numVersao=1"
+    },
+    {
+     "data": "2022-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=974540&numSequencia=499274&numVersao=1"
+    },
+    {
+     "data": "2022-07-22",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=999858&numSequencia=524592&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19739",
+   "empresa": "LOCALIZA RENT A CAR SA",
+   "tickers": [
+    "RENT3",
+    "RENT4"
+   ],
+   "dataDoc": "2019-12-12",
+   "dataCom": "2019-12-17",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2019-12-12",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=726157&numSequencia=250936&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19739",
+   "empresa": "LOCALIZA RENT A CAR SA",
+   "tickers": [
+    "RENT3",
+    "RENT4"
+   ],
+   "dataDoc": "2019-12-27",
+   "dataCom": "2019-12-27",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2019-12-27",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=728093&numSequencia=252853&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2020-02-07",
+   "dataCom": "2020-04-16",
+   "percentual": 10.0,
+   "custo": 4.960422205,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "e . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$4,960422205 por acao, independe",
+   "documentos": [
+    {
+     "data": "2020-02-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=735186&numSequencia=259964&numVersao=1"
+    },
+    {
+     "data": "2020-04-03",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=751850&numSequencia=276608&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2020-05-11",
+   "dataCom": "2020-05-12",
+   "percentual": 5.25926213,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2020-05-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=760635&numSequencia=285389&numVersao=2"
+    },
+    {
+     "data": "2020-05-11",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=760634&numSequencia=285388&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2020-06-03",
+   "dataCom": "2020-06-12",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2020-06-03",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=766348&numSequencia=291100&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "4081",
+   "empresa": "CIA TECIDOS SANTANENSE",
+   "tickers": [
+    "CTSA3",
+    "CTSA4",
+    "CTSA8"
+   ],
+   "dataDoc": "2020-06-25",
+   "dataCom": "2020-07-06",
+   "percentual": 183.2101627,
+   "custo": 0.4167,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "a instrucao normativa rfb n 1.585/15; o custo atribuido as acoes objeto da bonificacao e de r$0,4167 por acao. e) inform",
+   "documentos": [
+    {
+     "data": "2020-06-25",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=771417&numSequencia=296165&numVersao=1"
+    },
+    {
+     "data": "2020-06-25",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=771419&numSequencia=296167&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2453",
+   "empresa": "CIA ENERG MINAS GERAIS - CEMIG",
+   "tickers": [
+    "CMIG3",
+    "CMIG4"
+   ],
+   "dataDoc": "2020-08-03",
+   "dataCom": "",
+   "percentual": null,
+   "custo": 5.0,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "01, da secretaria da receita federal, o custo unitario de aquisicao atribuido as acoes bonificadas e de r$5,00. e) conforme instru",
+   "documentos": [
+    {
+     "data": "2020-08-03",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=780554&numSequencia=305295&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "INDÚSTRIAS ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2020-10-28",
+   "dataCom": "2020-11-03",
+   "percentual": 16.666667462,
+   "custo": 13.91,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonifica das e de r$ 13,91 (treze reais e nove",
+   "documentos": [
+    {
+     "data": "2020-10-28",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=803445&numSequencia=328183&numVersao=2"
+    },
+    {
+     "data": "2020-10-28",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=803447&numSequencia=328185&numVersao=2"
+    },
+    {
+     "data": "2020-11-04",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=804689&numSequencia=329427&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2021-02-03",
+   "dataCom": "2021-04-22",
+   "percentual": 10.0,
+   "custo": 4.527177676,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "nte . vii.custo das acoes bonificadas :ocusto atribuido asacoes bonificadas sera der$4,527177676 por acao, independe",
+   "documentos": [
+    {
+     "data": "2021-02-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=827178&numSequencia=351916&numVersao=1"
+    },
+    {
+     "data": "2021-04-07",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=851425&numSequencia=376162&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2453",
+   "empresa": "CIA ENERG MINAS GERAIS - CEMIG",
+   "tickers": [
+    "CMIG3",
+    "CMIG4"
+   ],
+   "dataDoc": "2021-04-30",
+   "dataCom": "",
+   "percentual": 11.496899948,
+   "custo": 5.0,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "01, da secretaria da receita federal, o custo unitario de aquisicao atribuido as acoes bonificadas e de r$5,00. e) conforme instru",
+   "documentos": [
+    {
+     "data": "2021-04-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=861099&numSequencia=385836&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24783",
+   "empresa": "NATURA & CO HOLDING S.A.",
+   "tickers": [
+    "NTCO3"
+   ],
+   "dataDoc": "2021-05-12",
+   "dataCom": "2021-05-11",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2021-05-12",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=866722&numSequencia=391459&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2021-06-11",
+   "dataCom": "2021-06-21",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2021-06-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=875924&numSequencia=400661&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "94",
+   "empresa": "PANATLANTICA SA",
+   "tickers": [
+    "PATI3",
+    "PATI4"
+   ],
+   "dataDoc": "2021-08-04",
+   "dataCom": "",
+   "percentual": null,
+   "custo": 33.0943440196,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " a partir da r espectiva emissao ; 2) o custo atribuido as acoes bonificadas ser a de r$33,0943440196, fixado com base no",
+   "documentos": [
+    {
+     "data": "2021-08-04",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=889067&numSequencia=413803&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "16659",
+   "empresa": "PORTO SEGURO SA",
+   "tickers": [
+    "PSSA3"
+   ],
+   "dataDoc": "2021-09-03",
+   "dataCom": "",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2021-09-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=898719&numSequencia=423453&numVersao=1"
+    },
+    {
+     "data": "2021-10-20",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=908820&numSequencia=433554&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8133",
+   "empresa": "LOJAS RENNER SA",
+   "tickers": [
+    "LREN3",
+    "LREN4"
+   ],
+   "dataDoc": "2021-08-12",
+   "dataCom": "2021-11-08",
+   "percentual": 10.0,
+   "custo": 13.36,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " 89.850.788 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 13,36 . ressalta -se que ",
+   "documentos": [
+    {
+     "data": "2021-08-12",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=892812&numSequencia=417546&numVersao=1"
+    },
+    {
+     "data": "2021-11-04",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=913176&numSequencia=437910&numVersao=1"
+    },
+    {
+     "data": "2021-12-23",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=928533&numSequencia=453267&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21091",
+   "empresa": "DEXCO S.A.",
+   "tickers": [
+    "DXCO3"
+   ],
+   "dataDoc": "2021-12-09",
+   "dataCom": "2021-12-14",
+   "percentual": 10.0,
+   "custo": 5.78214746,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " de aquisicao das acoes bonificadas : o custo atribuido as acoes bonificadas e de r$ 5,78214746 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2021-12-09",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=924194&numSequencia=448928&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2021-12-14",
+   "dataCom": "2021-12-20",
+   "percentual": 5.0,
+   "custo": 18.891662,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "ionistas serao incrementados em 5%; e o custo atribuido as acoes bonificadas foi de r$ 18,891662 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2021-12-14",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=925744&numSequencia=450478&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20745",
+   "empresa": "SLC AGRICOLA SA",
+   "tickers": [
+    "SLCE3"
+   ],
+   "dataDoc": "2021-11-10",
+   "dataCom": "2022-01-05",
+   "percentual": 10.0,
+   "custo": 25.89,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "19.311.14 5 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 25,89 (vinte e cinco reai",
+   "documentos": [
+    {
+     "data": "2021-11-10",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=915813&numSequencia=440547&numVersao=1"
+    },
+    {
+     "data": "2021-12-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=929839&numSequencia=454573&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2021-12-14",
+   "dataCom": "2022-01-14",
+   "percentual": 5.0,
+   "custo": 18.891662,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " data a ser informada oportunamente . o custo atribuido as acoes bonificadas e de r$ 18,891662 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2021-12-14",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=925731&numSequencia=450465&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "15423",
+   "empresa": "ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
+   "tickers": [
+    "FASA3"
+   ],
+   "dataDoc": "2022-03-30",
+   "dataCom": "",
+   "percentual": 100.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2022-03-30",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=960916&numSequencia=485650&numVersao=1"
+    },
+    {
+     "data": "2022-05-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=976129&numSequencia=500863&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2022-02-08",
+   "dataCom": "2022-04-22",
+   "percentual": 10.0,
+   "custo": 4.128165265,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "te. vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas sera de r$4,128165265 por acao , independ",
+   "documentos": [
+    {
+     "data": "2022-02-08",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=939991&numSequencia=464725&numVersao=1"
+    },
+    {
+     "data": "2022-04-06",
+     "categoria": "Comunicado ao Mercado",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=964667&numSequencia=489401&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "11592",
+   "empresa": "UNIPAR CARBOCLORO S.A.",
+   "tickers": [
+    "UNIP3",
+    "UNIP5",
+    "UNIP6"
+   ],
+   "dataDoc": "2022-04-20",
+   "dataCom": "2022-04-26",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2022-04-20",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=968830&numSequencia=493564&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2453",
+   "empresa": "CIA ENERG MINAS GERAIS - CEMIG",
+   "tickers": [
+    "CMIG3",
+    "CMIG4"
+   ],
+   "dataDoc": "2022-04-29",
+   "dataCom": "",
+   "percentual": 29.999999976,
+   "custo": 5.0,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "01, da secretaria da receita federal, o custo unitario de aquisicao atribuido as acoes bonificadas e de r$5,00. e) conforme instru",
+   "documentos": [
+    {
+     "data": "2022-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=973994&numSequencia=498728&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2022-09-20",
+   "dataCom": "2022-10-04",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2022-09-20",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1016710&numSequencia=541444&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2022-09-22",
+   "dataCom": "2022-10-05",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2022-09-22",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1017023&numSequencia=541757&numVersao=1"
+    },
+    {
+     "data": "2022-09-22",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1017019&numSequencia=541753&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2022-11-07",
+   "dataCom": "2022-11-10",
+   "percentual": 10.0,
+   "custo": 13.65162423,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "nistas serao increm entados em 10%; e o custo atribuido as acoes bonificadas foi de r$ 13,65162423 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2022-11-07",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1029158&numSequencia=553889&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2022-11-07",
+   "dataCom": "2022-11-16",
+   "percentual": 10.0,
+   "custo": 13.65162423,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "ormada oportunamente pela companhia . o custo atribuido as acoes bonificadas e de r$ 13,65162423 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2022-11-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1029162&numSequencia=553893&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21091",
+   "empresa": "DEXCO S.A.",
+   "tickers": [
+    "DXCO3"
+   ],
+   "dataDoc": "2022-12-15",
+   "dataCom": "2022-12-20",
+   "percentual": 10.0,
+   "custo": 13.14124424,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " de aquisicao das acoes bonificadas : o custo atribuido as acoes bonificadas e de r$ 13,14124424 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2022-12-15",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1041846&numSequencia=566576&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "3980",
+   "empresa": "GERDAU S.A.",
+   "tickers": [
+    "GGBR3",
+    "GGBR4"
+   ],
+   "dataDoc": "2023-03-01",
+   "dataCom": "2023-03-21",
+   "percentual": 5.0,
+   "custo": 11.54731631,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "l. quanto as consequencias economicas o custo atribuido as acoes bonificadas foi de r$ 11,54731631 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2023-03-01",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1066809&numSequencia=591539&numVersao=1"
+    },
+    {
+     "data": "2023-03-01",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1066810&numSequencia=591540&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2023-02-06",
+   "dataCom": "2023-04-06",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2023-02-06",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1055781&numSequencia=580511&numVersao=2"
+    },
+    {
+     "data": "2023-03-28",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1078577&numSequencia=603307&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "25275",
+   "empresa": "ALPHAVILLE S.A.",
+   "tickers": [
+    "AVLL3"
+   ],
+   "dataDoc": "2023-04-05",
+   "dataCom": "2023-04-11",
+   "percentual": 33.4961419,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2023-04-05",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1083269&numSequencia=607998&numVersao=1"
+    },
+    {
+     "data": "2023-04-11",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1085103&numSequencia=609832&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2023-01-31",
+   "dataCom": "2023-04-17",
+   "percentual": 10.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2023-01-31",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1053681&numSequencia=578411&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21490",
+   "empresa": "ALUPAR INVESTIMENTO S/A",
+   "tickers": [
+    "ALUP11",
+    "ALUP3",
+    "ALUP4"
+   ],
+   "dataDoc": "2023-04-17",
+   "dataCom": "2023-04-24",
+   "percentual": 4.0,
+   "custo": 9.35,
+   "custoUnit": 28.05,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "m data a ser informada oportunamente. o custo atribuido as acoes bonificadas e de r$9,35 (nove reais e trint",
+   "documentos": [
+    {
+     "data": "2023-04-17",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1086802&numSequencia=611531&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8192",
+   "empresa": "TREVISA  INVESTIMENTOS SA",
+   "tickers": [
+    "LUXM3",
+    "LUXM4"
+   ],
+   "dataDoc": "2023-04-27",
+   "dataCom": "2023-04-27",
+   "percentual": 300.0,
+   "custo": 0.962279,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "receita federal do brasil n 1.585/15, o custo atribuido as acoes bonificadas e de r$ 0,962279 por acao . porto al",
+   "documentos": [
+    {
+     "data": "2023-04-27",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1091584&numSequencia=616313&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20745",
+   "empresa": "SLC AGRICOLA SA",
+   "tickers": [
+    "SLCE3"
+   ],
+   "dataDoc": "2023-03-08",
+   "dataCom": "2023-05-11",
+   "percentual": 10.0,
+   "custo": 23.54,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " 21.242.259 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 23,54 (vinte e tres reais",
+   "documentos": [
+    {
+     "data": "2023-03-08",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1070394&numSequencia=595124&numVersao=1"
+    },
+    {
+     "data": "2023-04-27",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1091993&numSequencia=616722&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "5258",
+   "empresa": "RAIA DROGASIL S.A.",
+   "tickers": [
+    "RADL3",
+    "RADL5",
+    "RADL6",
+    "RADL7",
+    "RADL8"
+   ],
+   "dataDoc": "2023-03-07",
+   "dataCom": "2023-05-19",
+   "percentual": 4.0,
+   "custo": 22.69975787,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "oderao transferir as fracoes de acao. o custo atribuido as acoes bonificadas , se aprovado pela assembleia geral, sera de r$ 22,69975787 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2023-03-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1069789&numSequencia=594519&numVersao=2"
+    },
+    {
+     "data": "2023-04-19",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1087862&numSequencia=612591&numVersao=1"
+    },
+    {
+     "data": "2023-04-24",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1089019&numSequencia=613748&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21881",
+   "empresa": "FLEURY SA",
+   "tickers": [
+    "FLRY3"
+   ],
+   "dataDoc": "2023-06-06",
+   "dataCom": "2023-06-12",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2023-06-06",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1110382&numSequencia=635111&numVersao=1"
+    },
+    {
+     "data": "2023-06-06",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1110399&numSequencia=635128&numVersao=1"
+    },
+    {
+     "data": "2023-06-09",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1111875&numSequencia=636604&numVersao=2"
+    },
+    {
+     "data": "2023-06-09",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1111874&numSequencia=636603&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2023-11-22",
+   "dataCom": "2023-11-27",
+   "percentual": 5.0,
+   "custo": 17.91,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "lei 9.249, de 26 de dezembro de 1995: o custo atribuido as acoes recebidas em bonificacao e de r$ 17,91 7246 por acao. e) i",
+   "documentos": [
+    {
+     "data": "2023-11-22",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1165810&numSequencia=690536&numVersao=1"
+    },
+    {
+     "data": "2023-11-22",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1165820&numSequencia=690546&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2453",
+   "empresa": "CIA ENERG MINAS GERAIS - CEMIG",
+   "tickers": [
+    "CMIG3",
+    "CMIG4"
+   ],
+   "dataDoc": "2024-04-29",
+   "dataCom": "2023-12-14",
+   "percentual": 30.00000002726,
+   "custo": 5.0,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "15, da secretaria da receita federal, o custo unitario de aquisicao atribuido as acoes bonificadas e de r$5,00. e) conforme instru",
+   "documentos": [
+    {
+     "data": "2024-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1228312&numSequencia=753038&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2024-03-26",
+   "dataCom": "2024-04-04",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2024-03-26",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1212656&numSequencia=737382&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7510",
+   "empresa": "ROMI S.A.",
+   "tickers": [
+    "ROMI3",
+    "ROMI4"
+   ],
+   "dataDoc": "2024-01-30",
+   "dataCom": "2024-04-05",
+   "percentual": 5.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2024-01-30",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1187663&numSequencia=712389&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "25763",
+   "empresa": "VITTIA S.A.",
+   "tickers": [
+    "VITT3"
+   ],
+   "dataDoc": "2024-03-28",
+   "dataCom": "2024-04-12",
+   "percentual": 10.0,
+   "custo": 14.961423,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o de aquisicao das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 14,961423 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2024-03-28",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1214846&numSequencia=739572&numVersao=1"
+    },
+    {
+     "data": "2024-04-18",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1223399&numSequencia=748125&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "3980",
+   "empresa": "GERDAU S.A.",
+   "tickers": [
+    "GGBR3",
+    "GGBR4"
+   ],
+   "dataDoc": "2024-04-16",
+   "dataCom": "2024-04-17",
+   "percentual": 20.0,
+   "custo": 11.5473163,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": ". quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 11,5473163 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2024-04-16",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1222481&numSequencia=747207&numVersao=1"
+    },
+    {
+     "data": "2024-04-16",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1222478&numSequencia=747204&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21490",
+   "empresa": "ALUPAR INVESTIMENTO S/A",
+   "tickers": [
+    "ALUP11",
+    "ALUP3",
+    "ALUP4"
+   ],
+   "dataDoc": "2024-04-19",
+   "dataCom": "2024-04-24",
+   "percentual": 4.0,
+   "custo": 9.92,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "m data a ser informada oportunamente. o custo atribuido as acoes bonificadas e de r$9, 92 (nove reais e noven",
+   "documentos": [
+    {
+     "data": "2024-04-19",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1223805&numSequencia=748531&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "12653",
+   "empresa": "KLABIN S.A.",
+   "tickers": [
+    "KLBN11",
+    "KLBN3",
+    "KLBN4"
+   ],
+   "dataDoc": "2024-04-16",
+   "dataCom": "2024-05-07",
+   "percentual": 10.0,
+   "custo": 2.8480429784,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "do brasil n 1.585/15, informa -se que o custo atribuido as acoes bonificadas e de r$ 2,84804297839 por acao, independe",
+   "documentos": [
+    {
+     "data": "2024-04-16",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1222602&numSequencia=747328&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2024-11-11",
+   "dataCom": "2024-12-02",
+   "percentual": 5.0,
+   "custo": 13.55518731,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "formada oportunamente pela companhia. o custo atribuido as acoes bonificadas e de r$ 13,55518731 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2024-11-11",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1302403&numSequencia=827129&numVersao=1"
+    },
+    {
+     "data": "2024-11-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1302375&numSequencia=827101&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8133",
+   "empresa": "LOJAS RENNER SA",
+   "tickers": [
+    "LREN3",
+    "LREN4"
+   ],
+   "dataDoc": "2024-10-23",
+   "dataCom": "2024-12-16",
+   "percentual": 10.0,
+   "custo": 5.38,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " 96.322.699 novas acoes ordinarias, com custo unitario atribuido de r$ 5,38. se aprovado na age",
+   "documentos": [
+    {
+     "data": "2024-10-23",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1294130&numSequencia=818856&numVersao=1"
+    },
+    {
+     "data": "2024-12-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1314484&numSequencia=839210&numVersao=1"
+    },
+    {
+     "data": "2024-12-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1314539&numSequencia=839265&numVersao=2"
+    },
+    {
+     "data": "2025-03-05",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1342363&numSequencia=867089&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "1155",
+   "empresa": "BANESTES SA BANCO DO ESTADO DO ESPIRITO SANTO",
+   "tickers": [
+    "BEES3",
+    "BEES4"
+   ],
+   "dataDoc": "2025-03-24",
+   "dataCom": "",
+   "percentual": 10.0,
+   "custo": 9.4962895781,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " ate que ocorra a quitacao dos valores. custo das acoes bonificadas: as acoes bonificadas serao e mitidas ao custo unitario de r$ 9,4962895781. os valores referen",
+   "documentos": [
+    {
+     "data": "2025-03-24",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1350513&numSequencia=875239&numVersao=1"
+    },
+    {
+     "data": "2025-04-25",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1365291&numSequencia=890017&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21490",
+   "empresa": "ALUPAR INVESTIMENTO S/A",
+   "tickers": [
+    "ALUP11",
+    "ALUP3",
+    "ALUP4"
+   ],
+   "dataDoc": "2025-04-16",
+   "dataCom": "2025-04-23",
+   "percentual": 4.0,
+   "custo": 9.19,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "m data a ser informada oportunamente. o custo atribuido as acoes bonificadas e de r$9, 19 (nove reais e dezen",
+   "documentos": [
+    {
+     "data": "2025-04-16",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1362112&numSequencia=886838&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "6173",
+   "empresa": "TAURUS ARMAS S.A.",
+   "tickers": [
+    "TASA3",
+    "TASA4"
+   ],
+   "dataDoc": "2025-04-29",
+   "dataCom": "",
+   "percentual": 10.0,
+   "custo": 7.8967466,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": ". quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2025-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1367306&numSequencia=892032&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8192",
+   "empresa": "TREVISA  INVESTIMENTOS SA",
+   "tickers": [
+    "LUXM3",
+    "LUXM4"
+   ],
+   "dataDoc": "2025-04-29",
+   "dataCom": "2025-04-29",
+   "percentual": 100.0,
+   "custo": 1.443418,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "receita federal do brasil n 1.585/15, o custo atribuido as acoes bonificadas e de r$ 1,443418 por acao. porto ale",
+   "documentos": [
+    {
+     "data": "2025-04-29",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1367563&numSequencia=892289&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "17329",
+   "empresa": "ENGIE BRASIL ENERGIA S.A.",
+   "tickers": [
+    "EGIE3",
+    "EGIE5",
+    "EGIE6"
+   ],
+   "dataDoc": "2025-11-05",
+   "dataCom": "2025-11-26",
+   "percentual": 40.0,
+   "custo": 6.0086788,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes recebidas em bonificacao e de r$ 6,00867880 por acao. e. inform",
+   "documentos": [
+    {
+     "data": "2025-11-05",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1440290&numSequencia=965002&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "17329",
+   "empresa": "ENGIE BRASIL ENERGIA S.A.",
+   "tickers": [
+    "EGIE3",
+    "EGIE5",
+    "EGIE6"
+   ],
+   "dataDoc": "2025-11-05",
+   "dataCom": "2025-11-26",
+   "percentual": 50.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2025-11-05",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1440286&numSequencia=964998&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "15253",
+   "empresa": "ENERGISA SA",
+   "tickers": [
+    "ENGI11",
+    "ENGI3",
+    "ENGI4"
+   ],
+   "dataDoc": "2025-11-19",
+   "dataCom": "2025-11-27",
+   "percentual": 10.0,
+   "custo": 12.0,
+   "custoUnit": 60.0,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes on e pn bonificadas e de r$ 12,00 (doze reais) por ac",
+   "documentos": [
+    {
+     "data": "2025-11-19",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1447539&numSequencia=972251&numVersao=1"
+    },
+    {
+     "data": "2025-11-19",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1447537&numSequencia=972249&numVersao=1"
+    },
+    {
+     "data": "2026-03-16",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1490840&numSequencia=1015546&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "12653",
+   "empresa": "KLABIN S.A.",
+   "tickers": [
+    "KLBN11",
+    "KLBN3",
+    "KLBN4"
+   ],
+   "dataDoc": "2025-12-08",
+   "dataCom": "2025-12-08",
+   "percentual": 1.0,
+   "custo": 12.9456498892,
+   "custoUnit": 0.911943445,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas sera d e r$ 12,94564988922 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-08",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454107&numSequencia=978819&numVersao=1"
+    },
+    {
+     "data": "2025-12-08",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454103&numSequencia=978815&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20770",
+   "empresa": "EZ TEC EMPREEND. E PARTICIPAÇÕES S/A",
+   "tickers": [
+    "EZTC3"
+   ],
+   "dataDoc": "2025-12-04",
+   "dataCom": "2025-12-09",
+   "percentual": 27.155591016,
+   "custo": 23.53,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "tesouraria tambem serao bonificadas; c) custo das acoes bonificadas : r$ 23,53 por acao, conforme ",
+   "documentos": [
+    {
+     "data": "2025-12-04",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453007&numSequencia=977719&numVersao=1"
+    },
+    {
+     "data": "2025-12-04",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453013&numSequencia=977725&numVersao=1"
+    },
+    {
+     "data": "2026-01-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1471693&numSequencia=996399&numVersao=1"
+    },
+    {
+     "data": "2026-02-04",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1473181&numSequencia=997887&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21130",
+   "empresa": "TRISUL S/A",
+   "tickers": [
+    "TRIS3"
+   ],
+   "dataDoc": "2025-12-09",
+   "dataCom": "2025-12-12",
+   "percentual": 0.3000789776,
+   "custo": 8.5,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "5, incluindo as acoes em tesouraria; c) custo das acoes bonificadas : r$ 8,50 (oito reais e cinqu",
+   "documentos": [
+    {
+     "data": "2025-12-09",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455040&numSequencia=979752&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21130",
+   "empresa": "TRISUL S/A",
+   "tickers": [
+    "TRIS3"
+   ],
+   "dataDoc": "2025-12-12",
+   "dataCom": "2025-12-12",
+   "percentual": 30.007897757,
+   "custo": 8.5,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "5, incluindo as acoes em tesouraria; c) custo das acoes bonificadas : r$ 8,50 (oito reais e cinqu",
+   "documentos": [
+    {
+     "data": "2025-12-12",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1456796&numSequencia=981508&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "16632",
+   "empresa": "DEXXOS PARTICIPAÇÕES S.A.",
+   "tickers": [
+    "DEXP3",
+    "DEXP4"
+   ],
+   "dataDoc": "2025-12-11",
+   "dataCom": "2025-12-16",
+   "percentual": 12.5,
+   "custo": 9.519403,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "os respectivos titulares das fracoes. o custo atribuido as acoes ordinarias e preferenciais bonificadas e de r$9,519403 por acao, independe",
+   "documentos": [
+    {
+     "data": "2025-12-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455980&numSequencia=980692&numVersao=1"
+    },
+    {
+     "data": "2025-12-11",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455979&numSequencia=980691&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "4537",
+   "empresa": "GRAZZIOTIN SA",
+   "tickers": [
+    "CGRA3",
+    "CGRA4"
+   ],
+   "dataDoc": "2025-12-17",
+   "dataCom": "",
+   "percentual": 16.5496127,
+   "custo": 31.73470498,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas sera de r$ 31,73470498 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-17",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1458642&numSequencia=983354&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "4537",
+   "empresa": "GRAZZIOTIN SA",
+   "tickers": [
+    "CGRA3",
+    "CGRA4"
+   ],
+   "dataDoc": "2025-12-17",
+   "dataCom": "2025-12-17",
+   "percentual": 16.6666666667,
+   "custo": 31.73470498,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "nte pela companhia. custo das acoes : o custo atribuido as acoes bonificadas sera de r$ 31,73470498 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-17",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1458640&numSequencia=983352&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "4537",
+   "empresa": "GRAZZIOTIN SA",
+   "tickers": [
+    "CGRA3",
+    "CGRA4"
+   ],
+   "dataDoc": "2025-12-19",
+   "dataCom": "2025-12-17",
+   "percentual": 16.6666666667,
+   "custo": 31.73470498,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "nte pela companhia. custo das acoes : o custo atribuido as acoes bonificadas sera de r$ 31,73470498 450 por acao, para ",
+   "documentos": [
+    {
+     "data": "2025-12-19",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459614&numSequencia=984320&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21130",
+   "empresa": "TRISUL S/A",
+   "tickers": [
+    "TRIS3"
+   ],
+   "dataDoc": "2025-12-09",
+   "dataCom": "2025-12-17",
+   "percentual": 0.3000789776,
+   "custo": 8.5,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes recebidas em bonificacao e de r$ 8,50 (oito reais e cinqu",
+   "documentos": [
+    {
+     "data": "2025-12-09",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455041&numSequencia=979753&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21130",
+   "empresa": "TRISUL S/A",
+   "tickers": [
+    "TRIS3"
+   ],
+   "dataDoc": "2025-12-12",
+   "dataCom": "2025-12-17",
+   "percentual": 30.007897757,
+   "custo": 8.5,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes recebidas em bonificacao e de r$ 8,50 (oito reais e cinqu",
+   "documentos": [
+    {
+     "data": "2025-12-12",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1456780&numSequencia=981492&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21091",
+   "empresa": "DEXCO S.A.",
+   "tickers": [
+    "DXCO3"
+   ],
+   "dataDoc": "2025-12-18",
+   "dataCom": "",
+   "percentual": 12.0,
+   "custo": 10.1555886966,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo de aquisicao atribuido as acoes e de r$ 10,15558869663 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-18",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459293&numSequencia=984005&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "7617",
+   "empresa": "ITAUSA S.A.",
+   "tickers": [
+    "ITSA3",
+    "ITSA4"
+   ],
+   "dataDoc": "2025-12-15",
+   "dataCom": "2025-12-18",
+   "percentual": 2.0,
+   "custo": 11.370033972,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "formada oportunamente pela companhia. o custo atribuido as acoes bonificadas e de r$ 11,370033972 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-15",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1457508&numSequencia=982220&numVersao=1"
+    },
+    {
+     "data": "2025-12-15",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1457512&numSequencia=982224&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8656",
+   "empresa": "METALURGICA GERDAU SA",
+   "tickers": [
+    "GOAU3",
+    "GOAU4"
+   ],
+   "dataDoc": "2025-12-15",
+   "dataCom": "2025-12-18",
+   "percentual": 33.33,
+   "custo": 8.3,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": ". quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 8,30 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2025-12-15",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1457706&numSequencia=982418&numVersao=1"
+    },
+    {
+     "data": "2025-12-15",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1457673&numSequencia=982385&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "4537",
+   "empresa": "GRAZZIOTIN SA",
+   "tickers": [
+    "CGRA3",
+    "CGRA4"
+   ],
+   "dataDoc": "2025-12-19",
+   "dataCom": "",
+   "percentual": 16.378927,
+   "custo": 31.73470498,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas sera de r$ 31,73470498 450 por acao, para ",
+   "documentos": [
+    {
+     "data": "2025-12-19",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459629&numSequencia=984335&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "8451",
+   "empresa": "MARCOPOLO SA",
+   "tickers": [
+    "POMO3",
+    "POMO4"
+   ],
+   "dataDoc": "2025-12-19",
+   "dataCom": "",
+   "percentual": 10.0,
+   "custo": 6.21,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "lei 9.249, de 26 de dezembro de 1995; o custo atribuido as acoes recebidas em bonificacao e de r$ 6,21 por acao ; e) infor",
+   "documentos": [
+    {
+     "data": "2025-12-19",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459615&numSequencia=984321&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "21091",
+   "empresa": "DEXCO S.A.",
+   "tickers": [
+    "DXCO3"
+   ],
+   "dataDoc": "2025-12-18",
+   "dataCom": "2025-12-23",
+   "percentual": 120.0,
+   "custo": 10.15558869,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " de aquisicao das acoes bonificadas : o custo de aquisicao atribuido as acoes bonificadas e de r$ 10,15558869 7 por acao, para os",
+   "documentos": [
+    {
+     "data": "2025-12-18",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459278&numSequencia=983990&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19348",
+   "empresa": "ITAÚ UNIBANCO HOLDING S.A.",
+   "tickers": [
+    "ITUB3",
+    "ITUB4"
+   ],
+   "dataDoc": "2025-12-18",
+   "dataCom": "2025-12-23",
+   "percentual": 3.0,
+   "custo": 40.0,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "ia. 2.6. custo das acoes bonificadas: o custo atribuido as acoes bonificadas sera de r$ 40,00 por acao, conforme ",
+   "documentos": [
+    {
+     "data": "2025-12-18",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459139&numSequencia=983851&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2437",
+   "empresa": "AXIA ENERGIA S.A.",
+   "tickers": [
+    "AXIA3",
+    "AXIA5",
+    "AXIA6"
+   ],
+   "dataDoc": "2025-12-08",
+   "dataCom": "2025-12-26",
+   "percentual": null,
+   "custo": 49.44,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. inform",
+   "documentos": [
+    {
+     "data": "2025-12-08",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454335&numSequencia=979047&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "5258",
+   "empresa": "RAIA DROGASIL S.A.",
+   "tickers": [
+    "RADL3",
+    "RADL5",
+    "RADL6",
+    "RADL7",
+    "RADL8"
+   ],
+   "dataDoc": "2025-12-01",
+   "dataCom": "2025-12-26",
+   "percentual": 2.0,
+   "custo": 21.8276151578,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "s detalhadas sobre esse procedimento. o custo atribuido as acoes bonificadas sera de r$ 21,827615157841 por acao, conforme ",
+   "documentos": [
+    {
+     "data": "2025-12-01",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1451145&numSequencia=975857&numVersao=1"
+    },
+    {
+     "data": "2025-12-22",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1460400&numSequencia=985106&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24627",
+   "empresa": "BLAU FARMACÊUTICA S.A.",
+   "tickers": [
+    "BLAU3"
+   ],
+   "dataDoc": "2025-12-29",
+   "dataCom": "",
+   "percentual": 30.0,
+   "custo": 7.432432449,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "lei 9.249, de 26 de deze mbro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,432432449 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462052&numSequencia=986758&numVersao=1"
+    },
+    {
+     "data": "2025-12-29",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462056&numSequencia=986762&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "26050",
+   "empresa": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
+   "tickers": [
+    "FIQE3"
+   ],
+   "dataDoc": "2025-12-29",
+   "dataCom": "2025-12-29",
+   "percentual": 11.1111111111,
+   "custo": 5.4,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "receita federal do brasil n 1.585/15, o custo atribuido as acoes bonificadas e de r$ 5,40 (cinco reais e quar",
+   "documentos": [
+    {
+     "data": "2025-12-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462003&numSequencia=986709&numVersao=1"
+    },
+    {
+     "data": "2025-12-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462077&numSequencia=986783&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "17973",
+   "empresa": "COGNA EDUCAÇÃO S.A.",
+   "tickers": [
+    "COGN11",
+    "COGN3",
+    "COGN4"
+   ],
+   "dataDoc": "2025-12-18",
+   "dataCom": "2025-12-30",
+   "percentual": null,
+   "custo": 3.3406493943,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 3,34064939431 por acao, conforme ",
+   "documentos": [
+    {
+     "data": "2025-12-18",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459113&numSequencia=983825&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20745",
+   "empresa": "SLC AGRICOLA SA",
+   "tickers": [
+    "SLCE3"
+   ],
+   "dataDoc": "2025-12-30",
+   "dataCom": "",
+   "percentual": 12.5,
+   "custo": 16.4962,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "55.416.214 novas acoes ordinarias , com custo unitario atribuido as acoes bonificadas de r$ 16,4962 (dezesseis reais e ",
+   "documentos": [
+    {
+     "data": "2025-12-30",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462648&numSequencia=987354&numVersao=1"
+    },
+    {
+     "data": "2026-02-26",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1482597&numSequencia=1007303&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "19739",
+   "empresa": "LOCALIZA RENT A CAR SA",
+   "tickers": [
+    "RENT3",
+    "RENT4"
+   ],
+   "dataDoc": "2025-12-29",
+   "dataCom": "2026-01-05",
+   "percentual": 3.8461538462,
+   "custo": 49.6,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "rfb n 1.585, de 31 de agosto de 2015, o custo atribuido as acoes preferenciais emitidas a titulo de bonificacao sera de r$49,60 (quarenta e nove re",
+   "documentos": [
+    {
+     "data": "2025-12-29",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462029&numSequencia=986735&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "22470",
+   "empresa": "MAGAZINE LUIZA SA",
+   "tickers": [
+    "MGLU3"
+   ],
+   "dataDoc": "2025-12-22",
+   "dataCom": "2026-01-05",
+   "percentual": null,
+   "custo": 10.8255095121,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 10,82550951208 por acao, conforme ",
+   "documentos": [
+    {
+     "data": "2025-12-22",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1460685&numSequencia=985391&numVersao=1"
+    },
+    {
+     "data": "2025-12-22",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1460683&numSequencia=985389&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "5258",
+   "empresa": "RAIA DROGASIL S.A.",
+   "tickers": [
+    "RADL3",
+    "RADL5",
+    "RADL6",
+    "RADL7",
+    "RADL8"
+   ],
+   "dataDoc": "2026-03-24",
+   "dataCom": "2026-03-31",
+   "percentual": 2.0,
+   "custo": null,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "",
+   "documentos": [
+    {
+     "data": "2026-03-24",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1494603&numSequencia=1019309&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "25763",
+   "empresa": "VITTIA S.A.",
+   "tickers": [
+    "VITT3"
+   ],
+   "dataDoc": "2025-12-30",
+   "dataCom": "2026-04-09",
+   "percentual": 10.0,
+   "custo": 10.284774,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "o de aquisicao das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 10,284774 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-30",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462638&numSequencia=987344&numVersao=2"
+    }
+   ]
+  }
+ ]
+}
