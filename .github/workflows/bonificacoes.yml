@@ -23,6 +23,10 @@ on:
         description: 'Ano inicial (modo completo)'
         required: false
         default: '2016'
+      refazer:
+        description: 'Reler tudo do zero (usar quando as regras de leitura mudarem)'
+        type: boolean
+        default: false
 permissions:
   contents: write
   pages: write
@@ -38,7 +42,7 @@ jobs:
       mudou: ${{ steps.gravar.outputs.mudou }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Instalar leitor de PDF
@@ -48,6 +52,7 @@ jobs:
           MODO: ${{ inputs.modo || 'atualizar' }}
           ANO_INICIO: ${{ inputs.ano_inicio || '2016' }}
           MINUTOS: '300'
+          REFAZER: ${{ inputs.refazer && '1' || '0' }}
         run: python scripts/bonificacoes_custos.py
       - name: Gravar no repositório (só se mudou)
         id: gravar
