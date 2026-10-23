@@ -42,6 +42,9 @@ LIMITE_MIN = float(os.environ.get('MINUTOS') or '320')
 ESPERA = 12.5
 T0 = time.time()
 TICKER_OK = re.compile(r'^[A-Z][A-Z0-9.\-]{0,9}$')
+# Fundos mútuos americanos (5 letras terminando em X, ex.: VFIAX, AABCX): não são negociados
+# em bolsa nem comprados pelas corretoras dos alunos. Ficam de fora (metade dos registros).
+FUNDO_MUTUO = re.compile(r'^[A-Z]{4}X$')
 _ultima = [0.0]
 
 
@@ -94,7 +97,7 @@ def normalizar(x):
     t = str(x.get('ticker') or '').upper()
     ex = str(x.get('ex_dividend_date') or '')[:10]
     v = x.get('cash_amount')
-    if not TICKER_OK.match(t) or not ex or not isinstance(v, (int, float)) or v <= 0:
+    if not TICKER_OK.match(t) or FUNDO_MUTUO.match(t) or not ex or not isinstance(v, (int, float)) or v <= 0:
         return None, None
     moeda = (x.get('currency') or 'USD').upper()
     if moeda != 'USD':
