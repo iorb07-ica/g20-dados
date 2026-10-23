@@ -53,10 +53,17 @@ def baixar(url, tentativas=3, espera=4):
             time.sleep(espera * (i + 1))
 
 def num_br(s):
-    s = s.strip().rstrip('.,')
+    s = re.sub(r'\s+', '', s).rstrip('.,')
     return float(s.replace('.', '').replace(',', '.'))
 
+MESES = {'janeiro': 1, 'fevereiro': 2, 'marco': 3, 'abril': 4, 'maio': 5, 'junho': 6, 'julho': 7, 'agosto': 8,
+         'setembro': 9, 'outubro': 10, 'novembro': 11, 'dezembro': 12}
+R_DATA = r'(\d{1,2}/\d{1,2}/\d{4}|\d{1,2}\s+de\s+(?:janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+\d{4})'
 def data_br(s):
+    m = re.search(r'(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})', s)
+    if m and m.group(2) in MESES:
+        try: return datetime.date(int(m.group(3)), MESES[m.group(2)], int(m.group(1))).isoformat()
+        except ValueError: return ''
     m = re.search(r'(\d{1,2})[/.](\d{1,2})[/.](\d{4})', s)
     if not m: return ''
     try: return datetime.date(int(m.group(3)), int(m.group(2)), int(m.group(1))).isoformat()
@@ -76,7 +83,7 @@ def texto_pdf(dados):
     r = PdfReader(io.BytesIO(dados))
     return '\n'.join((p.extract_text() or '') for p in r.pages[:12])
 
-R_NUM = r'(\d{1,3}(?:\.\d{3})*,\d{2,12}|\d+,\d{2,12})'
+R_NUM = r'(\d{1,3}(?:\.\d{3})*\s?,\s?\d{2,12}|\d+\s?,\s?\d{2,12})'
 R_CUSTO = [
     r'custo(?:\s+unitario)?(?:\s+de\s+aquisicao)?\s+atribuido[^.;]{0,220}?r\s?\$\s?' + R_NUM,
     r'custo(?:\s+unitario)?(?:\s+de\s+aquisicao)?\s+(?:das|de\s+cada|por)\s+(?:novas?\s+)?ac(?:oes|ao)\s+bonificadas?[^.;]{0,220}?r\s?\$\s?' + R_NUM,
@@ -90,18 +97,25 @@ R_PCT = [
     r'(\d{1,3}(?:,\d+)?)\s?%\s*\([^)]{0,40}\)\s*(?:de\s+)?(?:bonificacao|em\s+acoes|das\s+acoes)',
 ]
 # "1 (uma) nova ação para cada 25", "uma ação nova para cada 25", "10 (dez) ações novas para cada 100 (cem)"
-R_PROP = r'(\d+|uma|duas|tres)\s*(?:\([a-z ]{2,30}\)\s*)?(?:(?:nova|novas)\s+ac(?:oes|ao)|ac(?:oes|ao)\s+(?:nova|novas))[^.;]{0,80}?para\s+cada\s+(\d+)'
+R_PROP = r'(\d+(?:,\d+)?|uma|duas|tres)\s*(?:\([a-z ]{2,30}\)\s*)?(?:(?:nova|novas)\s+ac(?:oes|ao)|ac(?:oes|ao)\s+(?:nova|novas))[^.;]{0,80}?para\s+cada\s+(\d+)'
 R_PROP2 = R_PROP
 _PALAVRAS = {'uma': 1, 'duas': 2, 'tres': 3}
 R_DATACOM = [
-    r'posic(?:ao|oes)\s+acionarias?[^;]{0,160}?(\d{1,2}/\d{1,2}/\d{4})',
-    r'data[\s-]+(?:base|com)[^.;]{0,100}?(\d{1,2}/\d{1,2}/\d{4})',
-    r'acionistas\s+(?:titulares|detentores)[^.;]{0,160}?(\d{1,2}/\d{1,2}/\d{4})',
+    r'posic(?:ao|oes)\s+(?:acionarias?\s+)?(?:final|finais|existentes?|em\s+aberto)?[^;]{0,120}?' + R_DATA,
+    r'data[\s-]+(?:base|com)[^;]{0,140}?' + R_DATA,
+    r'fechamento\s+do\s+pregao\s+(?:do\s+dia\s+|de\s+)?' + R_DATA,
+    r'acionistas\s+(?:titulares|detentores)[^;]{0,160}?' + R_DATA,
 ]
 
 def analisar(txt):
     t = re.sub(r'\s+', ' ', sem_acento(txt))
-    if 'bonific' not in t: return None
+    t = re.sub(r'\b(20[0-3]) (\d)\b', r'\1\2', t)        # "201 6" -> "2016"
+    t = re.sub(r'\b(\d) (\d) de\b', r'\1\2 de', t)         # "0 2 de maio" -> "02 de maio"
+    t = re.sub(r'\ba ?c ?o ?e ?s\b', 'acoes', t)              # "ac oes", "acoe s"
+    t = re.sub(r'\bbonific ?ac ?(ao|oes)\b', r'bonificac\1', t)
+    # bonificação EM AÇÕES (fora "bonificação na conta de água" e afins)
+    if not re.search(r'bonificac\w*\s+(?:em|de)\s+(?:\d[\d,]*\s?%\s+(?:em\s+)?)?aco|acoes\s+bonificad|a\s+titulo\s+de\s+bonificac|aumento\s+(?:do\s+)?capital[^.]{0,120}bonificac|bonificac\w*\s+(?:a|na)\s+(?:razao|proporcao)', t):
+        return None
     out = {'percentual': None, 'dataCom': '', 'custo': None, 'semCusto': False, 'trecho': ''}
     for rx in R_CUSTO:
         m = re.search(rx, t)
@@ -114,6 +128,8 @@ def analisar(txt):
     if out['custo'] is None:
         m = re.search(R_SEM_CUSTO, t)
         if m: out['custo'] = 0.0; out['semCusto'] = True; out['trecho'] = t[max(0, m.start() - 60):m.end() + 40][:300]
+    m = re.search(r'r\s?\$\s?' + R_NUM + r'[^.;]{0,40}?por\s+unit', t)
+    out['custoUnit'] = round(num_br(m.group(1)), 10) if (m and out['custo']) else None
     for rx in R_PCT:
         m = re.search(rx, t)
         if m:
@@ -124,8 +140,8 @@ def analisar(txt):
     if out['percentual'] is None:
         m = re.search(R_PROP, t) or re.search(R_PROP2, t)
         if m and int(m.group(2)) > 0:
-            n = _PALAVRAS.get(m.group(1)) or int(m.group(1))
-            out['percentual'] = round(n / int(m.group(2)) * 100, 6)
+            n = _PALAVRAS.get(m.group(1)) or num_br(m.group(1) if ',' in m.group(1) else m.group(1) + ',0')
+            out['percentual'] = round(n / int(m.group(2)) * 100, 10)
     for rx in R_DATACOM:
         m = re.search(rx, t)
         if m: out['dataCom'] = data_br(m.group(1)); break
@@ -146,6 +162,33 @@ def ler_ipe(ano):
     nome = [n for n in z.namelist() if n.lower().endswith('.csv')][0]
     txt = z.read(nome).decode('latin-1')
     return list(csv.DictReader(io.StringIO(txt), delimiter=';'))
+
+def _dias(a, b):
+    try: return abs((datetime.date.fromisoformat(a) - datetime.date.fromisoformat(b)).days)
+    except Exception: return 9999
+def consolidar(evs):
+    # documento sem nenhum dado útil (comunicado do leilão de frações, pagamento etc.) não vira evento
+    evs = [e for e in evs if e.get('custo') is not None or e.get('percentual') or e.get('dataCom')]
+    evs.sort(key=lambda e: (e['codigoCVM'], e.get('dataDoc') or ''))
+    out = []
+    for e in evs:
+        a = out[-1] if out else None
+        mesmo = a and a['codigoCVM'] == e['codigoCVM'] and _dias(a['dataDoc'], e['dataDoc']) <= 120 and \
+            (not a.get('dataCom') or not e.get('dataCom') or a['dataCom'] == e['dataCom']) and \
+            (not a.get('percentual') or not e.get('percentual') or abs(a['percentual'] - e['percentual']) < 1e-6)
+        if not mesmo:
+            e = dict(e); e['documentos'] = [{'data': e.get('dataDoc'), 'categoria': e.get('categoria'), 'link': e.get('link')}]
+            out.append(e); continue
+        for k in ('dataCom', 'percentual', 'custoUnit'):
+            if not a.get(k) and e.get(k): a[k] = e[k]
+        if a.get('custo') is None and e.get('custo') is not None:
+            a['custo'], a['semCusto'], a['trecho'] = e['custo'], e.get('semCusto'), e.get('trecho')
+        a['documentos'].append({'data': e.get('dataDoc'), 'categoria': e.get('categoria'), 'link': e.get('link')})
+    for e in out:
+        e['status'] = 'sem-custo' if e.get('semCusto') else ('ok' if e.get('custo') is not None and e.get('percentual') and e.get('dataCom') else 'revisar')
+        for k in ('link', 'categoria', 'protocolo'): e.pop(k, None)
+    out.sort(key=lambda e: (e.get('dataCom') or e.get('dataDoc') or '', e.get('empresa') or ''))
+    return out
 
 def main():
     hoje = datetime.date.today()
@@ -196,7 +239,7 @@ def main():
             ev = {'codigoCVM': cvm, 'empresa': r.get('Nome_Companhia'), 'tickers': tickers.get(cvm, []),
                   'dataDoc': (r.get('Data_Entrega') or '')[:10], 'categoria': r.get('Categoria'), 'protocolo': prot,
                   'link': r.get('Link_Download'), 'dataCom': a['dataCom'], 'percentual': a['percentual'],
-                  'custo': a['custo'], 'semCusto': a['semCusto'], 'status': st, 'trecho': a['trecho']}
+                  'custo': a['custo'], 'custoUnit': a.get('custoUnit'), 'semCusto': a['semCusto'], 'status': st, 'trecho': a['trecho']}
             if MODO == 'diagnostico':
                 print('    DIAG', json.dumps({k: ev[k] for k in ('empresa', 'tickers', 'dataDoc', 'dataCom', 'percentual', 'custo', 'status', 'trecho')}, ensure_ascii=False))
                 if st == 'revisar' or a['percentual'] is None or not a['dataCom']:
@@ -210,7 +253,7 @@ def main():
             time.sleep(0.4)
     if MODO == 'diagnostico':
         print(f'Diagnóstico: {baixados} documentos baixados, {achados} falam de bonificação; nada gravado.'); return 0
-    lista = sorted(eventos.values(), key=lambda e: (e.get('dataDoc') or '', e['empresa'] or ''))
+    lista = consolidar(list(eventos.values()))
     os.makedirs(os.path.dirname(SAIDA), exist_ok=True)
     json.dump({'atualizado': hoje.isoformat(), 'fonte': 'CVM, dados abertos (IPE): fatos relevantes e avisos aos acionistas',
                'eventos': lista}, open(SAIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
