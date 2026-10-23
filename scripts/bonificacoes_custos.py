@@ -83,7 +83,7 @@ def texto_pdf(dados):
     r = PdfReader(io.BytesIO(dados))
     return '\n'.join((p.extract_text() or '') for p in r.pages[:12])
 
-R_NUM = r'(\d{1,3}(?:\.\d{3})*\s?,\s?\d{2,12}|\d+\s?,\s?\d{2,12})'
+R_NUM = r'(\d{1,3}(?:\.\d{3})*\s?,\s?\d{2,12}(?:\s\d{1,10}(?=\s*(?:por|\(|reais)))?|\d+\s?,\s?\d{2,12}(?:\s\d{1,10}(?=\s*(?:por|\(|reais)))?)'
 R_CUSTO = [
     r'custo(?:\s+unitario)?(?:\s+de\s+aquisicao)?\s+atribuido[^.;]{0,220}?r\s?\$\s?' + R_NUM,
     r'custo(?:\s+unitario)?(?:\s+de\s+aquisicao)?\s+(?:das|de\s+cada|por)\s+(?:novas?\s+)?ac(?:oes|ao)\s+bonificadas?[^.;]{0,220}?r\s?\$\s?' + R_NUM,
@@ -142,9 +142,12 @@ def analisar(txt):
         if m and int(m.group(2)) > 0:
             n = _PALAVRAS.get(m.group(1)) or num_br(m.group(1) if ',' in m.group(1) else m.group(1) + ',0')
             out['percentual'] = round(n / int(m.group(2)) * 100, 10)
-    for rx in R_DATACOM:
+    for i, rx in enumerate(R_DATACOM):
         m = re.search(rx, t)
-        if m: out['dataCom'] = data_br(m.group(1)); break
+        if m and data_br(m.group(1)): out['dataCom'] = data_br(m.group(1)); out['prioData'] = i; break
+    out['proposta'] = bool(out['custo']) and bool(re.search(r'se\s+aprovad', out.get('trecho') or ''))
+    if out['custo'] is None or out['percentual'] is None or not out['dataCom']:
+        out['janelas'] = [t[max(0, m.start() - 150):m.start() + 250] for pal in ('custo', 'bonific') for m in list(re.finditer(pal, t))[:2]]
     return out
 
 # ── empresas → códigos de negociação (da base de proventos) ─────────────────
@@ -167,27 +170,46 @@ def _dias(a, b):
     try: return abs((datetime.date.fromisoformat(a) - datetime.date.fromisoformat(b)).days)
     except Exception: return 9999
 def consolidar(evs):
-    # documento sem nenhum dado útil (comunicado do leilão de frações, pagamento etc.) não vira evento
     # só a data não basta: comunicados de leilão de frações trazem datas que não são a data-com
-    evs = [e for e in evs if e.get('custo') is not None or e.get('percentual')]
+    evs = [dict(e) for e in evs if e.get('custo') is not None or e.get('percentual')]
     evs.sort(key=lambda e: (e['codigoCVM'], e.get('dataDoc') or ''))
-    out = []
+    grupos = []
     for e in evs:
-        a = out[-1] if out else None
-        mesmo = a and a['codigoCVM'] == e['codigoCVM'] and _dias(a['dataDoc'], e['dataDoc']) <= 180 and \
-            (not a.get('dataCom') or not e.get('dataCom') or a['dataCom'] == e['dataCom']) and \
-            (not a.get('percentual') or not e.get('percentual') or abs(a['percentual'] - e['percentual']) < 1e-6)
-        if not mesmo:
-            e = dict(e); e['documentos'] = [{'data': e.get('dataDoc'), 'categoria': e.get('categoria'), 'link': e.get('link')}]
-            out.append(e); continue
-        for k in ('dataCom', 'percentual', 'custoUnit'):
-            if not a.get(k) and e.get(k): a[k] = e[k]
-        if a.get('custo') is None and e.get('custo') is not None:
-            a['custo'], a['semCusto'], a['trecho'] = e['custo'], e.get('semCusto'), e.get('trecho')
-        a['documentos'].append({'data': e.get('dataDoc'), 'categoria': e.get('categoria'), 'link': e.get('link')})
-    for e in out:
-        e['status'] = 'sem-custo' if e.get('semCusto') else ('ok' if e.get('custo') is not None and e.get('percentual') and e.get('dataCom') else 'revisar')
-        for k in ('link', 'categoria', 'protocolo'): e.pop(k, None)
+        e.setdefault('documentos', [{'data': e.get('dataDoc'), 'categoria': e.get('categoria'), 'link': e.get('link')}])
+        alvo = None
+        for g in reversed(grupos):
+            if g[0]['codigoCVM'] != e['codigoCVM']: break
+            ref = g[-1]
+            perto = _dias(ref['dataDoc'], e['dataDoc']) <= 180
+            pct_ok = not ref.get('_pct') or not e.get('percentual') or abs(ref['_pct'] - e['percentual']) < 1e-6
+            dc_ok = not ref.get('_dc') or not e.get('dataCom') or _dias(ref['_dc'], e['dataCom']) <= 45
+            if perto and (pct_ok or (e.get('custo') is None and _dias(ref['dataDoc'], e['dataDoc']) <= 3)) and dc_ok:
+                alvo = g; break
+        if alvo is None:
+            grupos.append([e]); e['_pct'] = e.get('percentual'); e['_dc'] = e.get('dataCom'); continue
+        alvo.append(e)
+        if not alvo[0].get('_pct') and e.get('percentual'): alvo[0]['_pct'] = e['percentual']
+        if not alvo[0].get('_dc') and e.get('dataCom'): alvo[0]['_dc'] = e['dataCom']
+        alvo[-1]['_pct'], alvo[-1]['_dc'] = alvo[0]['_pct'], alvo[0]['_dc']
+    out = []
+    for g in grupos:
+        b = dict(g[0])
+        # percentual: o do documento que também traz o custo; data-com: a regra mais confiável
+        com_custo = [x for x in g if x.get('custo') is not None]
+        pcts = [x['percentual'] for x in (com_custo or g) if x.get('percentual')] or [x['percentual'] for x in g if x.get('percentual')]
+        b['percentual'] = pcts[0] if pcts else None
+        dcs = sorted([x for x in g if x.get('dataCom')], key=lambda x: (x.get('prioData', 9), x.get('dataDoc') or ''))
+        b['dataCom'] = dcs[0]['dataCom'] if dcs else ''
+        # custo: o do documento mais recente que não seja só proposta ("se aprovado")
+        cs = sorted(com_custo, key=lambda x: (not x.get('proposta'), x.get('dataDoc') or ''))
+        if cs:
+            c = cs[-1]; b['custo'], b['semCusto'], b['trecho'], b['custoUnit'] = c['custo'], c.get('semCusto'), c.get('trecho'), c.get('custoUnit')
+        b['documentos'] = [d for x in g for d in x.get('documentos', [])]
+        b['janelas'] = [j for x in g for j in (x.get('janelas') or [])][:6] if (b.get('custo') is None or not b.get('percentual') or not b.get('dataCom')) else []
+        b['status'] = 'sem-custo' if b.get('semCusto') else ('ok' if b.get('custo') is not None and b.get('percentual') and b.get('dataCom') else 'revisar')
+        for k in ('link', 'categoria', 'protocolo', '_pct', '_dc', 'prioData', 'proposta'): b.pop(k, None)
+        if not b['janelas']: b.pop('janelas', None)
+        out.append(b)
     out.sort(key=lambda e: (e.get('dataCom') or e.get('dataDoc') or '', e.get('empresa') or ''))
     return out
 
@@ -204,7 +226,8 @@ def main():
     if os.path.exists(ESTADO):
         try: estado = json.load(open(ESTADO, encoding='utf-8'))
         except Exception: pass
-    lidos = set(estado.get('lidos', []))
+    lidos = set() if os.environ.get('REFAZER') == '1' else set(estado.get('lidos', []))
+    if os.environ.get('REFAZER') == '1': base = {'eventos': []}
     eventos = {(e['codigoCVM'], e.get('protocolo')): e for e in base.get('eventos', [])}
     novos = revisar = falhas = baixados = achados = 0
     for ano in anos:
@@ -240,7 +263,8 @@ def main():
             ev = {'codigoCVM': cvm, 'empresa': r.get('Nome_Companhia'), 'tickers': tickers.get(cvm, []),
                   'dataDoc': (r.get('Data_Entrega') or '')[:10], 'categoria': r.get('Categoria'), 'protocolo': prot,
                   'link': r.get('Link_Download'), 'dataCom': a['dataCom'], 'percentual': a['percentual'],
-                  'custo': a['custo'], 'custoUnit': a.get('custoUnit'), 'semCusto': a['semCusto'], 'status': st, 'trecho': a['trecho']}
+                  'custo': a['custo'], 'custoUnit': a.get('custoUnit'), 'semCusto': a['semCusto'], 'status': st, 'trecho': a['trecho'],
+                  'prioData': a.get('prioData', 9), 'proposta': a.get('proposta', False), 'janelas': a.get('janelas', [])}
             if MODO == 'diagnostico':
                 print('    DIAG', json.dumps({k: ev[k] for k in ('empresa', 'tickers', 'dataDoc', 'dataCom', 'percentual', 'custo', 'status', 'trecho')}, ensure_ascii=False))
                 if st == 'revisar' or a['percentual'] is None or not a['dataCom']:
