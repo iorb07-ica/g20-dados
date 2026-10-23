@@ -1,0 +1,88 @@
+name: Proventos EUA - base
+# out/2026: monta em dados/proventos/us/ a base de proventos dos EUA (ações, REITs e ETFs),
+# um arquivo por ativo, lida pela Minha Carteira e pelo push dos caraminguás.
+# Fonte: Polygon (plano gratuito), segredo POLYGON_API_KEY. Script: scripts/proventos_us.py.
+# Roda sozinha de segunda a sexta às 22h30 (Brasília) no modo atualizar, e também pelo botão
+# "Run workflow" na aba Actions, escolhendo o modo:
+#   atualizar   = rotina diária: data ex de 60 dias atrás até 400 dias à frente (poucos minutos)
+#   completo    = carga desde o ano inicial, mês a mês (a primeira vez). Leva algumas horas;
+#                 se parar no limite de tempo, rodar de novo continua de onde parou
+#   diagnostico = não grava nada; mostra no log uma amostra da última semana
+# Depois atualiza a agenda dos próximos pagamentos (dados/proventos/agenda.json).
+on:
+  schedule:
+    - cron: '30 1 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'Modo'
+        type: choice
+        options: [atualizar, completo, diagnostico]
+        default: atualizar
+      ano_inicio:
+        description: 'Ano inicial (modo completo)'
+        required: false
+        default: '2016'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  carga:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    concurrency:
+      group: proventos-us
+      cancel-in-progress: false
+    outputs:
+      mudou: ${{ steps.gravar.outputs.mudou }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Montar a base
+        env:
+          MODO: ${{ inputs.modo || 'atualizar' }}
+          ANO_INICIO: ${{ inputs.ano_inicio || '2016' }}
+          POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
+          MINUTOS: '320'
+        run: python3 scripts/proventos_us.py
+      - name: Agenda de pagamentos
+        if: always()
+        run: python3 scripts/agenda_proventos.py
+      - name: Gravar no repositório (só se mudou)
+        id: gravar
+        if: always()
+        run: |
+          git config user.name "G20 Proventos EUA"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados/proventos/us 2>/dev/null || true
+          git add dados/proventos/us-estado.json 2>/dev/null || true
+          git add dados/proventos/us-indice.json 2>/dev/null || true
+          git add dados/proventos/agenda.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
+            echo "Nada novo para gravar."
+          else
+            git commit -q -m "Proventos EUA (${{ inputs.modo || 'atualizar' }}): $(date -u -d '-3 hours' +%Y-%m-%d)"
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
+          fi
+  publicar:
+    needs: carga
+    if: always() && needs.carga.outputs.mudou == 'sim'
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v5
