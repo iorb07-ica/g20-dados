@@ -89,6 +89,7 @@ R_CUSTO = [
     r'custo(?:\s+unitario)?(?:\s+de\s+aquisicao)?\s+(?:das|de\s+cada|por)\s+(?:novas?\s+)?ac(?:oes|ao)\s+bonificadas?[^.;]{0,220}?r\s?\$\s?' + R_NUM,
     r'ac(?:oes|ao)\s+bonificadas?[^.;]{0,120}?custo[^.;]{0,120}?r\s?\$\s?' + R_NUM,
     r'valor\s+(?:de\s+)?r\s?\$\s?' + R_NUM + r'\s+por\s+acao[^.;]{0,80}?(?:custo|bonificad)',
+    r'r\s?\$\s?' + R_NUM + r'\s+(?:o|como)\s+custo\s+(?:unitario\s+)?(?:de\s+aquisicao\s+)?atribuido',
 ]
 R_SEM_CUSTO = r'(nao\s+sera\s+atribuido\s+(?:valor\s+de\s+)?custo|sem\s+atribuicao\s+de\s+custo|nao\s+(?:havera|haver)\s+atribuicao\s+de\s+custo|custo\s+(?:de\s+aquisicao\s+)?(?:sera\s+)?(?:igual\s+a\s+)?(?:zero|r\s?\$\s?0,00))'
 R_PCT = [
@@ -101,6 +102,7 @@ R_PROP = r'(\d+(?:,\d+)?|uma|duas|tres)\s*(?:\([a-z ]{2,30}\)\s*)?(?:(?:nova|nov
 R_PROP2 = R_PROP
 _PALAVRAS = {'uma': 1, 'duas': 2, 'tres': 3}
 R_DATACOM = [
+    r'data[\s-]+base[^;]{0,140}?' + R_DATA,
     r'posic(?:ao|oes)\s+(?:acionarias?\s+)?(?:final|finais|existentes?|em\s+aberto)?[^;]{0,120}?' + R_DATA,
     r'data[\s-]+(?:base|com)[^;]{0,140}?' + R_DATA,
     r'fechamento\s+do\s+pregao\s+(?:do\s+dia\s+|de\s+)?' + R_DATA,
@@ -125,6 +127,9 @@ def analisar(txt):
                 ini = max(0, m.start() - 40); out['trecho'] = t[ini:m.end() + 20][:300]
                 break
             except ValueError: pass
+    if out['custo'] is None and re.search(r'leilao|alienou\s+a\s+totalidade|agrupadas\s+em\s+numeros?\s+inteiros|foram\s+(?:devidamente\s+)?creditadas', t) \
+            and not re.search(r'custo\s+(?:unitario\s+)?(?:de\s+aquisicao\s+)?atribuido', t):
+        return None
     if out['custo'] is None:
         m = re.search(R_SEM_CUSTO, t)
         if m: out['custo'] = 0.0; out['semCusto'] = True; out['trecho'] = t[max(0, m.start() - 60):m.end() + 40][:300]
@@ -145,6 +150,13 @@ def analisar(txt):
     for i, rx in enumerate(R_DATACOM):
         m = re.search(rx, t)
         if m and data_br(m.group(1)): out['dataCom'] = data_br(m.group(1)); out['prioData'] = i; break
+    if not out['dataCom']:
+        # "negociadas ex-bonificação a partir de 02/05/2016": data-com é o dia útil anterior
+        m = re.search(r'ex[\s-]*(?:direitos?\s+(?:a|à)\s+)?(?:direito|bonificac\w*)[^;]{0,80}?(?:a\s+partir\s+(?:de|do\s+dia)|em)\s+' + R_DATA, t)
+        if m and data_br(m.group(1)):
+            d = datetime.date.fromisoformat(data_br(m.group(1))) - datetime.timedelta(days=1)
+            while d.weekday() >= 5: d -= datetime.timedelta(days=1)
+            out['dataCom'] = d.isoformat(); out['prioData'] = 8
     out['proposta'] = bool(out['custo']) and bool(re.search(r'se\s+aprovad', out.get('trecho') or ''))
     if out['custo'] is None or out['percentual'] is None or not out['dataCom']:
         out['janelas'] = [t[max(0, m.start() - 150):m.start() + 250] for pal in ('custo', 'bonific') for m in list(re.finditer(pal, t))[:2]]
