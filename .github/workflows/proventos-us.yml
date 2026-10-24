@@ -8,6 +8,7 @@ name: Proventos EUA - base
 #   completo    = carga desde o ano inicial, mês a mês (a primeira vez). Leva algumas horas;
 #                 se parar no limite de tempo, rodar de novo continua de onde parou
 #   diagnostico = não grava nada; mostra no log uma amostra da última semana
+# Só entram ativos listados (NYSE, Nasdaq, NYSE American, NYSE Arca e Cboe); balcão (OTC) fica fora.
 # Depois atualiza a agenda dos próximos pagamentos (dados/proventos/agenda.json).
 on:
   schedule:
@@ -57,6 +58,7 @@ jobs:
           git add dados/proventos/us 2>/dev/null || true
           git add dados/proventos/us-estado.json 2>/dev/null || true
           git add dados/proventos/us-indice.json 2>/dev/null || true
+          git add dados/proventos/us-bolsas.json 2>/dev/null || true
           git add dados/proventos/agenda.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "mudou=nao" >> "$GITHUB_OUTPUT"
