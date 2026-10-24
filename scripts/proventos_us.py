@@ -25,6 +25,10 @@ Modos (variável MODO):
   diagnostico = não grava nada; mostra no log uma amostra. Com o ano inicial antes do ano
                 passado, a amostra é de janeiro daquele ano (para testar se há dados antigos);
                 senão, da última semana
+Bolsas: só entram ativos que são ou foram listados na NYSE, Nasdaq, NYSE American, NYSE Arca
+ou Cboe (lista da própria Polygon, ativos e já saídos da bolsa, refeita uma vez por semana em
+dados/proventos/us-bolsas.json). Balcão (OTC) fica de fora, e arquivos de quem não é
+listado são apagados.
 Também grava dados/proventos/us-indice.json: {"atualizado", "completo", "tickers": [...]}.
 Com "completo": true, ativo fora da lista é ativo que não pagou proventos no período
 (a Minha Carteira não precisa consultar a Polygon por ele).
@@ -37,6 +41,11 @@ RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 PASTA = os.path.join(RAIZ, 'dados', 'proventos', 'us')
 ESTADO = os.path.join(RAIZ, 'dados', 'proventos', 'us-estado.json')
 INDICE = os.path.join(RAIZ, 'dados', 'proventos', 'us-indice.json')
+BOLSAS = os.path.join(RAIZ, 'dados', 'proventos', 'us-bolsas.json')
+# Bolsas onde os alunos conseguem comprar (Avenue, Inter etc.): NYSE, Nasdaq, NYSE American,
+# NYSE Arca (ETFs) e Cboe. Quem só existe no balcão (OTC) fica fora da base.
+LISTA_BOLSAS = ['XNYS', 'XNAS', 'XASE', 'ARCX', 'BATS']
+LISTADOS = None
 CHAVE = os.environ.get('POLYGON_API_KEY', '').strip()
 MODO = (os.environ.get('MODO') or 'atualizar').strip()
 ANO_INICIO = int(os.environ.get('ANO_INICIO') or '2016')
@@ -99,7 +108,7 @@ def normalizar(x):
     t = str(x.get('ticker') or '').upper()
     ex = str(x.get('ex_dividend_date') or '')[:10]
     v = x.get('cash_amount')
-    if not TICKER_OK.match(t) or FUNDO_MUTUO.match(t) or not ex or not isinstance(v, (int, float)) or v <= 0:
+    if not TICKER_OK.match(t) or FUNDO_MUTUO.match(t) or (LISTADOS is not None and t not in LISTADOS) or not ex or not isinstance(v, (int, float)) or v <= 0:
         return None, None
     moeda = (x.get('currency') or 'USD').upper()
     if moeda != 'USD':
@@ -149,6 +158,52 @@ def janela(ini, fim, hoje):
     return n
 
 
+def carregar_bolsas(hoje):
+    """Lista de quem é ou foi listado nas bolsas. Refaz se tiver mais de 7 dias."""
+    global LISTADOS
+    est = {}
+    if os.path.exists(BOLSAS):
+        try: est = json.load(open(BOLSAS, encoding='utf-8'))
+        except Exception: est = {}
+    idade = 999
+    try: idade = (hoje - datetime.date.fromisoformat(est.get('atualizado', '2000-01-01'))).days
+    except Exception: pass
+    if idade >= 7 or len(est.get('tickers') or []) < 5000:
+        print('Atualizando a lista de ativos listados nas bolsas...')
+        novos, ok = set(), True
+        for b in LISTA_BOLSAS:
+            for ativo in ('true', 'false'):
+                url = ('https://api.polygon.io/v3/reference/tickers?market=stocks&exchange=%s&active=%s&limit=1000&sort=ticker&order=asc' % (b, ativo))
+                n0, pag = len(novos), 0
+                try:
+                    while url and pag < 200:
+                        d = consultar(com_chave(url)); pag += 1
+                        for x in d.get('results') or []:
+                            if x.get('ticker'): novos.add(str(x['ticker']).upper())
+                        url = d.get('next_url')
+                except Exception as e:
+                    print(f'  {b} ({"ativos" if ativo == "true" else "saídos"}): erro {e}'); ok = False
+                print(f'  {b} ({"ativos" if ativo == "true" else "saídos"}): +{len(novos) - n0} em {pag} página(s)')
+        if ok and len(novos) >= 5000:
+            est = {'atualizado': hoje.isoformat(), 'bolsas': LISTA_BOLSAS, 'tickers': sorted(novos)}
+            json.dump(est, open(BOLSAS, 'w', encoding='utf-8'), separators=(',', ':'))
+        else:
+            print('  Lista incompleta: mantida a anterior' if est.get('tickers') else '  Lista incompleta: sem filtro de bolsa nesta rodada')
+    if len(est.get('tickers') or []) >= 5000:
+        LISTADOS = set(est['tickers'])
+        print(f'Ativos listados nas bolsas: {len(LISTADOS)}')
+
+
+def podar(hoje):
+    """Apaga arquivos de ativos que não são nem foram listados nas bolsas."""
+    if LISTADOS is None or not os.path.isdir(PASTA): return
+    n = 0
+    for f in os.listdir(PASTA):
+        if f.endswith('.json') and (f[:-5] not in LISTADOS or FUNDO_MUTUO.match(f[:-5])):
+            os.remove(os.path.join(PASTA, f)); n += 1
+    print(f'Fora das bolsas (balcão) apagados: {n}')
+
+
 def gravar_indice(hoje):
     est = {}
     if os.path.exists(ESTADO):
@@ -166,6 +221,7 @@ def main():
     hoje = hoje_sp()
     h = hoje.isoformat()
     print(f'Modo {MODO}; hoje {h}')
+    carregar_bolsas(hoje)
     if MODO == 'diagnostico':
         if ANO_INICIO < hoje.year - 1:
             janela(f'{ANO_INICIO}-01-01', f'{ANO_INICIO}-01-31', h)
@@ -174,6 +230,7 @@ def main():
         return 0
     if MODO == 'atualizar':
         janela((hoje - datetime.timedelta(days=60)).isoformat(), (hoje + datetime.timedelta(days=400)).isoformat(), h)
+        podar(hoje)
         gravar_indice(h)
         return 0
     # completo: mês a mês, retomando de onde parou
@@ -213,6 +270,7 @@ def main():
         est['cargaCompleta'] = True; est['desde'] = min(ini_ant, f'{ANO_INICIO}-01-01')
         json.dump(est, open(ESTADO, 'w', encoding='utf-8'))
         print('Carga completa concluída.')
+    podar(hoje)
     gravar_indice(h)
     return 0
 
