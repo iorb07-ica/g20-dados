@@ -1,35 +1,7 @@
 {
- "atualizado": "2026-10-23",
+ "atualizado": "2026-10-24",
  "fonte": "CVM, dados abertos (IPE): fatos relevantes e avisos aos acionistas",
  "eventos": [
-  {
-   "codigoCVM": "21091",
-   "empresa": "DEXCO S.A.",
-   "tickers": [
-    "DXCO3"
-   ],
-   "dataDoc": "2016-02-16",
-   "dataCom": "",
-   "percentual": 3.9541346,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "vendo os acionistas que assim desejarem informar sua opcao pela ut ilizacao desses juros no respectivo boletim de subscricao. os acionistas com acoes custodiadas na central depositaria de ativos da bm&fbovespa deverao exercer os respectivos direitos por meio de seus a gentes de custodia (corretoras), de acordo com as regr as e prazos estipulados pela propria central depositaria de ativos da bm&fbo",
-    "acionistas com acoes custodiadas na central depositaria de ativos da bm&fbovespa deverao exercer os respectivos direitos por meio de seus a gentes de custodia (corretoras), de acordo com as regr as e prazos estipulados pela propria central depositaria de ativos da bm&fbovespa. os acionistas com acoes custodiadas no itau : (a) para pagamento em dinheiro, deverao comparecer em qualquer agencia do it",
-    " que sao negociadas, identificando: as tabelas a seguir mostram, para os periodos indicados, as cotacoes ajustadas por eventos, tais como grupamento, bonificacao e subscricao: i - cotacao minima, media e maxima de cada ano, nos ultimos 3 (tres) anos: ano acoes on r$ minima media maxima 2013 10,39 12,29 14,41 2014 7,40 9,43 11,95 2015 5,26 7,29 9,24 fonte: economatica ii - cotacao minima, media e m",
-    "o s aumentos de capital realizados pela companhia nos ultimos 3 (tres) anos fo ram efetuados em razao ( i) de capitalizacao de r eserva de lucros com bonificacao em acoes , cujas acoes emitidas foram atribuidas gratuitamente aos acionistas da companhia e (ii) de conversao de debentures, cujo preco de emissao foi estabelecido de acordo com os criterios fixados na escritura particular da primeira em"
-   ],
-   "documentos": [
-    {
-     "data": "2016-02-16",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=501410&numSequencia=44158&numVersao=2"
-    }
-   ]
-  },
   {
    "codigoCVM": "21490",
    "empresa": "ALUPAR INVESTIMENTO S/A",
@@ -51,34 +23,6 @@
      "data": "2016-04-20",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=511604&numSequencia=54352&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2016-02-03",
-   "dataCom": "2016-04-20",
-   "percentual": 10.0,
-   "custo": 15.845572693,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "ok",
-   "trecho": "te. vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$ 15,845572693 por acao, independe",
-   "documentos": [
-    {
-     "data": "2016-02-03",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=499775&numSequencia=42523&numVersao=1"
-    },
-    {
-     "data": "2016-04-04",
-     "categoria": "Comunicado ao Mercado",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=508844&numSequencia=51592&numVersao=1"
     }
    ]
   },
@@ -156,49 +100,24 @@
     "BBDC3",
     "BBDC4"
    ],
-   "dataDoc": "2016-06-09",
-   "dataCom": "2016-06-20",
+   "dataDoc": "2016-02-03",
+   "dataCom": "2016-05-03",
    "percentual": 10.0,
-   "custo": null,
+   "custo": 15.845572693,
    "custoUnit": null,
    "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "res a que tem direito; e b) aqueles com acoes depositadas na bm&fbovespa, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. cidade de deus , osasco, sp, 9 de junho de 2016 banco bradesco s.a. luiz carlos angelotti diretor gerente e diretor de relacoes com investidores ",
-    "es, mercadorias e futuros (bm&fbovespa) no dia 3 passado , alienou a totalidade das acoes resultantes das fracoes de acoes decorrentes da operacao de bonificacao de 10% em acoes ( 1 nova acao, da mesma especie, para cada 10 acoes possuidas) , aprovada na assembl eia geral extraordinaria realizada em 10.3.2016. na oportunidade, foram alienadas 29.298 acoes ordinarias e 265.814 preferenciais, todas "
-   ],
+   "status": "ok",
+   "trecho": " por oportuno, informa tambem que: e de r$15,845572693 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
-     "data": "2016-06-09",
+     "data": "2016-02-03",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=499775&numSequencia=42523&numVersao=1"
+    },
+    {
+     "data": "2016-04-04",
      "categoria": "Comunicado ao Mercado",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=520123&numSequencia=62871&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "19909",
-   "empresa": "BR MALLS PARTICIPAÇOES S.A.",
-   "tickers": [
-    "BRML3"
-   ],
-   "dataDoc": "2016-06-29",
-   "dataCom": "",
-   "percentual": 30.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "oes depositadas na bm&fbovespa bolsa de valores, mercadorias e futuros, por intermedio das instituicoes e/ou correto ras que man tem suas posicoes em custodia. br malls participacoes s.a. diretor de relacao com investidores frederico da cunha villa sobre a brmalls a brmalls e a maior empresa integrada de shopping centers do brasil, com participacao em 4 5 shoppings, que totalizam 1.638,1 mil m de ",
-    " seus acionistas, em complemento ao comunicado enviado no dia 2 de maio de 2016, que as fracoe s resultantes do aumento de capital social por meio de bonificacao de 30% em acoes, aprovada em assembleia geral ordinaria em 30 de abril de 2016, foram agrupadas em numero inteiros (totalizando 514) e vendidas em leilao realizado no dia 16 de junho de 2016 na bm&bovespa. o valor liquido apurado com a al"
-   ],
-   "documentos": [
-    {
-     "data": "2016-06-29",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=522022&numSequencia=64770&numVersao=1"
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=508844&numSequencia=51592&numVersao=1"
     }
    ]
   },
@@ -302,7 +221,7 @@
    "custoUnit": null,
    "semCusto": false,
    "status": "ok",
-   "trecho": "e. vii. custo das acoes bonifica das: o custo atribuido as acoes bonificadas e de r$14,405066098 por acao, independe",
+   "trecho": " por oportuno, informa tambem que: e de r$ 14,405066098 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
      "data": "2017-02-06",
@@ -368,11 +287,6 @@
      "data": "2017-05-03",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=562217&numSequencia=104965&numVersao=1"
-    },
-    {
-     "data": "2017-07-21",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=572311&numSequencia=115111&numVersao=1"
     }
    ]
   },
@@ -395,33 +309,6 @@
      "data": "2017-05-16",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=565207&numSequencia=107955&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2017-06-23",
-   "dataCom": "2017-07-03",
-   "percentual": 10.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    " financeira por eles indicadas; e b) aqueles com acoes depositadas na b3, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. os acionistas que nao possuirem seus dados atua lizados deverao apresentar -se na agencia bradesco de sua preferencia, munidos de cpf, rg e comprovante de residencia, para atualizacao cadastral e recebimento dos respectivos valores a que te",
-    "a b3 s.a. - brasil, bolsa, balcao (b3) no dia 21 passado, alienou a totalidade das acoes resu ltantes das fracoes de acoes decorrentes da operacao de bonificacao de 10% em acoes (1 nova acao, da mesma especie, para cada 10 acoes possuidas), aprovada na assembleia geral extraordinaria realizada em 10.3.2017. na oportunidade, foram alienadas 19.624 acoes ordinarias e 170.349 preferenciais, todas nom"
-   ],
-   "documentos": [
-    {
-     "data": "2017-06-23",
-     "categoria": "Comunicado ao Mercado",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=569074&numSequencia=111862&numVersao=1"
     }
    ]
   },
@@ -463,19 +350,11 @@
    "dataDoc": "2018-02-27",
    "dataCom": "2018-04-27",
    "percentual": 30.0,
-   "custo": null,
+   "custo": 4.0688,
    "custoUnit": null,
    "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    " weg s.a. companhia aberta cnpj sob n 84.429.695/0001-11 fato relevante proposta de aumento de capital com bonificacao de acoes em atendimento as disposicoes da instrucao cvm n. 358, a weg s .a. (\"weg\") (b3: wege3 / otc: wegzy), comunica aos seus acionistas e ao mer cado em geral que o conselho de administracao, em reuniao realizada nes ta data, deliberou",
-    "00. esse aumento cor respondera a emissao de 484.305.923 novas acoes ordinarias. em consequencia dessa proposta, os acionistas receberao, a titulo de bonificacao, 3 ( tres) novas acoes ordinarias para cada 10 (dez) acoes ordinarias ja possuidas na data de realizacao da ago/e. apos aprovacao pelos acionistas em assembleia geral, as acoes d e emissao da companhia serao negociadas na b3, ex-direito a",
-    "undas da bonificacao serao incorporadas a posicao dos acionistas em 27 de abril de 2018, estando disponiveis em 30 de abril de 2018; e de r$ 4,0688 o custo unitario atribuido as acoes bonificadas , de conformidade com o disposto no paragrafo primeiro do artigo 47 da instrucao normat iva da secretaria da receita federal n 1.022, de 05 de abril de 2010, que constara do \"comprovante de acoes escritur",
-    "o; e b) aqueles com acoes depositadas na b3 s.a. brasil, bolsa, ba lcao, por intermedio das instituicoes e/ou corretoras que mantem suas pos icoes em custodia. a partir de 25 de abril de 2018, inclusive, as acoes que compoe m o capital social participarao em igualdade de condicoes dos juros sobre o capital proprio e/o u dividendos que vierem a ser declarados, bem como, de forma integral, a eventua",
-    " weg s.a. companhia aberta cnpj sob n 84.429.695/0001-11 aviso aos acionistas aumento de capital com bonificacao de acoes a weg s.a. (b3: wege3 / otc: wegzy), comunica aos seus acionist as e ao mercado em geral que, a assembleia geral ordinaria e extraordinaria, reali zada em 24 de abril de 2018, aprovou o aumento do capital social da companhia, no ",
-    "provou o aumento do capital social da companhia, no montante d e r$ 1.970.543.940,00, elevando-o de r$ 3.533.972.568,00 para r$ 5.504.516.508,00, com bonificacao de 30% das acoes (tres novas acoes, da mesma especie, para cada 10 acoes p ossuidas). em decorrencia dessa aprovacao, informamos que: serao beneficiados os acionistas que estiverem inscritos nos r egistros da companhia em 24 de abril de 2"
-   ],
+   "status": "ok",
+   "trecho": "isponiveis em 30 de abril de 2018; e de r$ 4,0688 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
      "data": "2018-02-27",
@@ -520,7 +399,7 @@
     "ITSA4"
    ],
    "dataDoc": "2018-05-24",
-   "dataCom": "2018-05-30",
+   "dataCom": "2018-05-24",
    "percentual": 10.0,
    "custo": 6.536570679,
    "custoUnit": null,
@@ -537,33 +416,6 @@
      "data": "2018-05-25",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=625755&numSequencia=160794&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2018-05-30",
-   "dataCom": "2018-06-05",
-   "percentual": 10.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "anceira por eles indicadas; e b) aos que tiverem acoes depositadas na b3, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. os acionistas que nao possuirem seus dados atualizados deverao apresentar -se na agencia bradesco de sua preferencia, munidos de cpf, rg e comprovante de residencia, para atualizacao cadastral e recebimento dos respectivos valores a que tem",
-    "a b3 s.a. - brasil, bolsa, balcao (b3) no dia 24 passado, alienou a totalidade das acoes resul tantes das fracoes de acoes decorrentes da operacao de bonificacao de 10% em acoes (1 nova acao, da mesma especie, para cada 10 acoes possuidas), aprovada na assembleia geral extraordinaria realizada em 12.3.2018. na oportunidade, foram alienadas 16.118 acoes ordinarias e 124.804 preferenciais, todas nom"
-   ],
-   "documentos": [
-    {
-     "data": "2018-05-30",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=626304&numSequencia=161238&numVersao=1"
     }
    ]
   },
@@ -599,7 +451,7 @@
     "EGIE6"
    ],
    "dataDoc": "2018-10-31",
-   "dataCom": "2018-12-17",
+   "dataCom": "2018-12-11",
    "percentual": 25.0,
    "custo": null,
    "custoUnit": null,
@@ -608,21 +460,13 @@
    "trecho": "",
    "janelas": [
     "ia@engie.com engie brasil energia s.a. companhia aberta cnpj 02.474.103/0001 -19 nire 4230002438 -4 fato relevante proposta de aumento de capital com bonificacao de acoes engie brasil energia s.a. (companhia), sociedade por acoes, com registro de companhia aberta perante a comissao de valores mobiliarios (cvm), em cumprimento ao disposto no artigo 157, 4, da lei n 6.404, de 15 de dezembro de 1976 ",
-    "vado com a emissao de 163.185.548 novas acoes ordinarias , escriturais e sem valor nominal, que serao atribuidas aos detentores de acoes, a titulo de bonificacao, na proporcao de 1 (uma) nova acao para cada 4 (quatro) acoes ordinaria s ja possuida s na data -base de 11 de dezembro de 2018 . dessa forma, em razao do aumento de capital, o capital social da companhia passara a ser de r$ 4.902.647.710",
-    "a estendido aos adrs ( american depositary receipts ), negociados no mercado de balcao norte americano, na mesma proporcao das acoes bonificadas. 10. custo das acoes bonificadas : para fins do disposto no artigo 10 da lei n 9.249, de 26 de dezembro de 1995, conforme alterada, e no 1 do artigo 47 da instrucao normativa rfb n 1.585, de 31 de agosto de 2015, conforme alterada, o valor unitario atribu",
-    "e.com engie brasil energia s.a. companhia aberta cnpj 02.474.103/0001 -19 nire 4230002438 -4 aviso aos acionistas aprovacao de aumento de capital com bonificacao de acoes engie brasil energia s.a. (companhia ), sociedade por acoes, com registro de companhia aberta perante a comissao de valores mobiliarios ( cvm ), vem pelo presente, em complemento ao fato relevante divulgado em 31 de outubro de 20",
-    " da usina hidreletrica ponte de pedra, no valor de r $ 4.165.733,17; e (iii) lucro liquido do 3 trimestre de 2018, no valor de r$ 475.069.170,85 . 2. bonificacao de acoes : em razao do aumento de capital, serao emitidas 163.185.548 novas acoes ordinarias, escriturais e sem valor nominal, distribuidas aos acionistas da companhia , a titulo de bonificacao, na proporcao de 1 (uma) nova acao para cada"
+    "vado com a emissao de 163.185.548 novas acoes ordinarias , escriturais e sem valor nominal, que serao atribuidas aos detentores de acoes, a titulo de bonificacao, na proporcao de 1 (uma) nova acao para cada 4 (quatro) acoes ordinaria s ja possuida s na data -base de 11 de dezembro de 2018 . dessa forma, em razao do aumento de capital, o capital social da companhia passara a ser de r$ 4.902.647.710"
    ],
    "documentos": [
     {
      "data": "2018-10-31",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=648239&numSequencia=180348&numVersao=1"
-    },
-    {
-     "data": "2018-12-07",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=655049&numSequencia=186060&numVersao=1"
     }
    ]
   },
@@ -651,6 +495,35 @@
      "data": "2018-12-20",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=657815&numSequencia=188677&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "906",
+   "empresa": "BANCO BRADESCO S.A.",
+   "tickers": [
+    "BBDC3",
+    "BBDC4"
+   ],
+   "dataDoc": "2019-02-07",
+   "dataCom": "",
+   "percentual": null,
+   "custo": 5.95250665,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "e . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$5,952506650 por acao, independe",
+   "janelas": [
+    "respectivos valores serao disponibilizados a os acionistas que fizerem jus. detalhes adicionais serao informados aos acionistas, oportunamente . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$5,952506650 por acao, independentemente da especie, para os fins do disposto no artigo 10 da lei no 9.249/95 (com nova redacao dada pela lei no 12.973/14), e no paragrafo prim",
+    "nibilizados a os acionistas que fizerem jus. detalhes adicionais serao informados aos acionistas, oportunamente . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$5,952506650 por acao, independentemente da especie, para os fins do disposto no artigo 10 da lei no 9.249/95 (com nova redacao dada pela lei no 12.973/14), e no paragrafo primeiro do artigo 58 da instrucao ",
+    " conselho de administracao da sociedade, em reuniao realizada nesta data, registrou proposta para aumento do capital social, com reservas de lucros e bonificacao em acoes, a ser deliberado pelos acionistas na assembleia geral extraordinaria a ser realizada em 11 de marco de 2019, as 16h , conforme segue: aumento do capital social com reservas de lucros e bonificacao em acoes: aumentar o capital so",
+    "a assembleia geral extraordinaria a ser realizada em 11 de marco de 2019, as 16h , conforme segue: aumento do capital social com reservas de lucros e bonificacao em acoes: aumentar o capital social em r$8.000 .000.000,00, elevando -o de r$67.100.000.000,00 para r$75.100.000.000,00 , com bonificacao em acoes, mediante a capitalizacao de parte do saldo da conta reservas de lucros - reserva estatutar"
+   ],
+   "documentos": [
+    {
+     "data": "2019-02-07",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=664005&numSequencia=194089&numVersao=1"
     }
    ]
   },
@@ -729,39 +602,6 @@
      "data": "2019-04-30",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=684705&numSequencia=212180&numVersao=1"
-    },
-    {
-     "data": "2019-07-29",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=702337&numSequencia=228261&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2019-02-07",
-   "dataCom": "2019-05-31",
-   "percentual": 20.0,
-   "custo": 5.95250665,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "ok",
-   "trecho": "e . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$5,952506650 por acao, independe",
-   "documentos": [
-    {
-     "data": "2019-02-07",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=664005&numSequencia=194089&numVersao=1"
-    },
-    {
-     "data": "2019-05-23",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=692081&numSequencia=218761&numVersao=1"
     }
    ]
   },
@@ -808,8 +648,8 @@
     "axima r$ 16 ,53 r$ 18 ,55 r$ 18 ,90 r$ 15 ,63 r$ 22 ,50 r$ 24 ,94 r$ 30 ,75 r$ 36 ,55 r$ 39 ,85 r$ 50 ,89 dados historicos ajustados p ara refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data -base de 17 de setembro de 2019. c) cotacao minima, media e maxima de cada mes, nos u",
     "ma r$ 11 ,30 r$ 13 ,03 r$ 20 ,05 media r$ 14 ,43 r$ 16 ,40 r$ 28 ,71 maxima r$ 17 ,73 r$ 22 ,50 r$ 39 ,85 dados historicos ajustados p ara refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data -base de 17 de setembro de 2019. b) cotacao minima, media e maxima de cada trimestre,",
     "maxima r$ 16 ,53 r$ 18 ,55 r$ 18 ,90 r$ 15 ,63 r$ 22 ,50 r$ 24 ,94 r$ 30 ,75 r$ 36 ,55 r$ 39 ,85 r$ 50 ,89 dados historicos ajustados para refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data -base de 17 de setembro de 2019. c) cotacao minima , media e maxima de cada mes, nos ",
-    " 2019 minima r$ 11,30 r$ 13,03 r$ 20,05 media r$ 14,43 r$ 16,40 r$ 28,71 maxima r$ 17,73 r$ 22,50 r$ 39,85 dados historicos ajustados para refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja det ida na data -base de 17 de setembro de 2019. (ii) cotacao minima, media e maxima de cada trimest",
-    " r$ 41,26 r$ 35,37 maxima r$ 18,90 r$ 15,63 r$ 22,50 r$ 24,94 r$ 30,75 r$ 36,55 r$ 39,85 r$ 50,89 r$ 42,34 dados historicos ajustados para refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data -base de 17 de setembro de 2019. (iii) cotacao minima, media e maxima de cada mes, no"
+    ",05 r$ 21,25 media(1) r$ 14,43 r$ 16,40 r$ 28,71 r$ 38,78 maxima(1) r$ 17,73 r$ 22,50 r$ 39,85 r$ 50,89 (1)dados historicos ajustados para refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data base de 17 de setembro de 2019. (2)ate 24 de julho de 2020. (ii) cotacao minima, medi",
+    " 54 maxima(1) r$ 18,90 r$ 15,63 r$ 22,50 r$ 24,94 r$ 30,75 r$ 36,55 r$ 39,85 r$ 50,89 r$ 42,34 r$ 43,48 (1)dados historicos ajustados para refletir a bonificacao em acoes aprovada na assembleia geral extraordinaria de 17 de setembro de 2019, na proporcao de 1 nova acao para cada 1 acao ordinaria ja detida na data -base de 17 de setembro de 2019. (2)ate 24 de julho de 2020. (iii) cotacao minima, me"
    ],
    "documentos": [
     {
@@ -821,11 +661,6 @@
      "data": "2020-05-06",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=759620&numSequencia=284374&numVersao=1"
-    },
-    {
-     "data": "2020-06-30",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=772640&numSequencia=297386&numVersao=1"
     },
     {
      "data": "2020-07-27",
@@ -922,7 +757,7 @@
    "custoUnit": null,
    "semCusto": false,
    "status": "ok",
-   "trecho": "e . vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas e de r$4,960422205 por acao, independe",
+   "trecho": " por oportuno, informa tambem que: e de r$4,960422205 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
      "data": "2020-02-07",
@@ -933,68 +768,6 @@
      "data": "2020-04-03",
      "categoria": "Comunicado ao Mercado",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=751850&numSequencia=276608&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "24783",
-   "empresa": "NATURA & CO HOLDING S.A.",
-   "tickers": [
-    "NTCO3"
-   ],
-   "dataDoc": "2020-05-11",
-   "dataCom": "2020-05-12",
-   "percentual": 5.25926213,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "e venha a ser limitado ao valor minimo, cria valor para os acionistas, em termos de lucro por acao, na medida em que tende a propiciar uma reducao no custo financeiro do endividamento, em termos absolutos. com excecao do acima exposto, a administracao da natura &co nao vislumbra outras consequencias juridicas ou economicas que nao as normalmente esperadas em um aumento de capital por subscricao pr",
-    "e venha a ser limitado ao valor minimo, cria valor para os acionistas, em termos de lucro por acao, na medida em que tende a propiciar uma reducao no custo financeiro do endividamento, em termos absolutos. tendo em vista que sera assegurado aos acionistas da natura &co o direito de preferencia, nos termos do artigo 171 da lei das s.a., nao havera diluicao societaria dos acionistas que subscreverem",
-    "aordinarias das duas companhias de 13 de novembro de 2019. nesse sentido, e importante ressaltar que os dados abaixo ja sao ajustados para refletir a bonificacao em acoes aprovada na referi da assembleia. a) cotacao minima, media e maxima de cada ano, nos ultimos 3 (tres) anos: jur_sp - 36740908v22 - 2324006.458570 natura cosmeticos (b3: natu3): r$ 2017 2018 2019 2020 minimo 11,24 13,03 20,05 n/a ",
-    "icao das acoes esta descrito de forma completa no item 4 do anexo a este fato relevante e aviso aos acionistas. os acionistas titulares de acoes: (i) custodiadas na central depositaria de ativos da b3 ( central depositaria ) deverao exercer o direito de subscricao por meio de seus agentes de custodia conforme prazos e procedimentos estabelecidos pela b3; e (ii) registradas na itau corretora de val",
-    "s: (i) custodiadas na central depositaria de ativos da b3 ( central depositaria ) deverao exercer o direito de subscricao por meio de seus agentes de custodia conforme prazos e procedimentos estabelecidos pela b3; e (ii) registradas na itau corretora de valores s.a., agente escriturador das acoes de emissao da natura &co ( escriturador ) deverao exercer seu direito de subscricao ate 12 de junho de",
-    "outros beneficios. as acoes a serem emitidas farao jus de forma integral a todos os beneficios, incluindo dividend os, juros sobre o capital proprio, bonificacoes e eventuais remuneracoes de capital que vierem a ser declarados pela natura &co, a partir de 7 de maio de 2020. (i) forma de pagamento. o pagamento do preco de emissao sera feito a vista, em moeda corrente nacio nal, no ato de subscricao"
-   ],
-   "documentos": [
-    {
-     "data": "2020-05-11",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=760635&numSequencia=285389&numVersao=2"
-    },
-    {
-     "data": "2020-05-11",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=760634&numSequencia=285388&numVersao=2"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2020-06-03",
-   "dataCom": "2020-06-12",
-   "percentual": 10.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "anceira por eles indicadas; e b) aos que tiverem acoes depositadas na b3, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. os acionistas que nao possuirem seus dados a tualizados deverao apresentar -se na agencia bradesco de sua preferencia, munidos de cpf, rg e comprovante de residencia, para atualizacao cadastral e recebimento dos respectivos valores a que te",
-    "a b3 s.a. - brasil, bolsa, balcao (b3) no dia 1o.6.2020 , alienou a totalidade das acoes resul tantes das fracoes de acoes decorrentes da operacao de bonificacao de 10% em acoes ( 1 nova ac ao para cada 10 acoes da mesma especie possuidas), aprovada na assembleia geral extraordinaria realizada em 10.3.2020 . na oportunidade, foram alienadas 21.640 acoes ordinarias e 128.999 preferenciais, todas no"
-   ],
-   "documentos": [
-    {
-     "data": "2020-06-03",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=766348&numSequencia=291100&numVersao=1"
     }
    ]
   },
@@ -1103,7 +876,7 @@
    "custoUnit": null,
    "semCusto": false,
    "status": "ok",
-   "trecho": "nte . vii.custo das acoes bonificadas :ocusto atribuido asacoes bonificadas sera der$4,527177676 por acao, independe",
+   "trecho": " por oportuno, informa tambem que: e de r$ 4,527177676 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
      "data": "2021-02-03",
@@ -1173,33 +946,6 @@
    ]
   },
   {
-   "codigoCVM": "906",
-   "empresa": "BANCO BRADESCO S.A.",
-   "tickers": [
-    "BBDC3",
-    "BBDC4"
-   ],
-   "dataDoc": "2021-06-11",
-   "dataCom": "2021-06-21",
-   "percentual": 10.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "anceira por eles indicadas; e b) aos que tiverem acoes depositadas na b3, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. os acionistas que nao possuirem seus dados atualizados deverao apresentar -se na agencia brades co de sua preferencia, munidos de cpf, rg e comprovante de residencia, para atualizacao cadastral e recebimento dos respectivos valores a que te",
-    " na b3 s.a. - brasil, bolsa, balcao (b3) no dia 9.6.2021, alienou a totalidade das acoes resultantes das fracoes de acoes decorrentes da operac ao de bonificacao de 10% em acoes (1 nova acao para cada 10 acoes da mesma especie possuida), aprovada na assembleia geral extraordinaria realizada em 10.3.2021. na oportunidade, foram alienadas 39.288 acoes ordinarias e 223.943 preferenciais, todas nomi n"
-   ],
-   "documentos": [
-    {
-     "data": "2021-06-11",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=875924&numSequencia=400661&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "94",
    "empresa": "PANATLANTICA SA",
    "tickers": [
@@ -1207,7 +953,7 @@
     "PATI4"
    ],
    "dataDoc": "2021-08-04",
-   "dataCom": "",
+   "dataCom": "2021-08-03",
    "percentual": null,
    "custo": 33.0943440196,
    "custoUnit": null,
@@ -1263,6 +1009,34 @@
    ]
   },
   {
+   "codigoCVM": "18724",
+   "empresa": "BRADESPAR S/A",
+   "tickers": [
+    "BRAP3",
+    "BRAP4"
+   ],
+   "dataDoc": "2021-09-21",
+   "dataCom": "2021-09-20",
+   "percentual": null,
+   "custo": 36.840441015,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "tando disponiveis em 24.9.2021; 4) e de r$36,840441015 o custo unitario atribuido as acoes bonificada",
+   "janelas": [
+    "emitidas em razao da bonificacao serao incorporadas a posicao dos acionistas em 23.9.2021, estando disponiveis em 24.9.2021; 4) e de r$36,840441015 o custo unitario atribuido as acoes bonificadas, em conformidade com o disposto no artigo 10 da lei no 9.249, de 26.12.1995 (com nova redacao dada pela lei no 12.973, de 13.5.2014), e no paragrafo primeiro do artigo 58 da instrucao normativa no 1.585, ",
+    "anhia) vem prestar informacoes adicionais relativas ao aumento do seu capital social, deliberado pelo conselho de administracao , na mesma data , com bonificacao em acoes , na proporcao de 1,295 (um inteiro e duzentos e noventa e cinco milesimos) de nova acao para cada 10 (dez) acoes da mesma especie e emissao da bradespar , que serao atribuidas gratuitamente aos acionistas , quais sejam: 1) foram",
+    " registros da bradespar na data -base de 20.9.2021. 2) a partir de hoje , 21.9.2021 , as acoes de emissao da companhia passarao a ser negociadas ex - bonificacao; 3) as acoes emitidas em razao da bonificacao serao incorporadas a posicao dos acionistas em 23.9.2021, estando disponiveis em 24.9.2021; 4) e de r$36,840441015 o custo unitario atribuido as acoes bonificadas, em conformidade com o dispos"
+   ],
+   "documentos": [
+    {
+     "data": "2021-09-21",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=902373&numSequencia=427107&numVersao=1"
+    }
+   ]
+  },
+  {
    "codigoCVM": "8133",
    "empresa": "LOJAS RENNER SA",
    "tickers": [
@@ -1287,11 +1061,33 @@
      "data": "2021-11-04",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=913176&numSequencia=437910&numVersao=1"
-    },
+    }
+   ]
+  },
+  {
+   "codigoCVM": "20745",
+   "empresa": "SLC AGRICOLA SA",
+   "tickers": [
+    "SLCE3"
+   ],
+   "dataDoc": "2021-11-10",
+   "dataCom": "",
+   "percentual": 10.0,
+   "custo": 25.89,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "19.311.14 5 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 25,89 (vinte e cinco reai",
+   "janelas": [
+    "rvas estatutarias , com bonificacao de acoes , a razao de 10% (dez por cento), que correspondera a emissao de 19.311.14 5 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 25,89 (vinte e cinco reais e o itenta e nove centa vos). os acionistas receberao a titulo de bo nificacao de acoes 1 (uma) nova acao ordinaria para cada 10 (dez ) acoes ordinarias de que forem titul",
+    "1) 3230 7799 fax (51) 3230 7750 www.slcagricola.com.br 1 de 2 fato relevante relacoes com investidores +55 (51) 3230.7864 /7797 ri@slcagricola.com.br bonificacao de acoes a slc agricola s.a. (b3: slce3; adrs: slcjy; bloomberg: slce3:bz; refinitiv : slce3.sa) (slc agricola) , em conson ancia com o artigo 157, paragra fo 4 da lei 6404 , confo rme alterada e na resolucao n 44 da comissao de v alores ",
+    "valor total de r$ 500.000.000,00 ( quinhentos milhoes de reais) , por meio d a incorporacao de parte do saldo da conta de reservas estatutarias , com bonificacao de acoes , a razao de 10% (dez por cento), que correspondera a emissao de 19.311.14 5 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 25,89 (vinte e cinco reais e o itenta e nove centa vos). os acionistas r"
+   ],
+   "documentos": [
     {
-     "data": "2021-12-23",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=928533&numSequencia=453267&numVersao=1"
+     "data": "2021-11-10",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=915813&numSequencia=440547&numVersao=1"
     }
    ]
   },
@@ -1346,68 +1142,6 @@
    ]
   },
   {
-   "codigoCVM": "20745",
-   "empresa": "SLC AGRICOLA SA",
-   "tickers": [
-    "SLCE3"
-   ],
-   "dataDoc": "2021-11-10",
-   "dataCom": "2022-01-05",
-   "percentual": 10.0,
-   "custo": 25.89,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "ok",
-   "trecho": "19.311.14 5 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 25,89 (vinte e cinco reai",
-   "documentos": [
-    {
-     "data": "2021-11-10",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=915813&numSequencia=440547&numVersao=1"
-    },
-    {
-     "data": "2021-12-30",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=929839&numSequencia=454573&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "15423",
-   "empresa": "ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
-   "tickers": [
-    "FASA3"
-   ],
-   "dataDoc": "2022-03-30",
-   "dataCom": "",
-   "percentual": 100.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "s declarados na ago. para fins do artigo 10, da lei n 9.249/1995, e do artigo 58, da instrucao normativa da receita federal do brasil n 1.585/2015, o custo de aquisicao sera de r$3,04 (tres reais e quatro centavos) por acao com base na media ponderada (pelo volume diario de negociacao) dos precos de fechamento diarios da cotacao das acoes de emissao da companhia nos ultimos 90 (noventa) pregoes da",
-    "904 (dois milhoes, novecentos e cinco mil, novecentas e quatro) novas acoes ordinarias, nominativas e sem v alor nominal, aos acionistas, a titulo de bonificacao, na proporcao de 0,14 (catorze centesimos) de uma nova acao para cada 1 (uma) acao existente, passando o capital social de r$ 5.080.323,75 (cinco milhoes, oitenta mil, trezentos e vinte tres reais e set enta e cinco centavos) para r$13.91",
-    " 23.804.898 (vinte e tres milhoes, oitocentas e quatro mil, oitocentas e noventa e oito) acoes ordinarias, nominativas e sem valor nominal . as acoes bonificadas serao de mesma especie e classe das acoes ordinarias atualmente emitidas pela companhia e conferirao aos seus titulares os mesmos direitos e vantagens das acoes ordinarias atualmente emit idas pela companhia, a partir da data da assemblei",
-    "s declarados na ago. para fins do artigo 10, da lei n 9.249/1995, e do artigo 58, da instrucao normativa da receita federal do brasil n 1.585/2015, o custo de aquisicao sera de r$3,04 (tres reais e quatro centavos) por acao , com base na media ponderada (pelo volume diario de neg ociacao) dos precos de fechamento diarios da cotacao das acoes de emissao da companhia nos ultimos 90 (noventa) pregoes",
-    "904 (dois milhoes, novecentos e cinco mil, novecentas e quatro) novas acoes ordinarias, nominativas e sem valo r nominal, aos acionistas, a titulo de bonificacao, na proporcao de 0,13904516170 de uma nova acao para cada 1 (uma) acao existente, passando o capital social de r$ 5.080.323,75 (cinco milhoes, oitenta mil, trezentos e vinte tres reais e setenta e cinco c entavos) para r$13.914.27 0,83 (t",
-    " 23.804.898 (vinte e tres milhoes, oitocentas e quatro mil, oitocentas e noventa e oito) acoes ordinarias, n ominativas e sem valor nominal. as acoes bonificadas serao de mesma especie e classe das acoes ordinarias atualmente emitidas pela companhia e conferirao aos seus titulares os mesmos direitos e vantagens das acoes ordinarias atualmente emitidas pela comp anhia, a partir da data da assemblei"
-   ],
-   "documentos": [
-    {
-     "data": "2022-03-30",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=960916&numSequencia=485650&numVersao=1"
-    },
-    {
-     "data": "2022-05-03",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=976129&numSequencia=500863&numVersao=2"
-    }
-   ]
-  },
-  {
    "codigoCVM": "906",
    "empresa": "BANCO BRADESCO S.A.",
    "tickers": [
@@ -1421,7 +1155,7 @@
    "custoUnit": null,
    "semCusto": false,
    "status": "ok",
-   "trecho": "te. vii. custo das acoes bonificadas: o custo atribuido as acoes bonificadas sera de r$4,128165265 por acao , independ",
+   "trecho": " por oportuno, informa tambem que: e de r$4,128165265 o custo unitario atribuido as acoes bonificada",
    "documentos": [
     {
      "data": "2022-02-08",
@@ -1584,6 +1318,33 @@
    ]
   },
   {
+   "codigoCVM": "20745",
+   "empresa": "SLC AGRICOLA SA",
+   "tickers": [
+    "SLCE3"
+   ],
+   "dataDoc": "2023-03-08",
+   "dataCom": "",
+   "percentual": 10.0,
+   "custo": 23.54,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " 21.242.259 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 23,54 (vinte e tres reais",
+   "janelas": [
+    "rvas estatutarias , com bonificacao de acoes , a razao de 10% (dez por cento ), que correspondera a emissao de 21.242.259 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 23,54 (vinte e tres reais e cinquenta e quatro cent avos). os acion istas receberao a titulo de bo nificacao de acoes 1 (uma) nova acao ordinaria para cada 10 (dez ) acoes ordinarias de que forem ti",
+    ") 3230 77 99 fax (51) 3230 7750 www.slcagricola.com.br 1 de 2 fato relevante relacoes com investidores +55 (51) 3230.7864 /7797 ri@slcagricola.com.br bonificacao de acoes a slc agricola s.a. (b3: slce3; adrs: slcjy; bloomberg: slce3:bz; refinitiv : slce3.sa) (slc agricola) , em conson ancia com o artigo 157, paragra fo 4 da lei 6404 , confo rme alterada e na resolucao n 44 da comissao de v alores ",
+    "alor total de r$ 500.000.000,00 ( quinhentos milhoes de reais) , por meio d a incorporacao de parte do saldo da conta d e reservas estatutarias , com bonificacao de acoes , a razao de 10% (dez por cento ), que correspondera a emissao de 21.242.259 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 23,54 (vinte e tres reais e cinquenta e quatro cent avos). os acion ista"
+   ],
+   "documentos": [
+    {
+     "data": "2023-03-08",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1070394&numSequencia=595124&numVersao=1"
+    }
+   ]
+  },
+  {
    "codigoCVM": "3980",
    "empresa": "GERDAU S.A.",
    "tickers": [
@@ -1712,29 +1473,25 @@
    ]
   },
   {
-   "codigoCVM": "20745",
-   "empresa": "SLC AGRICOLA SA",
+   "codigoCVM": "8192",
+   "empresa": "TREVISA  INVESTIMENTOS SA",
    "tickers": [
-    "SLCE3"
+    "LUXM3",
+    "LUXM4"
    ],
-   "dataDoc": "2023-03-08",
-   "dataCom": "2023-05-11",
-   "percentual": 10.0,
-   "custo": 23.54,
+   "dataDoc": "2023-04-27",
+   "dataCom": "2023-04-27",
+   "percentual": 300.0,
+   "custo": 0.962279,
    "custoUnit": null,
    "semCusto": false,
    "status": "ok",
-   "trecho": " 21.242.259 novas acoes ordinarias, com custo unitario atribuido as acoes bonificadas de r$ 23,54 (vinte e tres reais",
+   "trecho": "receita federal do brasil n 1.585/15, o custo atribuido as acoes bonificadas e de r$ 0,962279 por acao . porto al",
    "documentos": [
     {
-     "data": "2023-03-08",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1070394&numSequencia=595124&numVersao=1"
-    },
-    {
      "data": "2023-04-27",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1091993&numSequencia=616722&numVersao=1"
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1091584&numSequencia=616313&numVersao=1"
     }
    ]
   },
@@ -1792,9 +1549,9 @@
     " 1 (vinte e seis milhoes, cinquenta e seis mil e quatrocentas e sessenta e uma ) acoes ordinarias, nominativas, escriturais e sem valor nomina l. (c) custo de aquisicao . o valor atribuido as acoes e de r$6,52429353319 por acao , para fins do artigo 10, da lei n. 9.249/1995, e do artigo 58, da instrucao normativa da receita federal do brasil n. 1.585/2015 . (d) data de corte . terao direito a boni",
     " fleury s.a. companhia aberta cnpj 60.840.055/0001 -31 fato relevante aumento de capital com bonificacao em acoes fleury s.a. (companhia ou fleury ), em cumprimento ao disposto na lei n 6.404, de 15 de dezembro de 1976 ( lei das s.a. ) e na resolucao cvm n 44, de 23 de agosto de 2021, vem informar aos seus acionistas e ao mercado em geral qu",
     "trocentas e sessenta e uma ) acoes ordinarias, nominativas , escriturais e sem valor nominal (acoes ), que serao atribuidas gratuitamente a titulo de bonificacao, o que corresponde a 1 acao nova para cada 20 acoes de emissao da companhia, incluindo as acoes em tesouraria , conforme disposto no artigo 169 da lei n 6.404/76 (aumento de capital ). o aumento de capital esta sujeito aos seguintes termo",
-    "arias de sua titularidade , correspondendo a um percentual de 5%. fleury s.a. companhia aberta cnpj 60.840.055/0001 -31 conforme orientacao do agente custodiante das acoes de emissao da companhia, a data prevista para o credito das acoes decorren tes da bonificacao aos acionistas e dia 14 de junho de 2023 . (c) descrever os direitos, vantagens e restricoes atribuidos as acoes a serem emitidas : as",
-    "companhia a partir da data prevista para o credito das acoes decorrentes da bonificacao aos acionistas, ou seja, 14 de junho de 2023 . (d) informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de dezembro de 1995 : o valor atribuido as acoes , para fins fiscais, e de r$6,52429353319 por acao . (e) informar o tratament",
-    "trocentas e sessenta e uma ) acoes ordinarias, nominativas, escriturais e sem valor nominal ( acoes ), que serao atribuidas gratuitamente a titulo de bonificacao, o que corresponde a 1 acao nova para cada 20 acoes de emissao da companhia, incluindo as acoes em tesouraria , conforme disposto no artigo 169 da lei n 6.404/76 (aumento de capital ). em atendime nto ao disposto no artigo 33, inciso xxxi"
+    " 1 (vinte e seis milhoes, cinquenta e seis mil e quatrocentas e sessenta e uma ) acoes ordinarias, nominativas, escriturais e sem valor nomina l. (c) custo de aquisicao . o valor atribuido as acoes e de r$6,52429353319 por acao , para fins do artigo 10, da lei n. 9.249/1995, e do artigo 58, da instrucao normativa da receita federal do brasil n. 1.585/2015 . (d) data de corte . terao direito a boni",
+    " fleury s.a. companhia aberta cnpj 60.840.055/0001 -31 fato relevante aumento de capital com bonificacao em acoes fleury s.a. (companhia ou fleury ), em cumprimento ao disposto na lei n 6.404, de 15 de dezembro de 1976 ( lei das s.a. ) e na resolucao cvm n 44, de 23 de agosto de 2021, vem informar aos seus acionistas e ao mercado em geral qu",
+    "trocentas e sessenta e uma ) acoes ordinarias, nominativas , escriturais e sem valor nominal (acoes ), que serao atribuidas gratuitamente a titulo de bonificacao, o que corresponde a 1 acao nova para cada 20 acoes de emissao da companhia, incluindo as acoes em tesouraria , conform e disposto no artigo 169 da lei n 6.404/76 (aumento de capital ). o aumento de capital esta sujeito aos seguintes term"
    ],
    "documentos": [
     {
@@ -1803,19 +1560,9 @@
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1110382&numSequencia=635111&numVersao=1"
     },
     {
-     "data": "2023-06-06",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1110399&numSequencia=635128&numVersao=1"
-    },
-    {
      "data": "2023-06-09",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1111875&numSequencia=636604&numVersao=2"
-    },
-    {
-     "data": "2023-06-09",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1111874&numSequencia=636603&numVersao=2"
     }
    ]
   },
@@ -1827,7 +1574,7 @@
     "ITSA4"
    ],
    "dataDoc": "2023-11-22",
-   "dataCom": "2023-11-27",
+   "dataCom": "2023-11-24",
    "percentual": 5.0,
    "custo": 17.917246,
    "custoUnit": null,
@@ -2017,7 +1764,7 @@
     "ITSA4"
    ],
    "dataDoc": "2024-11-11",
-   "dataCom": "2024-12-02",
+   "dataCom": "2024-12-04",
    "percentual": 5.0,
    "custo": 13.55518731,
    "custoUnit": null,
@@ -2067,11 +1814,6 @@
      "data": "2024-12-11",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1314539&numSequencia=839265&numVersao=2"
-    },
-    {
-     "data": "2025-03-05",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1342363&numSequencia=867089&numVersao=1"
     }
    ]
   },
@@ -2094,20 +1836,13 @@
     "reito as fracoes leiloadas. se as fracoes nao forem vendidas em um unico leilao, outros deverao ser remarcados ate que ocorra a quitacao dos valores. custo das acoes bonificadas: as acoes bonificadas serao e mitidas ao custo unitario de r$ 9,4962895781. os valores referentes as fracoes de acoes serao repassados aos acionistas com acoes depositadas na b3 pela instituicao ou corretora que mantem a c",
     "ico leilao, outros deverao ser remarcados ate que ocorra a quitacao dos valores. custo das acoes bonificadas: as acoes bonificadas serao e mitidas ao custo unitario de r$ 9,4962895781. os valores referentes as fracoes de acoes serao repassados aos acionistas com acoes depositadas na b3 pela instituicao ou corretora que mantem a custodia de suas posicoes. para os acionistas com acoes mantidas em me",
     "rou , nesta data , e autorizou submeter a assembleia geral , a proposta de aumento de capital social mediante capitalizacao da reserva de l ucros com bonificacao em acoes. a proposta consiste no a umento do capital social no valor de r$ 300.000.000,00 (trezentos milhoes de reais) , passando de r$ 1.600.000.000,00 (um bilhao e seisc entos milhoes de reais) para r$ 1.900.000.000,00 (um bilhao e nove",
-    "do de r$ 1.600.000.000,00 (um bilhao e seisc entos milhoes de reais) para r$ 1.900.000.000,00 (um bilhao e novecentos milhoes de reais) . a titulo de bonificacao, serao emitidas 31.591.286 novas acoes, sendo 23.100.600 acoes ordinarias e 8.490.686 acoes preferenciais, atribuidas gratuitamente aos acionistas, na proporcao de 1 acao nova para cada 10 acoes da mesma especie que possuirem na dat a de ",
-    "ompanhia para r$ 1.900.000.000 (um bilhao e novecentos milhoes de reais) . a bonificacao ocorrera com emissao de 31.591.286 no vas acoes, emitidas ao custo unitario de r$ 9,4962895781 , sendo 23.100.600 acoes ordinarias e 8.490.686 acoes preferenciais, atribuid as gratuitamente aos acionistas na proporcao de 10% de acoes do mesmo tipo que possuirem na dat a de direito. com a aprovacao na a ssemble",
-    "onistas que a assembleia geral realizada nesta data aprovou a proposta de aumento do capital social mediante a capitalizacao da reserva de lucros com bonificacao de acoes submetida pelo seu conselho de administracao . o aumento do capital social se dara mediante a capitalizacao de r$ 300.000.000 (trezentos milhoes de reais) das reservas de lucro, passando o capital social da companhia para r$ 1.90"
+    "do de r$ 1.600.000.000,00 (um bilhao e seisc entos milhoes de reais) para r$ 1.900.000.000,00 (um bilhao e novecentos milhoes de reais) . a titulo de bonificacao, serao emitidas 31.591.286 novas acoes, sendo 23.100.600 acoes ordinarias e 8.490.686 acoes preferenciais, atribuidas gratuitamente aos acionistas, na proporcao de 1 acao nova para cada 10 acoes da mesma especie que possuirem na dat a de "
    ],
    "documentos": [
     {
      "data": "2025-03-24",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1350513&numSequencia=875239&numVersao=1"
-    },
-    {
-     "data": "2025-04-25",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1365291&numSequencia=890017&numVersao=1"
     }
    ]
   },
@@ -2136,35 +1871,6 @@
    ]
   },
   {
-   "codigoCVM": "6173",
-   "empresa": "TAURUS ARMAS S.A.",
-   "tickers": [
-    "TASA3",
-    "TASA4"
-   ],
-   "dataDoc": "2025-04-29",
-   "dataCom": "",
-   "percentual": 10.0,
-   "custo": 7.8967466,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": ". quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando b",
-   "janelas": [
-    "os acionistas, mediante emissao de novas acoes. nao vislumbramos consequencias juridicas no aumento de capital. quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando beneficio fiscal ao acionista, consoante disposto no art. 10, da lei n 9.249, de 1995 c/c 1 do artigo 58 da instrucao normativa da receita federal do brasil n 1.585/15. 4. for",
-    " e farao jus a quaisquer dividendos e/ou juros sobre o capital proprio que vierem a ser declarados a partir de 08/05/2025 (inclusive). iv. informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando beneficio fiscal ao acionista",
-    "tatuto social), na forma do art. 169 da lei n 6.404/76 , no montante de r$ 100.000.000,00 (cem milhoes de reais), com emissao de novas acoes, a serem bonificadas aos acionistas na proporcao de 1 (uma) para cada 10 (dez) acoes da mesma especie detida pelo acionista em 7 de maio de 2025 , reiterando -se as informacoes do anexo c da resolucao cvm 81/2022 inseridas na proposta da administracao, confor",
-    "artigo 41, paragrafo unico do estatuto social da companhia. o aumento de capital foi realizado por meio da capitalizacao de reserva estatutaria com a bonificacao aos acionistas, mediante emissao de novas acoes. nao vislumbramos consequencias juridicas no aumento de capital. quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando beneficio fi"
-   ],
-   "documentos": [
-    {
-     "data": "2025-04-29",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1367306&numSequencia=892032&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "8192",
    "empresa": "TREVISA  INVESTIMENTOS SA",
    "tickers": [
@@ -2184,6 +1890,111 @@
      "data": "2025-04-29",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1367563&numSequencia=892289&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "6173",
+   "empresa": "TAURUS ARMAS S.A.",
+   "tickers": [
+    "TASA3",
+    "TASA4"
+   ],
+   "dataDoc": "2025-04-29",
+   "dataCom": "2025-05-07",
+   "percentual": 10.0,
+   "custo": 7.8967466,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": ". quanto as consequencias economicas, o custo atribuido as acoes bonificadas foi de r$ 7,8967466 por acao, gerando b",
+   "documentos": [
+    {
+     "data": "2025-04-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1367306&numSequencia=892032&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "17973",
+   "empresa": "COGNA EDUCAÇÃO S.A.",
+   "tickers": [
+    "COGN11",
+    "COGN3",
+    "COGN4"
+   ],
+   "dataDoc": "2025-12-18",
+   "dataCom": "2025-09-30",
+   "percentual": null,
+   "custo": 3.3406493943,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 3,34064939431 por acao, conforme ",
+   "janelas": [
+    "lizacao cadastral, nos prazos determinados pelo escriturador. os acionistas cujas acoes estao depositadas em instituicoes prestadoras dos servicos de custodia de valores mobiliarios terao seus dividendos creditados conforme procedimentos adotados pelas instituicoes depositarias. o recebimento do dividendo sera isento de imposto de renda, de acordo com o artigo 10 da lei n 9.249, de 26 de dezembro ",
+    "entos declarados antes de 30 de dezembro de 2025, ainda que tais proventos venham a ser pagos depois do credito das acoes bonificadas. (d) informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 3,34064939431 por acao, conforme o disposto no artigo",
+    "m 31 de dezembro de 2024, com a emissao de novas acoes ordinarias, todas nominativas, escriturais e sem valor nominal, a serem atribuidas a titulo de bonificacao (respectivamente, aumento de capital e acoes bonificadas ). informacoes adicionais acerca do aumento de capital, incluindo os termos, condicoes e procedimentos aplicaveis a atribuicao das acoes bonificadas , estao disponiveis no anexo ii ",
+    "dinarias, todas nominativas, escriturais e sem valor nominal, a serem atribuidas a titulo de bonificacao (respectivamente, aumento de capital e acoes bonificadas ). informacoes adicionais acerca do aumento de capital, incluindo os termos, condicoes e procedimentos aplicaveis a atribuicao das acoes bonificadas , estao disponiveis no anexo ii deste aviso aos acionistas, nos termos do artigo 33, inci"
+   ],
+   "documentos": [
+    {
+     "data": "2025-12-18",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459113&numSequencia=983825&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "16632",
+   "empresa": "DEXXOS PARTICIPAÇÕES S.A.",
+   "tickers": [
+    "DEXP3",
+    "DEXP4"
+   ],
+   "dataDoc": "2025-12-11",
+   "dataCom": "2025-09-30",
+   "percentual": 12.5,
+   "custo": 9.519403,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "os respectivos titulares das fracoes. o custo atribuido as acoes ordinarias e preferenciais bonificadas e de r$9,519403 por acao, independe",
+   "documentos": [
+    {
+     "data": "2025-12-11",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455980&numSequencia=980692&numVersao=1"
+    },
+    {
+     "data": "2025-12-11",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455979&numSequencia=980691&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "12653",
+   "empresa": "KLABIN S.A.",
+   "tickers": [
+    "KLBN11",
+    "KLBN3",
+    "KLBN4"
+   ],
+   "dataDoc": "2025-12-08",
+   "dataCom": "2025-09-30",
+   "percentual": 1.0,
+   "custo": 12.9456498892,
+   "custoUnit": 0.911943445,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "formada oportunamente pela companhia. o custo atribuido as acoes bonificadas sera de r$ 12,94564988922 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-08",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454103&numSequencia=978815&numVersao=1"
     }
    ]
   },
@@ -2228,54 +2039,15 @@
    "dataCom": "2025-11-27",
    "percentual": 10.0,
    "custo": 12.0,
-   "custoUnit": 12.0,
+   "custoUnit": 60.0,
    "semCusto": false,
    "status": "ok",
-   "trecho": "umero de acoes engi3, engi4 e engi11. o custo atribuido as acoes bonificadas foi definido em r$ 12,00 por acao engi3 e en",
+   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes on e pn bonificadas e de r$ 12,00 (doze reais) por ac",
    "documentos": [
     {
      "data": "2025-11-19",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1447539&numSequencia=972251&numVersao=1"
-    },
-    {
-     "data": "2025-11-19",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1447537&numSequencia=972249&numVersao=1"
-    },
-    {
-     "data": "2026-03-16",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1490840&numSequencia=1015546&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "12653",
-   "empresa": "KLABIN S.A.",
-   "tickers": [
-    "KLBN11",
-    "KLBN3",
-    "KLBN4"
-   ],
-   "dataDoc": "2025-12-08",
-   "dataCom": "2025-12-08",
-   "percentual": 1.0,
-   "custo": 12.9456498892,
-   "custoUnit": 0.911943445,
-   "semCusto": false,
-   "status": "ok",
-   "trecho": "formada oportunamente pela companhia. o custo atribuido as acoes bonificadas sera de r$ 12,94564988922 por acao, para os f",
-   "documentos": [
-    {
-     "data": "2025-12-08",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454107&numSequencia=978819&numVersao=1"
-    },
-    {
-     "data": "2025-12-08",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454103&numSequencia=978815&numVersao=1"
     }
    ]
   },
@@ -2303,16 +2075,6 @@
      "data": "2025-12-04",
      "categoria": "Aviso aos Acionistas",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453013&numSequencia=977725&numVersao=1"
-    },
-    {
-     "data": "2026-01-30",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1471693&numSequencia=996399&numVersao=1"
-    },
-    {
-     "data": "2026-02-04",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1473181&numSequencia=997887&numVersao=1"
     }
    ]
   },
@@ -2371,34 +2133,6 @@
    ]
   },
   {
-   "codigoCVM": "16632",
-   "empresa": "DEXXOS PARTICIPAÇÕES S.A.",
-   "tickers": [
-    "DEXP3",
-    "DEXP4"
-   ],
-   "dataDoc": "2025-12-11",
-   "dataCom": "2025-12-16",
-   "percentual": 12.5,
-   "custo": 9.519403,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "ok",
-   "trecho": "os respectivos titulares das fracoes. o custo atribuido as acoes ordinarias e preferenciais bonificadas e de r$9,519403 por acao, independe",
-   "documentos": [
-    {
-     "data": "2025-12-11",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455980&numSequencia=980692&numVersao=1"
-    },
-    {
-     "data": "2025-12-11",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1455979&numSequencia=980691&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "4537",
    "empresa": "GRAZZIOTIN SA",
    "tickers": [
@@ -2452,6 +2186,30 @@
      "data": "2025-12-19",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459614&numSequencia=984320&numVersao=2"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "12653",
+   "empresa": "KLABIN S.A.",
+   "tickers": [
+    "KLBN11",
+    "KLBN3",
+    "KLBN4"
+   ],
+   "dataDoc": "2025-12-08",
+   "dataCom": "2025-12-17",
+   "percentual": 1.0,
+   "custo": 12.9456498892,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes bonificadas sera d e r$ 12,94564988922 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-08",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454107&numSequencia=978819&numVersao=1"
     }
    ]
   },
@@ -2536,6 +2294,36 @@
      "data": "2025-12-15",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1457673&numSequencia=982385&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "2437",
+   "empresa": "AXIA ENERGIA S.A.",
+   "tickers": [
+    "AXIA3",
+    "AXIA5",
+    "AXIA6"
+   ],
+   "dataDoc": "2025-12-08",
+   "dataCom": "2025-12-19",
+   "percentual": null,
+   "custo": 49.44,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "revisar",
+   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. inform",
+   "janelas": [
+    "atica de todas as pnc apos a conversao ou o resgate de todas as suas respectivas acoes, a serem realizados ate 2031 ou antecipadamente. d. informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao artigo 10 da lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. informar o ",
+    "o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao artigo 10 da lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. informar o tratamento das fracoes, se for o caso em relacao as acoes pnc que nao puderem ser atribuidas por inteiro a cada acionista, sera observado o disposto",
+    " aprovacao de aumento de capital com bonificacao de acoes (anexo e da resolucao cvm n . 80/22) rio de janeiro, 8 de dezembro de 2025, a centrais eletricas brasileiras s/a - axia energia, em complemento ao fato relevante divulgado nesta data, informa a seus acionistas e ao mercado em ger",
+    "sao, pela companhia, de acoes preferenciais de classe c, nominativas, escriturais , sem valor nominal, conversiveis e resgataveis ( pnc), a titulo de bonificacao (bonificacao ). 3. explicar, pormenorizadamente, as razoes do aumento e suas consequencias juridicas e economicas diante das condicoes macroeconomicas atuais e de seu planejamento estrategico, a companhia vem avaliando alternativas destin"
+   ],
+   "documentos": [
+    {
+     "data": "2025-12-08",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454335&numSequencia=979047&numVersao=1"
     }
    ]
   },
@@ -2643,36 +2431,6 @@
    ]
   },
   {
-   "codigoCVM": "2437",
-   "empresa": "AXIA ENERGIA S.A.",
-   "tickers": [
-    "AXIA3",
-    "AXIA5",
-    "AXIA6"
-   ],
-   "dataDoc": "2025-12-08",
-   "dataCom": "2025-12-26",
-   "percentual": null,
-   "custo": 49.44,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": " lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. inform",
-   "janelas": [
-    "atica de todas as pnc apos a conversao ou o resgate de todas as suas respectivas acoes, a serem realizados ate 2031 ou antecipadamente. d. informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao artigo 10 da lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. informar o ",
-    "o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao artigo 10 da lei 9.249, de 26 de dezembro de 1995 o custo atribuido as acoes pnc recebidas no ambito da bonificacao e de r$ 49,44 por acao. e. informar o tratamento das fracoes, se for o caso em relacao as acoes pnc que nao puderem ser atribuidas por inteiro a cada acionista, sera observado o disposto",
-    " aprovacao de aumento de capital com bonificacao de acoes (anexo e da resolucao cvm n . 80/22) rio de janeiro, 8 de dezembro de 2025, a centrais eletricas brasileiras s/a - axia energia, em complemento ao fato relevante divulgado nesta data, informa a seus acionistas e ao mercado em ger",
-    "sao, pela companhia, de acoes preferenciais de classe c, nominativas, escriturais , sem valor nominal, conversiveis e resgataveis ( pnc), a titulo de bonificacao (bonificacao ). 3. explicar, pormenorizadamente, as razoes do aumento e suas consequencias juridicas e economicas diante das condicoes macroeconomicas atuais e de seu planejamento estrategico, a companhia vem avaliando alternativas destin"
-   ],
-   "documentos": [
-    {
-     "data": "2025-12-08",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1454335&numSequencia=979047&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "5258",
    "empresa": "RAIA DROGASIL S.A.",
    "tickers": [
@@ -2704,41 +2462,6 @@
    ]
   },
   {
-   "codigoCVM": "24627",
-   "empresa": "BLAU FARMACÊUTICA S.A.",
-   "tickers": [
-    "BLAU3"
-   ],
-   "dataDoc": "2025-12-29",
-   "dataCom": "",
-   "percentual": 30.0,
-   "custo": 7.432432449,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "lei 9.249, de 26 de deze mbro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,432432449 por acao, para os f",
-   "janelas": [
-    "a ja existentes de mesma e specie, inclusive a dividendos e/ou juros sobre capital proprio que venham a ser declarados apos 05 de janeiro de 2026. d) custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de deze mbro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,432432449 por acao, para os fins do disposto no 1 do ",
-    "d) custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de deze mbro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,432432449 por acao, para os fins do disposto no 1 do artigo 10 da lei n 9.249/1995 e no 1 do artigo 58 da instrucao normativa da receita federal do brasil n 1.585/2015. 3 e) tratament o das fracoes de",
-    " 1 blau farmaceutica s.a. companhia aberta nire 35.300.416.406 codigo cvm n 2462 -7 aviso aos acionistas aumento de capital com bonificacao de acoes a blau farmaceutica s.a. (ticker: blau3 ; blau ou companhia ), em atendimento ao disposto no artigo 33, inciso xxxi, da resolucao cvm n 80/2022, apresenta abaixo as informacoes exigidas pelo anexo e da resolucao cvm n 80/2022 sob",
-    "dezembro de 2025, que sera realizado mediante a capitalizacao de valores registrados nas reser vas de lucros da companhia (reserva de lucros ), com a bonificacao de novas acoes aos acionistas da companhia, de maneira gratuita, em conformidade com o artigo 169 da lei n 6.404/1976. i - razoes do aumento de capital e suas consequencias juridicas e e conomicas o aumento de capital esta inserido no con",
-    " 1 blau farmaceutica s.a. companhia aberta nire 35.300.416.406 codigo cvm n 2462 -7 fato relevante bonificacao de acoes a blau farmaceutica s.a. (ticker: blau3 ; blau ou companhia ), em atendimento ao disposto no artigo 157, 4, da lei n 6.404/1976 e na resolucao cvm n 44/2021, informa aos seus acionistas e ao mercado em geral que, em reuniao do co",
-    "es ordinarias, nominativas, escriturais e sem valor nominal, que serao atribuidas de forma gratuita aos detentores de acoes da companhia, a titulo de bonificacao, na proporcao de 3 (tres) novas acoes, da mesma especie, para cada 10 (dez) acoes possuidas, sendo que as acoes mantidas em tesouraria tambem sera o bonificadas (aumento de capi tal com bonificacao de acoes). as informacoes adicionais sob"
-   ],
-   "documentos": [
-    {
-     "data": "2025-12-29",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462052&numSequencia=986758&numVersao=1"
-    },
-    {
-     "data": "2025-12-29",
-     "categoria": "Fato Relevante",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462056&numSequencia=986762&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "26050",
    "empresa": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
    "tickers": [
@@ -2766,67 +2489,51 @@
    ]
   },
   {
-   "codigoCVM": "17973",
-   "empresa": "COGNA EDUCAÇÃO S.A.",
-   "tickers": [
-    "COGN11",
-    "COGN3",
-    "COGN4"
-   ],
-   "dataDoc": "2025-12-18",
-   "dataCom": "2025-12-30",
-   "percentual": null,
-   "custo": 3.3406493943,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "i 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 3,34064939431 por acao, conforme ",
-   "janelas": [
-    "lizacao cadastral, nos prazos determinados pelo escriturador. os acionistas cujas acoes estao depositadas em instituicoes prestadoras dos servicos de custodia de valores mobiliarios terao seus dividendos creditados conforme procedimentos adotados pelas instituicoes depositarias. o recebimento do dividendo sera isento de imposto de renda, de acordo com o artigo 10 da lei n 9.249, de 26 de dezembro ",
-    "entos declarados antes de 30 de dezembro de 2025, ainda que tais proventos venham a ser pagos depois do credito das acoes bonificadas. (d) informar o custo de aquisicao, em reais por acao, a ser atribuido para que os acionistas possam atender ao art. 10 da lei 9.249, de 26 de dezembro de 1995; e o custo atribuido as acoes bonificadas sera de r$ 3,34064939431 por acao, conforme o disposto no artigo",
-    "m 31 de dezembro de 2024, com a emissao de novas acoes ordinarias, todas nominativas, escriturais e sem valor nominal, a serem atribuidas a titulo de bonificacao (respectivamente, aumento de capital e acoes bonificadas ). informacoes adicionais acerca do aumento de capital, incluindo os termos, condicoes e procedimentos aplicaveis a atribuicao das acoes bonificadas , estao disponiveis no anexo ii ",
-    "dinarias, todas nominativas, escriturais e sem valor nominal, a serem atribuidas a titulo de bonificacao (respectivamente, aumento de capital e acoes bonificadas ). informacoes adicionais acerca do aumento de capital, incluindo os termos, condicoes e procedimentos aplicaveis a atribuicao das acoes bonificadas , estao disponiveis no anexo ii deste aviso aos acionistas, nos termos do artigo 33, inci"
-   ],
-   "documentos": [
-    {
-     "data": "2025-12-18",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1459113&numSequencia=983825&numVersao=1"
-    }
-   ]
-  },
-  {
    "codigoCVM": "20745",
    "empresa": "SLC AGRICOLA SA",
    "tickers": [
     "SLCE3"
    ],
    "dataDoc": "2025-12-30",
-   "dataCom": "",
+   "dataCom": "2026-01-01",
    "percentual": 12.5,
    "custo": 16.4962,
    "custoUnit": null,
    "semCusto": false,
-   "status": "revisar",
+   "status": "ok",
    "trecho": "55.416.214 novas acoes ordinarias , com custo unitario atribuido as acoes bonificadas de r$ 16,4962 (dezesseis reais e ",
-   "janelas": [
-    "nta reserva de expansao , a razao de 1 2,5% (d oze v irgula cinco por cento) , que correspondera a emissao de 55.416.214 novas acoes ordinarias , com custo unitario atribuido as acoes bonificadas de r$ 16,4962 (dezesseis reais e quarenta e nove centavos) . os acionistas receberao a titulo de bonificacao de acoes 1 (uma) nova acao ordinaria para cada 8 (oito) acoes ordinarias de que forem titulares",
-    "one (51) 3230 7799 fax (51) 3230 7750 www.slcagricola.com.br 1 de 2 fato relevante relacoes com investidores +55 (51) 3230 7797 ri@slcagricola.com.br bonificacao de acoes a slc agricola s.a. (b3: slce3; adrs: slcjy; bloomberg: slce3:bz; refinitiv : slce3.sa) (slc agricola), em consonancia com o artigo 157, paragrafo 4 da lei 6 .404/76, conforme alterada e na resolucao n 44 da comissao de valores m",
-    " para r$ 2.926.680.320,30 (dois bilhoes, novecentos e vinte e seis milhoes, seiscentos e oitenta mil, trezentos e vinte reais e trinta centavos), com bonificacao de acoes, mediante capitalizacao do saldo da conta reserva de expansao , a razao de 1 2,5% (d oze v irgula cinco por cento) , que correspondera a emissao de 55.416.214 novas acoes ordinarias , com custo unitario atribuido as acoes bonific",
-    " forma: i. para acionistas com acoes depositadas na central depositaria da b3, os valores serao pagos e repassados por intermedio dos seus agentes de custodia; ii. para os acionistas que tiverem acoes depositadas na custodia escritural, os valores serao pagos de acordo com o domicilio bancario fornecido ao banco btg pactual s.a., instituicao responsavel pela escrituracao das acoes da companhia (es",
-    "taria da b3, os valores serao pagos e repassados por intermedio dos seus agentes de custodia; ii. para os acionistas que tiverem acoes depositadas na custodia escritural, os valores serao pagos de acordo com o domicilio bancario fornecido ao banco btg pactual s.a., instituicao responsavel pela escrituracao das acoes da companhia (escriturador); iii. para acionistas cujo cadastro nao esteja atualiz",
-    "cjy; bloomberg: slce3:bz; refinitiv: slce3.sa) ( slc ou companhia ), informa aos seus acionistas e ao mercado em geral que, as fracoes resultantes da bonificacao de acoes, aprovada na assembleia geral extraordinaria realizada em 30 de dezembro de 2025, na proporcao de 1 (uma) nova acao ordinaria para cada 8 (oito) acoes ordinarias possuidas, foram agrupadas em numeros inteiros e vendidas em leilao"
-   ],
    "documentos": [
     {
      "data": "2025-12-30",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462648&numSequencia=987354&numVersao=1"
+    }
+   ]
+  },
+  {
+   "codigoCVM": "24627",
+   "empresa": "BLAU FARMACÊUTICA S.A.",
+   "tickers": [
+    "BLAU3"
+   ],
+   "dataDoc": "2025-12-29",
+   "dataCom": "2026-01-05",
+   "percentual": 30.0,
+   "custo": 7.432432449,
+   "custoUnit": null,
+   "semCusto": false,
+   "status": "ok",
+   "trecho": "lei 9.249, de 26 de deze mbro de 1995 o custo atribuido as acoes bonificadas sera de r$ 7,432432449 por acao, para os f",
+   "documentos": [
+    {
+     "data": "2025-12-29",
+     "categoria": "Aviso aos Acionistas",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462052&numSequencia=986758&numVersao=1"
     },
     {
-     "data": "2026-02-26",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1482597&numSequencia=1007303&numVersao=1"
+     "data": "2025-12-29",
+     "categoria": "Fato Relevante",
+     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1462056&numSequencia=986762&numVersao=1"
     }
    ]
   },
@@ -2885,38 +2592,6 @@
      "data": "2025-12-22",
      "categoria": "Fato Relevante",
      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1460683&numSequencia=985389&numVersao=1"
-    }
-   ]
-  },
-  {
-   "codigoCVM": "5258",
-   "empresa": "RAIA DROGASIL S.A.",
-   "tickers": [
-    "RADL3",
-    "RADL5",
-    "RADL6",
-    "RADL7",
-    "RADL8"
-   ],
-   "dataDoc": "2026-03-24",
-   "dataCom": "2026-03-31",
-   "percentual": 2.0,
-   "custo": null,
-   "custoUnit": null,
-   "semCusto": false,
-   "status": "revisar",
-   "trecho": "",
-   "janelas": [
-    "3, que repassara os valores aos acionistas cadastrados em seus registros, por intermedio das instituicoes e/ou corretoras que mantem suas posicoes em custodia. os recursos atribuidos aos investidores, residentes e nao residentes, poderao es tar sujeitos a incidencia de imposto de renda sobre eventuais ganhos, os quais serao tributados como ganhos liquidos, nos termos da legislacao vigente. dessa f",
-    "will transfer the amounts to the shareholders registered in its records through the institutions and/or broker age firms that hold their positions in custody. the amounts allocated to investors, whether resident or non -resident, may be subject to withholding income tax on any gains, which shall be taxed as net gains, pursuant to applicable legislation. accordingly, the identification and applicat",
-    "mbito do aumento de capital aprovado na assembleia geral extraordin aria realizada em 22 de dezembro de 2025, e atribuidas aos acionistas a titulo de bonificacao, na proporcao de 1 (uma) acao nova para cada 50 (cinquenta) acoes de emissao da companhia entao existentes , foram devidamente creditadas aos acionistas em 26 de d ezembro de 2025. decorrido o periodo para negociacao e transferencia de fr",
-    "acionistas em 26 de d ezembro de 2025. decorrido o periodo para negociacao e transferencia de fracoes de acoes recebidas pelos acionistas a titulo de bonificacao, as fracoes remanescentes foram agrupadas em numeros inteiros, totalizando 14.875 ,0200000 (quatorze mil, oitocentas e setenta e cinco virgula zero duas ) acoes ordinarias de emissao da companhia , as quais foram vendidas em leilao realiz"
-   ],
-   "documentos": [
-    {
-     "data": "2026-03-24",
-     "categoria": "Aviso aos Acionistas",
-     "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1494603&numSequencia=1019309&numVersao=1"
     }
    ]
   },
