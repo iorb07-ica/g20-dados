@@ -22,7 +22,9 @@ Modos (variável MODO):
   atualizar   = rotina diária: data ex de 60 dias atrás até 400 dias à frente (poucos minutos)
   completo    = carga desde ANO_INICIO, mês a mês. Para no limite de tempo e grava o que
                 fez; rodar de novo continua de onde parou (dados/proventos/us-estado.json)
-  diagnostico = não grava nada; mostra no log uma página de exemplo
+  diagnostico = não grava nada; mostra no log uma amostra. Com o ano inicial antes do ano
+                passado, a amostra é de janeiro daquele ano (para testar se há dados antigos);
+                senão, da última semana
 Também grava dados/proventos/us-indice.json: {"atualizado", "completo", "tickers": [...]}.
 Com "completo": true, ativo fora da lista é ativo que não pagou proventos no período
 (a Minha Carteira não precisa consultar a Polygon por ele).
@@ -165,7 +167,11 @@ def main():
     h = hoje.isoformat()
     print(f'Modo {MODO}; hoje {h}')
     if MODO == 'diagnostico':
-        janela((hoje - datetime.timedelta(days=7)).isoformat(), h, h); return 0
+        if ANO_INICIO < hoje.year - 1:
+            janela(f'{ANO_INICIO}-01-01', f'{ANO_INICIO}-01-31', h)
+        else:
+            janela((hoje - datetime.timedelta(days=7)).isoformat(), h, h)
+        return 0
     if MODO == 'atualizar':
         janela((hoje - datetime.timedelta(days=60)).isoformat(), (hoje + datetime.timedelta(days=400)).isoformat(), h)
         gravar_indice(h)
@@ -175,26 +181,36 @@ def main():
     if os.path.exists(ESTADO):
         try: est = json.load(open(ESTADO, encoding='utf-8'))
         except Exception: est = {}
-    feito = est.get('completoAte') or ''
+    # Meses já baixados. Antes guardava só "até onde foi"; agora guarda cada mês, para dar
+    # para voltar no tempo (ex.: carga de 2016 feita, depois completar de 2000 a 2015).
+    feitos = set(est.get('meses') or [])
+    if not feitos and est.get('completoAte'):
+        ini0 = est.get('desde') or '2016-01'          # a primeira carga (out/2026) começou em 2016
+        a0, m0 = int(ini0[:4]), int(ini0[5:7])
+        while f'{a0}-{m0:02d}' <= est['completoAte']:
+            feitos.add(f'{a0}-{m0:02d}'); a0, m0 = (a0 + (m0 == 12), 1 if m0 == 12 else m0 + 1)
     a, m = ANO_INICIO, 1
     fim_total = hoje + datetime.timedelta(days=400)
     while datetime.date(a, m, 1) <= fim_total:
         chave = f'{a}-{m:02d}'
         prox = (a + (m == 12), 1 if m == 12 else m + 1)
-        if chave > feito:
+        # os meses a partir do mês passado sempre são baixados de novo (podem mudar)
+        if chave not in feitos or chave >= (hoje.replace(day=1) - datetime.timedelta(days=1)).strftime('%Y-%m'):
             ini = datetime.date(a, m, 1).isoformat()
             fim = (datetime.date(prox[0], prox[1], 1) - datetime.timedelta(days=1)).isoformat()
             try:
                 janela(ini, fim, h)
             except TimeoutError:
                 print('Limite de tempo: o que foi feito está gravado; rode de novo para continuar.'); break
-            est['completoAte'] = chave; est['em'] = h
+            feitos.add(chave)
+            est['meses'] = sorted(feitos); est['completoAte'] = max(feitos); est['em'] = h
             json.dump(est, open(ESTADO, 'w', encoding='utf-8'))
         a, m = prox
         if (time.time() - T0) / 60 > LIMITE_MIN:
             print('Limite de tempo: rode de novo para continuar.'); break
     else:
-        est['cargaCompleta'] = True; est['desde'] = f'{ANO_INICIO}-01-01'
+        ini_ant = est.get('desde') or f'{ANO_INICIO}-01-01'
+        est['cargaCompleta'] = True; est['desde'] = min(ini_ant, f'{ANO_INICIO}-01-01')
         json.dump(est, open(ESTADO, 'w', encoding='utf-8'))
         print('Carga completa concluída.')
     gravar_indice(h)
