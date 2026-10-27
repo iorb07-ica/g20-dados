@@ -940,7 +940,14 @@
         if (!lote.length) return Promise.resolve();
         return Promise.all(lote.map(function (tk) {
           return buscarYahoo(yahooSymbol(tk, mapaAtivos[tk].tipo), desde)
-            .then(function (pontos) { resultados.push({ ticker: tk, pontos: pontos }); });
+            .then(function (pontos) {
+              /* 28/10/2026: ativo que saiu da bolsa não tem mais histórico no Yahoo. Quem chama pode
+                 mandar o histórico guardado (opts.precosExtra, ex.: o mensal da Carteira G20); sem ele
+                 o ativo ficava sem preço enquanto estava na carteira, a "cobertura" caía e o motor
+                 ignorava esses dias (a Carteira G20 de 2019 a 2021 tinha SQIA3, STBP3, STOR, CIO...). */
+              if ((!pontos || !pontos.length) && opts.precosExtra && opts.precosExtra[tk] && opts.precosExtra[tk].length) pontos = opts.precosExtra[tk];
+              resultados.push({ ticker: tk, pontos: pontos });
+            });
         })).then(function () { return processarLote(inicio + 6); });
       }
 

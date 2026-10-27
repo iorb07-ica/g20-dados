@@ -78,7 +78,26 @@ async function main() {
     console.log(`::notice title=Teste do proxy::HTTP ${t.status} · ${tx.slice(0, 160).replace(/\s+/g, ' ')}`); } catch (e) { console.log('::notice title=Teste do proxy::erro ' + e.message); }
   // o motor confere a "assinatura" dos lançamentos pelo que está guardado no aparelho: aqui são os da Carteira G20
   localStorage.setItem('g20_rvAportes', JSON.stringify(ent.aportes)); localStorage.setItem('g20_rendaFixa', '[]');
-  const serie = await G.calcular({ aportes: ent.aportes, proventos: ent.proventos || [], rendaFixa: [], _semGravar: true });
+  // ativos que saíram da bolsa: o histórico MENSAL guardado pela página (cg20Serie), repetido dia a dia
+  const precosExtra = {};
+  try {
+    const sd = await dados.doc('cg20Serie').get(); const hist = JSON.parse(((sd.exists && sd.data().value) || {}).histJson || '{}');
+    const tipoDe = {}; ent.aportes.forEach(x => { tipoDe[String(x.ticker).toUpperCase()] = x.tipo; });
+    const simb = (t, tp) => tp === 'Cripto' ? (t.includes('-') ? t : t + '-USD') : tp === 'UCITs' ? (t.includes('.') ? t : t + '.L') : (/\d$/.test(t) ? t + '.SA' : t);
+    const DEL = ['SQIA3', 'CIO', 'STOR', 'SKX', 'STBP3', 'IRDM11', 'BPYU'];
+    for (const t of Object.keys(tipoDe)) {
+      if (!DEL.includes(t.replace(/\.SA$/, ''))) continue;
+      const h = hist[simb(t, tipoDe[t])] || hist[t]; if (!h) continue;
+      const pts = []; Object.keys(h).sort().forEach(m => { const c = +h[m]; if (!(c > 0)) return; const [y, mo] = m.split('-').map(Number);
+        const dias = new Date(Date.UTC(y, mo, 0)).getUTCDate(); for (let d = 1; d <= dias; d++) pts.push({ d: `${m}-${String(d).padStart(2, '0')}`, c }); });
+      if (pts.length) precosExtra[t] = pts;
+    }
+    console.log('::notice title=Histórico guardado (saíram da bolsa)::' + (Object.keys(precosExtra).map(t => t + ' ' + precosExtra[t][0].d.slice(0, 7) + ' a ' + precosExtra[t][precosExtra[t].length - 1].d.slice(0, 7)).join(' · ') || 'nenhum'));
+  } catch (e) { console.log('::notice title=Histórico guardado::erro ' + e.message); }
+  const serie = await G.calcular({ aportes: ent.aportes, proventos: ent.proventos || [], rendaFixa: [], precosExtra, _semGravar: true });
+  // dias ignorados pelo motor por falta de preço (cobertura), por ano
+  try { const ig = {}; for (let i = 1; i < serie.length; i++) { const a0 = serie[i - 1].cobertura ?? 1, a1 = serie[i].cobertura ?? 1; if (Math.abs(a1 - a0) > 0.001 || a1 < 0.8) { const y = serie[i].d.slice(0, 4); ig[y] = (ig[y] || 0) + 1; } }
+    console.log('::notice title=Dias ignorados por falta de preço::' + (Object.keys(ig).map(y => y + ': ' + ig[y]).join(' · ') || 'nenhum')); } catch (e) {}
   const px = globalThis._g20Precos || {}, comPx = Object.keys(px).length;
   const tks = [...new Set(ent.aportes.map(x => String(x.ticker).toUpperCase()))];
   const semPx = tks.filter(t => !px[t] && !px[t.replace(/-(USD|USDT|USDC|BRL)$/, '')]);
