@@ -17,6 +17,10 @@ on:
         type: choice
         options: [gravar, diagnostico]
         default: gravar
+      motor_url:
+        description: 'Motor de teste (opcional; vazio = o do site)'
+        required: false
+        default: ''
 permissions:
   contents: read
 jobs:
@@ -37,4 +41,5 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           MODO: ${{ inputs.modo || 'gravar' }}
+          MOTOR_URL: ${{ inputs.motor_url }}
         run: node scripts/cg20-rent.mjs

@@ -17,7 +17,7 @@ import zlib from 'node:zlib';
 import crypto from 'node:crypto';
 import admin from 'firebase-admin';
 
-const MOTOR_URL = 'https://g20hub.com/assets/g20-rent.js';   // o motor único, direto do site (já é público)
+const MOTOR_URL = process.env.MOTOR_URL || 'https://g20hub.com/assets/g20-rent.js';   // o motor único, direto do site (já é público)
 const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
