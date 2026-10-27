@@ -25,7 +25,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Ajuste de eventos corporativos não lançados', 'Sem evento oficial que explique (fica como está)', 'Marcadas como subscrição (ficam como estão)', 'Eventos do Yahoo usados', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20'];
+const PRINCIPAIS = ['Abaixo do mercado: detalhe', 'Ano a ano (TWR)', 'Carteira G20'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -159,6 +159,14 @@ async function main() {
         if (evs && fat !== 1 && Math.abs(x.rz / fat - 1) < 0.06) { aportesCalc[x.i] = Object.assign({}, a, { qtd: +a.qtd * x.rz, preco: +a.preco / x.rz }); ajustes.push(t + ' ' + d + ' ×' + x.rz.toFixed(2) + ' (eventos ×' + fat.toFixed(2) + ')'); }
         else semEvento.push(t + ' ' + d + ' ×' + x.rz.toFixed(2) + (evs ? (fat !== 1 ? ' (eventos ×' + fat.toFixed(2) + ')' : ' (sem evento)') : ' (Yahoo não respondeu)') + (obs ? ' obs: ' + obs.slice(0, 40) : '')); }
     }
+    // detalhe das operações abaixo do mercado: proporção sobre o que já tinha (bonificação costuma ser
+    // um percentual redondo: 5%, 10%, 30%...), preço lançado, mercado e observação
+    try { const ordD = ent.aportes.slice().sort((a, b) => String(a.data).localeCompare(String(b.data))); const qa = {}; const det = [];
+      ordD.forEach(a => { const t = String(a.ticker).toUpperCase(), d = String(a.data).slice(0, 10), q = +a.qtd || 0, q0 = qa[t] || 0;
+        const mk = pxB[t] ? pxB[t].em(d) : null, pr = +a.preco || 0;
+        if (/\d$/.test(t) && a.op !== 'V' && mk > 0 && pr > 0 && pr / mk < 0.92) det.push(`${t} ${d}: +${q} sobre ${+q0.toFixed(2)} (${q0 > 0 ? (q / q0 * 100).toFixed(1) + '%' : 'primeira'}) · lançado ${pr.toFixed(2)} · mercado ${mk.toFixed(2)}${a.obs ? ' · obs: ' + String(a.obs).slice(0, 50) : ''}`);
+        qa[t] = q0 + (a.op === 'V' ? -q : q); });
+      nota('Abaixo do mercado: detalhe', det.join(' | ')); } catch (e) { nota('Abaixo do mercado: detalhe', 'erro ' + e.message); }
     nota('Sem evento oficial que explique (fica como está)', semEvento.length + ': ' + semEvento.slice(0, 40).join(' · '));
     nota('Marcadas como subscrição (ficam como estão)', subscricoes.length + ': ' + subscricoes.join(' · '));
     const evLista = Object.keys(evCache).filter(t => evCache[t] && evCache[t].length).map(t => t + ' ' + evCache[t].map(e => e.d + ' ×' + e.f.toFixed(3)).join(', '));
