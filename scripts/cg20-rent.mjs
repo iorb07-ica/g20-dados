@@ -38,6 +38,9 @@ async function carregarMotor() {
     key: i => Object.keys(mem)[i] || null, get length() { return Object.keys(mem).length; }, clear: () => { for (const k in mem) delete mem[k]; }
   };
   globalThis.G20Ind = { get: (k, d) => d };
+  // o Yahoo recusa pedidos sem cara de navegador: o robô se apresenta como um
+  const _f = globalThis.fetch;
+  globalThis.fetch = (u, o = {}) => { o = Object.assign({}, o); o.headers = Object.assign({ 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36', Accept: 'application/json,text/plain,*/*' }, o.headers || {}); return _f(u, o); };
   const r = await fetch(MOTOR_URL + '?t=' + Date.now()); if (!r.ok) throw new Error('motor não baixou: HTTP ' + r.status);
   const src = await r.text();
   vm.runInThisContext(src, { filename: 'g20-rent.js' });
@@ -67,7 +70,11 @@ async function main() {
   // o motor confere a "assinatura" dos lançamentos pelo que está guardado no aparelho: aqui são os da Carteira G20
   localStorage.setItem('g20_rvAportes', JSON.stringify(ent.aportes)); localStorage.setItem('g20_rendaFixa', '[]');
   const serie = await G.calcular({ aportes: ent.aportes, proventos: ent.proventos || [], rendaFixa: [], _semGravar: true });
-  if (!Array.isArray(serie) || serie.length < 2) throw new Error('série vazia');
+  const px = globalThis._g20Precos || {}, comPx = Object.keys(px).length;
+  const tks = [...new Set(ent.aportes.map(x => String(x.ticker).toUpperCase()))];
+  const semPx = tks.filter(t => !px[t] && !px[t.replace(/-(USD|USDT|USDC|BRL)$/, '')]);
+  console.log(`::notice title=Preços::${comPx} ativos com histórico de preço, de ${tks.length}. Câmbio: ${globalThis._g20Cambio ? 'ok' : 'FALTOU'}. Sem preço: ${semPx.slice(0, 40).join(', ')}`);
+  if (!Array.isArray(serie) || serie.length < 2) throw new Error('série vazia (' + (serie == null ? 'nula' : serie.length + ' dias') + ')');
   const D = serie.map(p => p.d), u = serie[serie.length - 1];
   const sem = (globalThis._g20SemCotacaoSerie || []);
   const twrMax = G.twrDesde(serie, D[0]);
