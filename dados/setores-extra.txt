@@ -1,0 +1,34 @@
+# Ativos do exterior que não estão no S&P 500 nem na Carteira G20 e precisam de setor.
+# Um código por linha (como na corretora americana). O robô de setores lê este arquivo
+# toda semana. Linhas com # são comentários.
+INTR
+NU
+XP
+STNE
+PAGS
+MELI
+DUOL
+ASML
+TSM
+BABA
+SHOP
+SE
+SPOT
+O
+NNN
+IIPR
+STAG
+VICI
+# ETFs (aparecem como "Diversificado")
+VOO
+IVV
+SPY
+QQQ
+VT
+VTI
+SCHD
+VNQ
+NOBL
+HERO
+SOXX
+SMH

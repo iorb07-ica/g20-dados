@@ -1,0 +1,71 @@
+name: Setores dos ativos
+# out/2026: monta dados/setores.json com o setor de cada ativo (Brasil pela B3, exterior pela SEC),
+# numa classificação única, para a subaba Composição da aba Gráficos do G20 Hub.
+# Veio do repositório privado plataforma-g20 em 27/10/2026: aqui, num repositório público, os
+# minutos do GitHub Actions são ilimitados e não gastam a franquia do plano.
+# Roda sozinha aos domingos às 12h (Brasília) no modo atualizar (só ativos novos ou com setor
+# guardado há mais de 180 dias), e pelo botão "Run workflow":
+#   atualizar   = rotina semanal
+#   completo    = refaz todos
+#   diagnostico = não grava nada; mostra no log o que as fontes devolvem
+on:
+  schedule:
+    - cron: '0 15 * * 0'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'Modo'
+        type: choice
+        options: [atualizar, completo, diagnostico]
+        default: atualizar
+      tickers:
+        description: 'Só estes ativos (opcional, separados por vírgula)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  setores:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 70
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Montar os setores
+        env:
+          MODO: ${{ inputs.modo || 'atualizar' }}
+          TICKERS: ${{ inputs.tickers }}
+          HORAS: '1'
+        run: node scripts/setores.mjs
+      - name: Gravar no repositório (só se mudou)
+        id: gravar
+        if: always()
+        run: |
+          git config user.name "G20 Setores"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados/setores.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
+            echo "Nada novo para gravar."
+          else
+            git commit -q -m "Setores (${{ inputs.modo || 'atualizar' }}): $(date -u -d '-3 hours' +%Y-%m-%d)"
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
+          fi
+      # Envio feito por esta tarefa não dispara o deploy normal: publica aqui mesmo
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/configure-pages@v6
+      - if: steps.gravar.outputs.mudou == 'sim'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+      - if: steps.gravar.outputs.mudou == 'sim'
+        id: deployment
+        uses: actions/deploy-pages@v5
