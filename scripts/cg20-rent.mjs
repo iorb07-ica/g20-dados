@@ -156,6 +156,32 @@ async function main() {
   if (gz.length + pa.length > 950000) throw new Error('documento grande demais para o Firestore');
 
   if (MODO === 'diagnostico') {
+    // 28/10/2026: AUDITORIA DOS DOIS MOTORES. Roda aqui também o motor mensal da página (G20Graf,
+    // assets/g20-graficos.js do site) com as mesmas entradas que a página usa, e compara: ano a ano,
+    // e o PREÇO de cada ativo no fim de cada mês nas duas fontes (mensal guardado × diário do Yahoo).
+    try {
+      const rg = await fetch('https://g20hub.com/assets/g20-graficos.js?t=' + Date.now()); vm.runInThisContext(await rg.text(), { filename: 'g20-graficos.js' });
+      const sd3 = await dados.doc('cg20Serie').get(); const H = JSON.parse(((sd3.exists && sd3.data().value) || {}).histJson || '{}');
+      const simb = (t, tp) => { t = String(t).toUpperCase(); return tp === 'Cripto' ? (t.includes('-') ? t : t + '-USD') : tp === 'UCITs' ? (t.includes('.') ? t : t + '.L') : (/\d$/.test(t) ? t + '.SA' : t); };
+      const ehBR = (t, tp) => /\d$/.test(String(t)) && tp !== 'Cripto';
+      const cfg = { transacoes: aportesCalc.map(a => ({ data: a.data, ticker: a.ticker, tipo: a.tipo, op: a.op, qtd: +a.qtd, preco: +a.preco, moeda: a.moeda, fxRate: a.fxRate })),
+        proventos: (ent.proventos || []).map(p => ({ data: p.data, ticker: p.ticker, valor: p.moeda === 'USD' ? p.total / 0.7 : p.total, us: p.moeda === 'USD' })),
+        hist: H, simbolo: simb, ehUS: (t, tp) => !ehBR(t, tp), precoAgora: () => null, fxAgora: (serie[serie.length - 1].fx || 5.3), cdi: {}, ipca: {}, cdiDia: {}, moeda: 'BRL' };
+      const sg = globalThis.G20Graf.serie(cfg); const anoG = {}; let totG = 1;
+      sg.linhas.forEach(l => { if (l.r == null) return; const y = l.m.slice(0, 4); anoG[y] = (anoG[y] || 1) * (1 + l.r); totG *= (1 + l.r); });
+      console.log('::notice title=Motor mensal da página (aqui no robô)::total ' + ((totG - 1) * 100).toFixed(2) + '% · ' + Object.keys(anoG).sort().map(y => y + ': ' + ((anoG[y] - 1) * 100).toFixed(2) + '%').join(' · '));
+      // preço no fim de cada mês: guardado (página) × diário (robô), enquanto o ativo estava na carteira
+      const px = globalThis._g20Precos || {}, tipoDe = {}, posMes = {};
+      const ord2 = aportesCalc.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
+      const q = {}; let k = 0; const mesesAll = sg.meses;
+      mesesAll.forEach(m => { const fim = m + '-31'; while (k < ord2.length && String(ord2[k].data).slice(0, 10) <= fim) { const a = ord2[k++]; const t = String(a.ticker).toUpperCase(); tipoDe[t] = a.tipo; q[t] = (q[t] || 0) + (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); } posMes[m] = Object.keys(q).filter(t => q[t] > 1e-6); });
+      const difs = {};
+      mesesAll.forEach(m => { const [y, mo] = m.split('-').map(Number); const ult = new Date(Date.UTC(y, mo, 0)).toISOString().slice(0, 10);
+        posMes[m].forEach(t => { const hm = (H[simb(t, tipoDe[t])] || {})[m]; const pd = px[t] ? px[t].em(ult) : null; if (!(hm > 0) || !(pd > 0)) return; const rz = hm / pd;
+          if (Math.abs(rz - 1) > 0.12) { (difs[t] = difs[t] || []).push(m + ' ×' + rz.toFixed(2)); } }); });
+      const lst = Object.keys(difs).sort((a, b) => difs[b].length - difs[a].length);
+      console.log('::notice title=Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)::' + (lst.length ? lst.slice(0, 25).map(t => t + ' [' + difs[t].length + ' meses: ' + difs[t].slice(0, 3).join(', ') + ']').join(' | ') : 'nenhum'));
+    } catch (e) { console.log('::notice title=Motor mensal::erro ' + String(e && e.stack || e).slice(0, 400)); }
     // 28/10/2026: a MESMA série diária, mas medida mês a mês (como o motor mensal da página faz),
     // para ver se a diferença é de método (data dos aportes dentro do mês) ou de dados
     try {
