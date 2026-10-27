@@ -25,7 +25,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Cripto: operações com preço fora do mercado (mais de 15%)', 'Outros ativos: operações com preço fora do mercado (maior efeito primeiro)', 'Pente fino', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20'];
+const PRINCIPAIS = ['Ajuste de eventos corporativos não lançados', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Pente fino'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -127,6 +127,20 @@ async function main() {
   } catch (e) { console.log('::notice title=Bonificações::erro ' + e.message); }
   localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
   // teste (só no diagnóstico com BRUTO=1): proventos como a página soma (bruto, antes do imposto dos EUA)
+  if (process.env.AJUSTE === '1') {
+    // 1ª passada só para obter os preços diários; depois, para cada ativo do Brasil cujas operações estão
+    // sistematicamente acima/abaixo do fechamento ajustado do Yahoo (evento corporativo que o histórico
+    // ajustou e o lançamento não), a quantidade e o preço da operação são ajustados pela mesma proporção
+    // (mesmo valor investido), como se faz com desdobramento.
+    await G.calcular({ aportes: aportesCalc, proventos: [], rendaFixa: [], precosExtra, _semGravar: true });
+    const pxB = globalThis._g20Precos || {}, porT = {};
+    aportesCalc.forEach((a, i) => { const t = String(a.ticker).toUpperCase(); if (!/\d$/.test(t) || !pxB[t]) return; const mk = pxB[t].em(String(a.data).slice(0, 10)); const pr = +a.preco || 0; if (!(mk > 0) || !(pr > 0)) return; (porT[t] = porT[t] || []).push({ i, rz: pr / mk }); });
+    const ajustes = [];
+    Object.keys(porT).forEach(t => { const L = porT[t].filter(x => x.rz > 1.12 || x.rz < 0.88); if (L.length < 2) return;
+      L.forEach(x => { const par = L.filter(y => y !== x && Math.abs(y.rz / x.rz - 1) < 0.06).length; if (!par) return; const a = aportesCalc[x.i]; aportesCalc[x.i] = Object.assign({}, a, { qtd: +a.qtd * x.rz, preco: +a.preco / x.rz }); ajustes.push(t + ' ' + String(a.data).slice(0, 10) + ' ×' + x.rz.toFixed(2)); }); });
+    nota('Ajuste de eventos corporativos não lançados', ajustes.length + ': ' + ajustes.slice(0, 40).join(' · '));
+    localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
+  }
   const provCalc = process.env.BRUTO === '1' ? (ent.proventos || []).map(p => Object.assign({}, p, { total: p.moeda === 'USD' ? p.total / 0.7 : p.total })) : (ent.proventos || []);
   const serie = await G.calcular({ aportes: aportesCalc, proventos: provCalc, rendaFixa: [], precosExtra, _semGravar: true });
   // dias ignorados pelo motor por falta de preço (cobertura), por ano
