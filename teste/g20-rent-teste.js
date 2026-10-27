@@ -945,7 +945,18 @@
                  mandar o histórico guardado (opts.precosExtra, ex.: o mensal da Carteira G20); sem ele
                  o ativo ficava sem preço enquanto estava na carteira, a "cobertura" caía e o motor
                  ignorava esses dias (a Carteira G20 de 2019 a 2021 tinha SQIA3, STBP3, STOR, CIO...). */
-              if ((!pontos || !pontos.length) && opts.precosExtra && opts.precosExtra[tk] && opts.precosExtra[tk].length) pontos = opts.precosExtra[tk];
+              /* Também quando o histórico diário COMEÇA DEPOIS da primeira compra (fundo que mudou de
+                 código, histórico antigo que sumiu do Yahoo): os dias que faltam no começo vêm do
+                 histórico guardado. Exemplo: XPLG11, TVRI11 e BTHF11 comprados em 09/12/2019 não tinham
+                 preço diário naquele mês e subiram de 9% a 16%; o ganho ficava de fora. */
+              var ex = opts.precosExtra && opts.precosExtra[tk];
+              if (ex && ex.length) {
+                if (!pontos || !pontos.length) pontos = ex.slice();
+                else if (ex[0].d < pontos[0].d) {
+                  var ini = pontos[0].d, antes = ex.filter(function (p) { return p.d < ini; });
+                  if (antes.length) pontos = antes.concat(pontos);
+                }
+              }
               resultados.push({ ticker: tk, pontos: pontos });
             });
         })).then(function () { return processarLote(inicio + 6); });

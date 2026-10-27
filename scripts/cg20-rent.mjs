@@ -87,15 +87,21 @@ async function main() {
     const sd = await dados.doc('cg20Serie').get(); const hist = JSON.parse(((sd.exists && sd.data().value) || {}).histJson || '{}');
     const tipoDe = {}; ent.aportes.forEach(x => { tipoDe[String(x.ticker).toUpperCase()] = x.tipo; });
     const simb = (t, tp) => tp === 'Cripto' ? (t.includes('-') ? t : t + '-USD') : tp === 'UCITs' ? (t.includes('.') ? t : t + '.L') : (/\d$/.test(t) ? t + '.SA' : t);
-    const DEL = ['SQIA3', 'CIO', 'STOR', 'SKX', 'STBP3', 'IRDM11', 'BPYU'];
+    // TODOS os ativos: o histórico mensal guardado vira diário, ligando um fim de mês ao seguinte em linha
+    // reta (como o motor mensal faz). O motor só usa isso onde o Yahoo não tem o dia (antes do histórico
+    // diário começar, ou o ativo inteiro, se saiu da bolsa).
+    const fimDoMes = m => { const [y, mo] = m.split('-').map(Number); return new Date(Date.UTC(y, mo, 0)).toISOString().slice(0, 10); };
+    const somaDia = (iso, n) => new Date(Date.parse(iso + 'T12:00:00Z') + n * 864e5).toISOString().slice(0, 10);
     for (const t of Object.keys(tipoDe)) {
-      if (!DEL.includes(t.replace(/\.SA$/, ''))) continue;
       const h = hist[simb(t, tipoDe[t])] || hist[t]; if (!h) continue;
-      const pts = []; Object.keys(h).sort().forEach(m => { const c = +h[m]; if (!(c > 0)) return; const [y, mo] = m.split('-').map(Number);
-        const dias = new Date(Date.UTC(y, mo, 0)).getUTCDate(); for (let d = 1; d <= dias; d++) pts.push({ d: `${m}-${String(d).padStart(2, '0')}`, c }); });
+      const ms = Object.keys(h).filter(m => +h[m] > 0).sort(); if (!ms.length) continue;
+      const pts = []; let d = somaDia(fimDoMes(ms[0]), -30);
+      for (let i = 0; i < ms.length; i++) { const d1 = fimDoMes(ms[i]), c1 = +h[ms[i]], c0 = i ? +h[ms[i - 1]] : c1, d0 = i ? fimDoMes(ms[i - 1]) : d;
+        const n = Math.max(1, Math.round((Date.parse(d1) - Date.parse(d0)) / 864e5));
+        for (let k = i ? 1 : 0; k <= n; k++) { const dd = somaDia(d0, k); if (dd > d1) break; pts.push({ d: dd, c: c0 + (c1 - c0) * k / n }); } }
       if (pts.length) precosExtra[t] = pts;
     }
-    nota('Histórico guardado (saíram da bolsa)', (Object.keys(precosExtra).map(t => t + ' ' + precosExtra[t][0].d.slice(0, 7) + ' a ' + precosExtra[t][precosExtra[t].length - 1].d.slice(0, 7)).join(' · ') || 'nenhum'));
+    nota('Histórico guardado (saíram da bolsa)', (Object.keys(precosExtra).length + ' ativos com histórico guardado' || 'nenhum'));
   } catch (e) { console.log('::notice title=Histórico guardado::erro ' + e.message); }
   // Bonificações (igual à página, função bonificacoes do carteira.html): na Carteira G20 a ação recebida
   // em bonificação é lançada como compra pelo custo atribuído (bem abaixo da cotação). O Yahoo trata a
