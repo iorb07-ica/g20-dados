@@ -25,7 +25,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Proventos: registrado ÷ esperado pelas bases', 'Proventos que faltam (ativo: eventos sem registro · registrado ÷ esperado · último faltando)', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos'];
+const PRINCIPAIS = ['Cripto: operações com preço fora do mercado (mais de 15%)', 'Outros ativos: operações com preço fora do mercado (maior efeito primeiro)', 'Pente fino', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -152,6 +152,35 @@ async function main() {
       nota('De onde veio (proporção do resultado)', `ativos ${(dc.ativos / tot * 100).toFixed(1)}% · câmbio ${(dc.cambio / tot * 100).toFixed(1)}% · proventos ${(dc.proventos / tot * 100).toFixed(1)}%`); } } catch (e) {}
     try { const tir = G.tir(serie, D[0], D[D.length - 1]); nota('TIR ao ano', (tir == null ? '—' : (tir * (Math.abs(tir) < 1 ? 100 : 1)).toFixed(2) + '%')); } catch (e) {}
   }
+  // 28/10/2026: PENTE FINO NOS PREÇOS DOS APORTES (cripto em detalhe). Para cada compra/venda: o preço
+  // lançado, convertido para a moeda em que o ativo é cotado (US$ para cripto/exterior), contra o
+  // fechamento do dia. Preço lançado errado vira ganho ou perda falsa no dia da operação, nos dois motores.
+  if (MODO === 'diagnostico') try {
+    const pxA = globalThis._g20Precos || {}, cbA = globalThis._g20Cambio;
+    const linhas = [], porAtivo = {};
+    const patDia = {}; serie.forEach(p => { patDia[p.d] = p.patrimonio; });
+    for (const a of aportesCalc) {
+      const t = String(a.ticker).toUpperCase().replace(/-(USD|USDT|USDC|BRL)$/, ''), tp = a.tipo, d = String(a.data).slice(0, 10);
+      const us = !/\d$/.test(t), pr = +a.preco || 0; if (!(pr > 0) || !pxA[t]) continue;
+      const mk = pxA[t].em(d); if (!(mk > 0)) continue;
+      const fxD = cbA ? cbA.em(d) : null;
+      const moedaL = a.moeda || (us ? 'USD' : 'BRL');
+      // preço lançado na moeda da cotação
+      let nat = pr, como = moedaL;
+      if (us && moedaL === 'BRL') { const fx = (+a.fxRate > 1) ? +a.fxRate : fxD; nat = fx ? pr / fx : null; como = 'BRL÷' + ((+a.fxRate > 1) ? 'câmbio lançado ' + (+a.fxRate).toFixed(2) : 'câmbio do dia'); }
+      if (!(nat > 0)) continue;
+      const rz = nat / mk;
+      const imp = patDia[d] > 0 ? (+a.qtd || 0) * (mk - nat) * (us ? (fxD || 5) : 1) / patDia[d] * (a.op === 'V' ? -1 : 1) : null;
+      const o = porAtivo[t] = porAtivo[t] || { n: 0, ruins: 0, tp };
+      o.n++;
+      if (Math.abs(rz - 1) > 0.15) { o.ruins++; linhas.push({ t, d, op: a.op || 'C', tp, como, pr, nat, mk, rz, imp }); }
+    }
+    const cr = linhas.filter(l => l.tp === 'Cripto');
+    const resumoCr = Object.keys(porAtivo).filter(t => porAtivo[t].tp === 'Cripto').map(t => `${t}: ${porAtivo[t].ruins}/${porAtivo[t].n}`).join(' · ');
+    nota('Cripto: operações com preço fora do mercado (mais de 15%)', `${resumoCr || 'sem cripto'} | ` + cr.slice(0, 18).map(l => `${l.d} ${l.op} ${l.t} lançado ${l.pr.toFixed(2)} (${l.como}) = US$ ${l.nat.toFixed(2)} × mercado US$ ${l.mk.toFixed(2)} (×${l.rz.toFixed(2)}${l.imp != null ? '; efeito ' + (l.imp * 100).toFixed(1) + '% da carteira no dia' : ''})`).join(' | '));
+    const outros = linhas.filter(l => l.tp !== 'Cripto').sort((x, y) => Math.abs(y.imp || 0) - Math.abs(x.imp || 0));
+    nota('Outros ativos: operações com preço fora do mercado (maior efeito primeiro)', `${outros.length} operações | ` + outros.slice(0, 20).map(l => `${l.d} ${l.op} ${l.t} [${l.como}] lançado ${l.pr.toFixed(2)} × mercado ${l.mk.toFixed(2)} (×${l.rz.toFixed(2)}${l.imp != null ? '; ' + (l.imp * 100).toFixed(1) + '%' : ''})`).join(' | '));
+  } catch (e) { nota('Pente fino', 'erro ' + e.message); }
   // 28/10/2026: AUDITORIA DOS PROVENTOS. Compara os proventos que entraram na conta (os validados pela
   // página) com as bases oficiais (dados/proventos/br da B3 e dados/proventos/us), evento por evento:
   // quantidade na data-com (BR) ou antes da data-ex (EUA) × valor, líquido (JCP 15%, EUA 30%).
