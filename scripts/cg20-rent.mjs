@@ -151,6 +151,11 @@ async function main() {
       for (const x of L) { const a = aportesCalc[x.i], d = String(a.data).slice(0, 10), obs = String(a.obs || '');
         if (/subscri/i.test(obs)) { subscricoes.push(t + ' ' + d + ' ×' + x.rz.toFixed(2)); continue; }
         const fat = (evs || []).filter(e => e.d > d).reduce((p, e) => p * e.f, 1);
+        // regra: preço lançado ACIMA do histórico de forma sistemática (2+ operações do mesmo ativo com a
+        // mesma proporção) = evento corporativo que ajustou o histórico; ajusta. Abaixo do mercado (subscrição,
+        // compra em oferta) é ganho real; fica.
+        const parecidas = L.filter(y => y !== x && Math.abs(y.rz / x.rz - 1) < 0.06).length;
+        if (x.rz > 1.08 && parecidas >= 1) { aportesCalc[x.i] = Object.assign({}, a, { qtd: +a.qtd * x.rz, preco: +a.preco / x.rz }); ajustes.push(t + ' ' + d + ' ×' + x.rz.toFixed(2)); continue; }
         if (evs && fat !== 1 && Math.abs(x.rz / fat - 1) < 0.06) { aportesCalc[x.i] = Object.assign({}, a, { qtd: +a.qtd * x.rz, preco: +a.preco / x.rz }); ajustes.push(t + ' ' + d + ' ×' + x.rz.toFixed(2) + ' (eventos ×' + fat.toFixed(2) + ')'); }
         else semEvento.push(t + ' ' + d + ' ×' + x.rz.toFixed(2) + (evs ? (fat !== 1 ? ' (eventos ×' + fat.toFixed(2) + ')' : ' (sem evento)') : ' (Yahoo não respondeu)') + (obs ? ' obs: ' + obs.slice(0, 40) : '')); }
     }
