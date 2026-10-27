@@ -116,9 +116,15 @@ async function main() {
     const sd2 = await dados.doc('cg20Serie').get(); const hist2 = JSON.parse(((sd2.exists && sd2.data().value) || {}).histJson || '{}');
     const ord = ent.aportes.slice().sort((a, b) => String(a.data).localeCompare(String(b.data))).map(a => Object.assign({}, a));
     const qtdAte = {}, fora = new Set(), achadas = [];
+    // 28/10/2026: também é bonificação a entrada com o MESMO preço (custo atribuído) de uma bonificação
+    // confirmada do mesmo ativo, mesmo que não esteja tão abaixo do mercado. Ex.: Cemig lança toda
+    // bonificação a R$ 5,00 por ação (2022 e 2024 marcadas como bonificação; 2020 e 2021 entravam como compra).
+    const custoBonif = {};
+    ent.aportes.forEach(a => { if (/bonifica/i.test(String(a.obs || '')) && +a.preco > 0.05) (custoBonif[String(a.ticker).toUpperCase()] = custoBonif[String(a.ticker).toUpperCase()] || new Set()).add((+a.preco).toFixed(2)); });
     ord.forEach((a, i) => { const tk = a.ticker, q0 = qtdAte[tk] || 0, q = +a.qtd || 0;
       if (a.op !== 'V' && q > 0 && q0 > 0 && /\d$/.test(String(tk))) { const m = String(a.data).slice(0, 7), pm = +((hist2[String(tk).toUpperCase() + '.SA'] || {})[m]) || 0, pr = +a.preco || 0;
-        if ((pr <= 0.05 || (pm > 0 && pr < 0.62 * pm)) && q / q0 <= 1) { const f = (q0 + q) / q0;
+        const mesmoCusto = (custoBonif[String(tk).toUpperCase()] || new Set()).has(pr.toFixed(2)) && q / q0 <= 0.5;
+        if ((pr <= 0.05 || (pm > 0 && pr < 0.62 * pm) || mesmoCusto) && q / q0 <= 1) { const f = (q0 + q) / q0;
           for (let j = 0; j < i; j++) { const b = ord[j]; if (b.ticker === tk && !fora.has(j)) { b.qtd = +b.qtd * f; b.preco = +b.preco / f; } }
           fora.add(i); achadas.push(tk + ' ' + String(a.data).slice(0, 10) + ' +' + ((f - 1) * 100).toFixed(1) + '%'); } }
       qtdAte[tk] = q0 + (a.op === 'V' ? -q : q); });
