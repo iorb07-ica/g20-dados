@@ -90,6 +90,15 @@ async function main() {
   const resumo = `Série: ${serie.length} dias, de ${D[0]} a ${D[D.length - 1]}. Rentabilidade desde o início (TWR): ${twrMax == null ? '—' : twrMax.toFixed(2) + '%'}` + (sem.length ? `. Sem cotação hoje: ${sem.join(', ')}` : '');
   log(resumo); console.log('::notice title=Carteira G20::' + resumo);
 
+  if (MODO === 'diagnostico') {
+    // ano a ano (só %), para comparar com a página
+    const anos = [...new Set(D.map(d => d.slice(0, 4)))];
+    const linhas = anos.map(y => { const ini = D.filter(d => d < y + '-01-01').pop() || D[0]; const sub = serie.filter(p => p.d <= y + '-12-31'); const r = G.twrDesde(sub, ini); return y + ': ' + (r == null ? '—' : (r >= 0 ? '+' : '') + r.toFixed(2) + '%'); });
+    console.log('::notice title=Ano a ano (TWR)::' + linhas.join(' · '));
+    try { const dc = G.decompor(serie, D[0], D[D.length - 1]); if (dc) { const tot = Math.abs(dc.ativos) + Math.abs(dc.cambio) + Math.abs(dc.proventos) + Math.abs(dc.rendaFixa || 0) || 1;
+      console.log(`::notice title=De onde veio (proporção do resultado)::ativos ${(dc.ativos / tot * 100).toFixed(1)}% · câmbio ${(dc.cambio / tot * 100).toFixed(1)}% · proventos ${(dc.proventos / tot * 100).toFixed(1)}%`); } } catch (e) {}
+    try { const tir = G.tir(serie, D[0], D[D.length - 1]); console.log('::notice title=TIR ao ano::' + (tir == null ? '—' : (tir * (Math.abs(tir) < 1 ? 100 : 1)).toFixed(2) + '%')); } catch (e) {}
+  }
   // resultado por ativo de cada período (o "Quem mais somou" dos alunos)
   const porAtivo = {};
   for (const p of Object.keys(PERIODOS)) {
@@ -105,7 +114,10 @@ async function main() {
   log(tam); console.log('::notice title=Tamanho::' + tam);
   if (gz.length + pa.length > 950000) throw new Error('documento grande demais para o Firestore');
 
-  if (MODO === 'diagnostico') { log('Modo diagnóstico: nada gravado.'); return; }
+  if (MODO === 'diagnostico') {
+    const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
+    console.log('::notice title=Quem mais tirou (desde o início)::' + L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
+    log('Modo diagnóstico: nada gravado.'); return; }
   await dados.doc('cg20Rent').set({
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
