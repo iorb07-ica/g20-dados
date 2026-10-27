@@ -25,7 +25,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Abaixo do mercado: detalhe', 'Ano a ano (TWR)', 'Carteira G20'];
+const PRINCIPAIS = ['Ajuste de eventos corporativos não lançados', 'Bonificações tratadas como desdobramento', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos: registrado ÷ esperado pelas bases', 'Falhou'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -133,7 +133,7 @@ async function main() {
   } catch (e) { console.log('::notice title=Bonificações::erro ' + e.message); }
   localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
   // teste (só no diagnóstico com BRUTO=1): proventos como a página soma (bruto, antes do imposto dos EUA)
-  if (process.env.AJUSTE === '1') {
+  if (process.env.AJUSTE !== '0') {   // sempre, a não ser que alguém desligue de propósito no teste
     // 1ª passada só para obter os preços diários; depois, para cada ativo do Brasil cujas operações estão
     // sistematicamente acima/abaixo do fechamento ajustado do Yahoo (evento corporativo que o histórico
     // ajustou e o lançamento não), a quantidade e o preço da operação são ajustados pela mesma proporção

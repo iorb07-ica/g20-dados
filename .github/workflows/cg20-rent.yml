@@ -18,7 +18,7 @@ on:
         options: [gravar, diagnostico]
         default: gravar
       ajuste:
-        description: 'Teste: ajustar eventos corporativos não lançados (1)'
+        description: 'Teste: 0 desliga o ajuste de eventos corporativos (padrão: ligado)'
         required: false
         default: ''
       bruto:
