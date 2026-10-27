@@ -21,6 +21,9 @@ const MOTOR_URL = process.env.MOTOR_URL || 'https://g20hub.com/assets/g20-rent.j
 const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
+// os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
+const PRINCIPAIS = ['Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
+function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
 if (!sa) { console.error('Falta o segredo FIREBASE_SERVICE_ACCOUNT.'); process.exit(1); }
@@ -75,7 +78,7 @@ async function main() {
   log(`Entrada: ${ent.aportes.length} lançamentos, ${(ent.proventos || []).length} proventos (publicada em ${ent.em || '?'})`);
   const G = await carregarMotor();
   try { const t = await fetch('https://g20-proxy.vercel.app/api/history?symbol=PETR4.SA&range=1mo&interval=1d'); const tx = await t.text();
-    console.log(`::notice title=Teste do proxy::HTTP ${t.status} · ${tx.slice(0, 160).replace(/\s+/g, ' ')}`); } catch (e) { console.log('::notice title=Teste do proxy::erro ' + e.message); }
+    nota('Teste do proxy', `HTTP ${t.status} · ${tx.slice(0, 160).replace(/\s+/g, ' ')}`); } catch (e) { console.log('::notice title=Teste do proxy::erro ' + e.message); }
   // o motor confere a "assinatura" dos lançamentos pelo que está guardado no aparelho: aqui são os da Carteira G20
   localStorage.setItem('g20_rvAportes', JSON.stringify(ent.aportes)); localStorage.setItem('g20_rendaFixa', '[]');
   // ativos que saíram da bolsa: o histórico MENSAL guardado pela página (cg20Serie), repetido dia a dia
@@ -92,7 +95,7 @@ async function main() {
         const dias = new Date(Date.UTC(y, mo, 0)).getUTCDate(); for (let d = 1; d <= dias; d++) pts.push({ d: `${m}-${String(d).padStart(2, '0')}`, c }); });
       if (pts.length) precosExtra[t] = pts;
     }
-    console.log('::notice title=Histórico guardado (saíram da bolsa)::' + (Object.keys(precosExtra).map(t => t + ' ' + precosExtra[t][0].d.slice(0, 7) + ' a ' + precosExtra[t][precosExtra[t].length - 1].d.slice(0, 7)).join(' · ') || 'nenhum'));
+    nota('Histórico guardado (saíram da bolsa)', (Object.keys(precosExtra).map(t => t + ' ' + precosExtra[t][0].d.slice(0, 7) + ' a ' + precosExtra[t][precosExtra[t].length - 1].d.slice(0, 7)).join(' · ') || 'nenhum'));
   } catch (e) { console.log('::notice title=Histórico guardado::erro ' + e.message); }
   // Bonificações (igual à página, função bonificacoes do carteira.html): na Carteira G20 a ação recebida
   // em bonificação é lançada como compra pelo custo atribuído (bem abaixo da cotação). O Yahoo trata a
@@ -111,7 +114,7 @@ async function main() {
           fora.add(i); achadas.push(tk + ' ' + String(a.data).slice(0, 10) + ' +' + ((f - 1) * 100).toFixed(1) + '%'); } }
       qtdAte[tk] = q0 + (a.op === 'V' ? -q : q); });
     aportesCalc = ord.filter((_, i) => !fora.has(i));
-    console.log('::notice title=Bonificações tratadas como desdobramento::' + (achadas.length ? achadas.length + ': ' + achadas.slice(0, 30).join(' · ') : 'nenhuma'));
+    nota('Bonificações tratadas como desdobramento', (achadas.length ? achadas.length + ': ' + achadas.slice(0, 30).join(' · ') : 'nenhuma'));
   } catch (e) { console.log('::notice title=Bonificações::erro ' + e.message); }
   localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
   // teste (só no diagnóstico com BRUTO=1): proventos como a página soma (bruto, antes do imposto dos EUA)
@@ -119,26 +122,26 @@ async function main() {
   const serie = await G.calcular({ aportes: aportesCalc, proventos: provCalc, rendaFixa: [], precosExtra, _semGravar: true });
   // dias ignorados pelo motor por falta de preço (cobertura), por ano
   try { const ig = {}; for (let i = 1; i < serie.length; i++) { const a0 = serie[i - 1].cobertura ?? 1, a1 = serie[i].cobertura ?? 1; if (Math.abs(a1 - a0) > 0.001 || a1 < 0.8) { const y = serie[i].d.slice(0, 4); ig[y] = (ig[y] || 0) + 1; } }
-    console.log('::notice title=Dias ignorados por falta de preço::' + (Object.keys(ig).map(y => y + ': ' + ig[y]).join(' · ') || 'nenhum')); } catch (e) {}
+    nota('Dias ignorados por falta de preço', (Object.keys(ig).map(y => y + ': ' + ig[y]).join(' · ') || 'nenhum')); } catch (e) {}
   const px = globalThis._g20Precos || {}, comPx = Object.keys(px).length;
   const tks = [...new Set(ent.aportes.map(x => String(x.ticker).toUpperCase()))];
   const semPx = tks.filter(t => !px[t] && !px[t.replace(/-(USD|USDT|USDC|BRL)$/, '')]);
-  console.log(`::notice title=Preços::${comPx} ativos com histórico de preço, de ${tks.length}. Câmbio: ${globalThis._g20Cambio ? 'ok' : 'FALTOU'}. Sem preço: ${semPx.slice(0, 40).join(', ')}`);
+  nota('Preços', `${comPx} ativos com histórico de preço, de ${tks.length}. Câmbio: ${globalThis._g20Cambio ? 'ok' : 'FALTOU'}. Sem preço: ${semPx.slice(0, 40).join(', ')}`);
   if (!Array.isArray(serie) || serie.length < 2) throw new Error('série vazia (' + (serie == null ? 'nula' : serie.length + ' dias') + ')');
   const D = serie.map(p => p.d), u = serie[serie.length - 1];
   const sem = (globalThis._g20SemCotacaoSerie || []);
   const twrMax = G.twrDesde(serie, D[0]);
   const resumo = `Série: ${serie.length} dias, de ${D[0]} a ${D[D.length - 1]}. Rentabilidade desde o início (TWR): ${twrMax == null ? '—' : twrMax.toFixed(2) + '%'}` + (sem.length ? `. Sem cotação hoje: ${sem.join(', ')}` : '');
-  log(resumo); console.log('::notice title=Carteira G20::' + resumo);
+  log(resumo); nota('Carteira G20', resumo);
 
   if (MODO === 'diagnostico') {
     // ano a ano (só %), para comparar com a página
     const anos = [...new Set(D.map(d => d.slice(0, 4)))];
     const linhas = anos.map(y => { const ini = D.filter(d => d < y + '-01-01').pop() || D[0]; const sub = serie.filter(p => p.d <= y + '-12-31'); const r = G.twrDesde(sub, ini); return y + ': ' + (r == null ? '—' : (r >= 0 ? '+' : '') + r.toFixed(2) + '%'); });
-    console.log('::notice title=Ano a ano (TWR)::' + linhas.join(' · '));
+    nota('Ano a ano (TWR)', linhas.join(' · '));
     try { const dc = G.decompor(serie, D[0], D[D.length - 1]); if (dc) { const tot = Math.abs(dc.ativos) + Math.abs(dc.cambio) + Math.abs(dc.proventos) + Math.abs(dc.rendaFixa || 0) || 1;
-      console.log(`::notice title=De onde veio (proporção do resultado)::ativos ${(dc.ativos / tot * 100).toFixed(1)}% · câmbio ${(dc.cambio / tot * 100).toFixed(1)}% · proventos ${(dc.proventos / tot * 100).toFixed(1)}%`); } } catch (e) {}
-    try { const tir = G.tir(serie, D[0], D[D.length - 1]); console.log('::notice title=TIR ao ano::' + (tir == null ? '—' : (tir * (Math.abs(tir) < 1 ? 100 : 1)).toFixed(2) + '%')); } catch (e) {}
+      nota('De onde veio (proporção do resultado)', `ativos ${(dc.ativos / tot * 100).toFixed(1)}% · câmbio ${(dc.cambio / tot * 100).toFixed(1)}% · proventos ${(dc.proventos / tot * 100).toFixed(1)}%`); } } catch (e) {}
+    try { const tir = G.tir(serie, D[0], D[D.length - 1]); nota('TIR ao ano', (tir == null ? '—' : (tir * (Math.abs(tir) < 1 ? 100 : 1)).toFixed(2) + '%')); } catch (e) {}
   }
   // resultado por ativo de cada período (o "Quem mais somou" dos alunos)
   const porAtivo = {};
@@ -152,7 +155,7 @@ async function main() {
   const sig = crypto.createHash('sha1').update(JSON.stringify([ent.sig || '', D[D.length - 1], serie.length])).digest('hex').slice(0, 16);
   const pa = JSON.stringify(porAtivo);
   const tam = `Comprimida: ${Math.round(gz.length / 1024)} KB (de ${Math.round(json.length / 1024)} KB). Por ativo: ${Math.round(pa.length / 1024)} KB.`;
-  log(tam); console.log('::notice title=Tamanho::' + tam);
+  log(tam); nota('Tamanho', tam);
   if (gz.length + pa.length > 950000) throw new Error('documento grande demais para o Firestore');
 
   if (MODO === 'diagnostico') {
@@ -180,7 +183,7 @@ async function main() {
         posMes[m].forEach(t => { const hm = (H[simb(t, tipoDe[t])] || {})[m]; const pd = px[t] ? px[t].em(ult) : null; if (!(hm > 0) || !(pd > 0)) return; const rz = hm / pd;
           if (Math.abs(rz - 1) > 0.12) { (difs[t] = difs[t] || []).push(m + ' ×' + rz.toFixed(2)); } }); });
       const lst = Object.keys(difs).sort((a, b) => difs[b].length - difs[a].length);
-      console.log('::notice title=Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)::' + (lst.length ? lst.slice(0, 25).map(t => t + ' [' + difs[t].length + ' meses: ' + difs[t].slice(0, 3).join(', ') + ']').join(' | ') : 'nenhum'));
+      nota('Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', (lst.length ? lst.slice(0, 25).map(t => t + ' [' + difs[t].length + ' meses: ' + difs[t].slice(0, 3).join(', ') + ']').join(' | ') : 'nenhum'));
     } catch (e) { console.log('::notice title=Motor mensal::erro ' + String(e && e.stack || e).slice(0, 400)); }
     // 28/10/2026: a MESMA série diária, mas medida mês a mês (como o motor mensal da página faz),
     // para ver se a diferença é de método (data dos aportes dentro do mês) ou de dados
@@ -194,9 +197,9 @@ async function main() {
         if (V0 > 0){ fFim *= (V1 + P - F) / V0; }                   // aporte no fim do mês
         if (V0 + Fw > 0){ fDz *= 1 + (V1 + P - V0 - F) / (V0 + Fw); } // Dietz modificado
       });
-      console.log(`::notice title=Mesma série medida mês a mês::aporte no começo do mês ${((fIni - 1) * 100).toFixed(1)}% · no fim do mês ${((fFim - 1) * 100).toFixed(1)}% · Dietz ${((fDz - 1) * 100).toFixed(1)}% (diário: ${twrMax == null ? '—' : twrMax.toFixed(1)}%)`);
+      nota('Mesma série medida mês a mês', `aporte no começo do mês ${((fIni - 1) * 100).toFixed(1)}% · no fim do mês ${((fFim - 1) * 100).toFixed(1)}% · Dietz ${((fDz - 1) * 100).toFixed(1)}% (diário: ${twrMax == null ? '—' : twrMax.toFixed(1)}%)`);
       const p0 = serie.slice(0, 200).map(p => p.d.slice(5) + ' ' + Math.round(p.patrimonio)).filter((_, i) => i % 20 === 0);
-      console.log('::notice title=Tamanho da carteira no começo (a cada 20 dias)::' + serie.slice(0, 400).filter((_, i) => i % 25 === 0).map(p => p.d + ' ' + (p.patrimonio < 1000 ? 'menos de mil' : p.patrimonio < 10000 ? 'poucos mil' : p.patrimonio < 50000 ? 'dezenas de mil' : 'acima de 50 mil')).join(' · '));
+      nota('Tamanho da carteira no começo (a cada 20 dias)', serie.slice(0, 400).filter((_, i) => i % 25 === 0).map(p => p.d + ' ' + (p.patrimonio < 1000 ? 'menos de mil' : p.patrimonio < 10000 ? 'poucos mil' : p.patrimonio < 50000 ? 'dezenas de mil' : 'acima de 50 mil')).join(' · '));
     } catch (e) { console.log('::notice title=Mês a mês::erro ' + e.message); }
     // 28/10/2026: período de ago/19 a out/21, onde a página e o robô se separam
     try {
@@ -207,19 +210,19 @@ async function main() {
       const tipoDe = {}, moedas = {}; ent.aportes.forEach(x => { const t = String(x.ticker).toUpperCase(); tipoDe[t] = x.tipo; if (x.data <= '2021-10-31') (moedas[t] = moedas[t] || new Set()).add(String(x.moeda || '(vazio)')); });
       const desc = l => { const base = (l.aportes || 0) + (l.valorInicio || 0); const pct = base > 0 ? (l.resultado / base * 100) : null; const p0 = px[l.ticker] && px[l.ticker].primeiro ? px[l.ticker].primeiro : ''; return `${l.ticker} [${tipoDe[l.ticker] || '?'}; moeda ${[...(moedas[l.ticker] || [])].join('/') || '-'}] ${pct == null ? '' : (pct >= 0 ? '+' : '') + pct.toFixed(0) + '%'}${p0 ? ' preço desde ' + p0 : ''}`; };
       const ord = lst.slice().sort((x, y) => x.resultado - y.resultado);
-      console.log(`::notice title=Ago/19 a out/21::TWR ${r1921 == null ? '—' : r1921.toFixed(2) + '%'} · ativos com resultado: ${lst.length}`);
-      console.log('::notice title=Ago/19 a out/21 · piores::' + ord.slice(0, 12).map(desc).join(' | '));
-      console.log('::notice title=Ago/19 a out/21 · melhores::' + ord.slice(-12).reverse().map(desc).join(' | '));
+      nota('Ago/19 a out/21', `TWR ${r1921 == null ? '—' : r1921.toFixed(2) + '%'} · ativos com resultado: ${lst.length}`);
+      nota('Ago/19 a out/21 · piores', ord.slice(0, 12).map(desc).join(' | '));
+      nota('Ago/19 a out/21 · melhores', ord.slice(-12).reverse().map(desc).join(' | '));
       // moedas usadas nos lançamentos de ativos de fora, até out/21
       const fora = Object.keys(moedas).filter(t => ['Stock', 'REIT', 'ETF', 'UCITs', 'Cripto'].includes(tipoDe[t]));
       const brl = fora.filter(t => moedas[t].has('BRL'));
-      console.log('::notice title=Moeda dos lançamentos de fora até out/21::' + fora.length + ' ativos; marcados como BRL: ' + (brl.join(', ') || 'nenhum'));
+      nota('Moeda dos lançamentos de fora até out/21', fora.length + ' ativos; marcados como BRL: ' + (brl.join(', ') || 'nenhum'));
       // série: dias com patrimônio muito diferente do dia anterior (saltos) até out/21
       const saltos = []; for (let i = 1; i < serie.length && serie[i].d <= fimJan; i++) { const a0 = serie[i - 1].patrimonio, a1 = serie[i].patrimonio - (serie[i].fluxo || 0); if (a0 > 0 && Math.abs(a1 / a0 - 1) > 0.08) saltos.push(serie[i].d + ' ' + ((a1 / a0 - 1) * 100).toFixed(1) + '%'); }
-      console.log('::notice title=Saltos diários acima de 8% até out/21::' + (saltos.slice(0, 25).join(' · ') || 'nenhum'));
+      nota('Saltos diários acima de 8% até out/21', (saltos.slice(0, 25).join(' · ') || 'nenhum'));
     } catch (e) { console.log('::notice title=Ago/19 a out/21::erro ' + e.message); }
     const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
-    console.log('::notice title=Quem mais tirou (desde o início)::' + L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
+    nota('Quem mais tirou (desde o início)', L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
     log('Modo diagnóstico: nada gravado.'); return; }
   await dados.doc('cg20Rent').set({
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
