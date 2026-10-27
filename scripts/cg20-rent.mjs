@@ -115,6 +115,26 @@ async function main() {
   if (gz.length + pa.length > 950000) throw new Error('documento grande demais para o Firestore');
 
   if (MODO === 'diagnostico') {
+    // 28/10/2026: período de ago/19 a out/21, onde a página e o robô se separam
+    try {
+      const fimJan = D.filter(d => d <= '2021-10-31').pop();
+      const r1921 = G.twrDesde(serie.filter(p => p.d <= fimJan), D[0]);
+      const lst = await G.porAtivo(D[0], fimJan) || [];
+      const px = globalThis._g20Precos || {};
+      const tipoDe = {}, moedas = {}; ent.aportes.forEach(x => { const t = String(x.ticker).toUpperCase(); tipoDe[t] = x.tipo; if (x.data <= '2021-10-31') (moedas[t] = moedas[t] || new Set()).add(String(x.moeda || '(vazio)')); });
+      const desc = l => { const base = (l.aportes || 0) + (l.valorInicio || 0); const pct = base > 0 ? (l.resultado / base * 100) : null; const p0 = px[l.ticker] && px[l.ticker].primeiro ? px[l.ticker].primeiro : ''; return `${l.ticker} [${tipoDe[l.ticker] || '?'}; moeda ${[...(moedas[l.ticker] || [])].join('/') || '-'}] ${pct == null ? '' : (pct >= 0 ? '+' : '') + pct.toFixed(0) + '%'}${p0 ? ' preço desde ' + p0 : ''}`; };
+      const ord = lst.slice().sort((x, y) => x.resultado - y.resultado);
+      console.log(`::notice title=Ago/19 a out/21::TWR ${r1921 == null ? '—' : r1921.toFixed(2) + '%'} · ativos com resultado: ${lst.length}`);
+      console.log('::notice title=Ago/19 a out/21 · piores::' + ord.slice(0, 12).map(desc).join(' | '));
+      console.log('::notice title=Ago/19 a out/21 · melhores::' + ord.slice(-12).reverse().map(desc).join(' | '));
+      // moedas usadas nos lançamentos de ativos de fora, até out/21
+      const fora = Object.keys(moedas).filter(t => ['Stock', 'REIT', 'ETF', 'UCITs', 'Cripto'].includes(tipoDe[t]));
+      const brl = fora.filter(t => moedas[t].has('BRL'));
+      console.log('::notice title=Moeda dos lançamentos de fora até out/21::' + fora.length + ' ativos; marcados como BRL: ' + (brl.join(', ') || 'nenhum'));
+      // série: dias com patrimônio muito diferente do dia anterior (saltos) até out/21
+      const saltos = []; for (let i = 1; i < serie.length && serie[i].d <= fimJan; i++) { const a0 = serie[i - 1].patrimonio, a1 = serie[i].patrimonio - (serie[i].fluxo || 0); if (a0 > 0 && Math.abs(a1 / a0 - 1) > 0.08) saltos.push(serie[i].d + ' ' + ((a1 / a0 - 1) * 100).toFixed(1) + '%'); }
+      console.log('::notice title=Saltos diários acima de 8% até out/21::' + (saltos.slice(0, 25).join(' · ') || 'nenhum'));
+    } catch (e) { console.log('::notice title=Ago/19 a out/21::erro ' + e.message); }
     const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
     console.log('::notice title=Quem mais tirou (desde o início)::' + L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
     log('Modo diagnóstico: nada gravado.'); return; }
