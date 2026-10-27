@@ -12,17 +12,20 @@
 //    resultado por ativo de cada período pronto. O aluno só lê.
 // Segredo necessário: FIREBASE_SERVICE_ACCOUNT (JSON da conta de serviço).
 // MODO=diagnostico calcula e mostra os números sem gravar.
+import fs from 'node:fs';
+import path from 'node:path';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
 import crypto from 'node:crypto';
 import admin from 'firebase-admin';
 
 const MOTOR_URL = process.env.MOTOR_URL || 'https://g20hub.com/assets/g20-rent.js';   // o motor único, direto do site (já é público)
+const RAIZ = path.join(path.dirname(new URL(import.meta.url).pathname), '..');
 const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Operações de dez/2019', 'Jul/2022: ativos com variação diferente (mensal/diário, %)', 'Mês a mês 2019 (mensal/diário, %)', 'Mês a mês 2022 (mensal/diário, %)', 'Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
+const PRINCIPAIS = ['Proventos: registrado ÷ esperado pelas bases', 'Proventos que faltam (ativo: eventos sem registro · registrado ÷ esperado · último faltando)', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -149,6 +152,40 @@ async function main() {
       nota('De onde veio (proporção do resultado)', `ativos ${(dc.ativos / tot * 100).toFixed(1)}% · câmbio ${(dc.cambio / tot * 100).toFixed(1)}% · proventos ${(dc.proventos / tot * 100).toFixed(1)}%`); } } catch (e) {}
     try { const tir = G.tir(serie, D[0], D[D.length - 1]); nota('TIR ao ano', (tir == null ? '—' : (tir * (Math.abs(tir) < 1 ? 100 : 1)).toFixed(2) + '%')); } catch (e) {}
   }
+  // 28/10/2026: AUDITORIA DOS PROVENTOS. Compara os proventos que entraram na conta (os validados pela
+  // página) com as bases oficiais (dados/proventos/br da B3 e dados/proventos/us), evento por evento:
+  // quantidade na data-com (BR) ou antes da data-ex (EUA) × valor, líquido (JCP 15%, EUA 30%).
+  if (MODO === 'diagnostico') try {
+    const BASE = path.join(RAIZ, 'dados', 'proventos');
+    const cod = (() => { try { return JSON.parse(fs.readFileSync(path.join(BASE, 'codigos-antigos.json'), 'utf8')).codigos || []; } catch (e) { return []; } })();
+    const ler = (pasta, t) => { try { return JSON.parse(fs.readFileSync(path.join(BASE, pasta, t + '.json'), 'utf8')); } catch (e) { return null; } };
+    const ops = ent.aportes.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
+    const tipoDe = {}; ops.forEach(a => { tipoDe[String(a.ticker).toUpperCase()] = a.tipo; });
+    const qtdEm = (t, dia, antes) => { let q = 0; for (const a of ops) { const d = String(a.data).slice(0, 10); if (String(a.ticker).toUpperCase() !== t) continue; if (antes ? d >= dia : d > dia) break; q += (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); } return q; };
+    const reg = {}; (ent.proventos || []).forEach(p => { const t = String(p.ticker).toUpperCase(); (reg[t] = reg[t] || []).push(p); });
+    const res = { br: [0, 0], fii: [0, 0], us: [0, 0] }, faltas = [], semBase = [];
+    for (const t of Object.keys(tipoDe)) {
+      const tp = tipoDe[t]; if (tp === 'Cripto' || tp === 'UCITs') continue;
+      const br = /\d$/.test(t); let base = br ? ler('br', t) : ler('us', t.replace('.', '-')) || ler('us', t.replace('.', '')) || ler('us', t);
+      if (!base && br) { const c = cod.find(x => x.antigo === t); if (c) base = ler('br', c.novo); }
+      if (!base) { semBase.push(t); continue; }
+      const evs = (base.proventos || []).map(e => br ? { com: e.dataCom, pag: e.dataPag || e.dataCom, v: +e.valor, liq: /JCP|JUROS/i.test(e.tipo || '') ? 0.85 : 1 } : { com: e.ex, pag: e.pag || e.ex, v: +e.valor, liq: 0.7, ex: true })
+        .filter(e => e.com && e.com >= '2019-08-01' && e.pag && e.pag <= new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10) && e.v > 0);
+      const grupo = br ? (/11$/.test(t) && tp !== 'Acao' ? 'fii' : 'br') : 'us';
+      let esp = 0, achou = 0, nFalta = 0, ultFalta = '';
+      const usados = new Set();
+      for (const e of evs) { const q = qtdEm(t, e.com, !!e.ex); if (!(q > 1e-6)) continue; const v = q * e.v * e.liq; esp += v;
+        const r = (reg[t] || []).findIndex((p, i) => !usados.has(i) && Math.abs(Date.parse(p.data) - Date.parse(e.pag)) <= 12 * 864e5);
+        if (r >= 0) { usados.add(r); achou += +reg[t][r].total || 0; } else { nFalta++; ultFalta = e.pag; } }
+      const regTot = (reg[t] || []).reduce((s, p) => s + (+p.total || 0), 0);
+      res[grupo][0] += esp; res[grupo][1] += regTot;
+      if (nFalta > 0 || (esp > 0 && regTot < esp * 0.85)) faltas.push({ t, nFalta, ratio: esp > 0 ? regTot / esp : 0, ult: ultFalta, esp });
+    }
+    const pctTxt = g => res[g][0] > 0 ? (res[g][1] / res[g][0] * 100).toFixed(0) + '%' : '—';
+    nota('Proventos: registrado ÷ esperado pelas bases', `Ações BR ${pctTxt('br')} · FIIs/Fiagros ${pctTxt('fii')} · Exterior ${pctTxt('us')} · sem base para conferir: ${semBase.join(', ') || 'nenhum'}`);
+    faltas.sort((a, b) => b.esp * (1 - Math.min(1, b.ratio)) - a.esp * (1 - Math.min(1, a.ratio)));
+    nota('Proventos que faltam (ativo: eventos sem registro · registrado ÷ esperado · último faltando)', faltas.slice(0, 30).map(f => `${f.t}: ${f.nFalta} · ${(f.ratio * 100).toFixed(0)}% · ${f.ult || '-'}`).join(' | ') || 'nenhum');
+  } catch (e) { nota('Proventos', 'erro ' + e.message); }
   // resultado por ativo de cada período (o "Quem mais somou" dos alunos)
   const porAtivo = {};
   for (const p of Object.keys(PERIODOS)) {
