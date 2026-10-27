@@ -1,0 +1,40 @@
+name: Rentabilidade da Carteira G20
+# 28/10/2026: calcula a série diária de rentabilidade da Carteira G20 com o motor único
+# (baixado do site, g20hub.com/assets/g20-rent.js) e grava users/{admin}/dados/cg20Rent, que os alunos
+# só leem. Fica no repositório PÚBLICO g20-dados: minutos do Actions ilimitados e gratuitos.
+# Segurança: só roda pelo horário ou pelo botão (nunca por pull request de terceiros), então
+# ninguém de fora consegue usar o segredo; e o robô não escreve valores em reais nos registros.
+# Script: scripts/cg20-rent.mjs. Precisa do segredo FIREBASE_SERVICE_ACCOUNT.
+# Roda sozinha de segunda a sexta às 21h de Brasília (depois do fechamento da B3 e de NY)
+# e pelo botão "Run workflow" (modo diagnostico calcula e mostra os números sem gravar).
+on:
+  schedule:
+    - cron: '0 0 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'Modo'
+        type: choice
+        options: [gravar, diagnostico]
+        default: gravar
+permissions:
+  contents: read
+jobs:
+  serie:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    concurrency:
+      group: cg20-rent
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar o acesso ao Firestore
+        run: npm install --no-save --no-audit --no-fund firebase-admin@13.0.0
+      - name: Calcular e gravar
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          MODO: ${{ inputs.modo || 'gravar' }}
+        run: node scripts/cg20-rent.mjs
