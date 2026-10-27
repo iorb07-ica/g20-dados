@@ -17,6 +17,10 @@ on:
         type: choice
         options: [gravar, diagnostico]
         default: gravar
+      bruto:
+        description: 'Teste: proventos brutos (1) ou líquidos (vazio)'
+        required: false
+        default: ''
       motor_url:
         description: 'Motor de teste (opcional; vazio = o do site)'
         required: false
@@ -42,4 +46,5 @@ jobs:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           MODO: ${{ inputs.modo || 'gravar' }}
           MOTOR_URL: ${{ inputs.motor_url }}
+          BRUTO: ${{ inputs.bruto }}
         run: node scripts/cg20-rent.mjs

@@ -114,7 +114,9 @@ async function main() {
     console.log('::notice title=Bonificações tratadas como desdobramento::' + (achadas.length ? achadas.length + ': ' + achadas.slice(0, 30).join(' · ') : 'nenhuma'));
   } catch (e) { console.log('::notice title=Bonificações::erro ' + e.message); }
   localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
-  const serie = await G.calcular({ aportes: aportesCalc, proventos: ent.proventos || [], rendaFixa: [], precosExtra, _semGravar: true });
+  // teste (só no diagnóstico com BRUTO=1): proventos como a página soma (bruto, antes do imposto dos EUA)
+  const provCalc = process.env.BRUTO === '1' ? (ent.proventos || []).map(p => Object.assign({}, p, { total: p.moeda === 'USD' ? p.total / 0.7 : p.total })) : (ent.proventos || []);
+  const serie = await G.calcular({ aportes: aportesCalc, proventos: provCalc, rendaFixa: [], precosExtra, _semGravar: true });
   // dias ignorados pelo motor por falta de preço (cobertura), por ano
   try { const ig = {}; for (let i = 1; i < serie.length; i++) { const a0 = serie[i - 1].cobertura ?? 1, a1 = serie[i].cobertura ?? 1; if (Math.abs(a1 - a0) > 0.001 || a1 < 0.8) { const y = serie[i].d.slice(0, 4); ig[y] = (ig[y] || 0) + 1; } }
     console.log('::notice title=Dias ignorados por falta de preço::' + (Object.keys(ig).map(y => y + ': ' + ig[y]).join(' · ') || 'nenhum')); } catch (e) {}
