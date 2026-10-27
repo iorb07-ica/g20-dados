@@ -94,7 +94,27 @@ async function main() {
     }
     console.log('::notice title=Histórico guardado (saíram da bolsa)::' + (Object.keys(precosExtra).map(t => t + ' ' + precosExtra[t][0].d.slice(0, 7) + ' a ' + precosExtra[t][precosExtra[t].length - 1].d.slice(0, 7)).join(' · ') || 'nenhum'));
   } catch (e) { console.log('::notice title=Histórico guardado::erro ' + e.message); }
-  const serie = await G.calcular({ aportes: ent.aportes, proventos: ent.proventos || [], rendaFixa: [], precosExtra, _semGravar: true });
+  // Bonificações (igual à página, função bonificacoes do carteira.html): na Carteira G20 a ação recebida
+  // em bonificação é lançada como compra pelo custo atribuído (bem abaixo da cotação). O Yahoo trata a
+  // bonificação como desdobramento (o histórico antigo vem dividido), então a compra vira "dinheiro novo"
+  // e o valor de antes fica baixo. Aqui, só para a conta: as compras anteriores ganham a proporção
+  // recebida (preço dividido, mesmo valor) e a entrada da bonificação sai.
+  let aportesCalc = ent.aportes;
+  try {
+    const sd2 = await dados.doc('cg20Serie').get(); const hist2 = JSON.parse(((sd2.exists && sd2.data().value) || {}).histJson || '{}');
+    const ord = ent.aportes.slice().sort((a, b) => String(a.data).localeCompare(String(b.data))).map(a => Object.assign({}, a));
+    const qtdAte = {}, fora = new Set(), achadas = [];
+    ord.forEach((a, i) => { const tk = a.ticker, q0 = qtdAte[tk] || 0, q = +a.qtd || 0;
+      if (a.op !== 'V' && q > 0 && q0 > 0 && /\d$/.test(String(tk))) { const m = String(a.data).slice(0, 7), pm = +((hist2[String(tk).toUpperCase() + '.SA'] || {})[m]) || 0, pr = +a.preco || 0;
+        if ((pr <= 0.05 || (pm > 0 && pr < 0.62 * pm)) && q / q0 <= 1) { const f = (q0 + q) / q0;
+          for (let j = 0; j < i; j++) { const b = ord[j]; if (b.ticker === tk && !fora.has(j)) { b.qtd = +b.qtd * f; b.preco = +b.preco / f; } }
+          fora.add(i); achadas.push(tk + ' ' + String(a.data).slice(0, 10) + ' +' + ((f - 1) * 100).toFixed(1) + '%'); } }
+      qtdAte[tk] = q0 + (a.op === 'V' ? -q : q); });
+    aportesCalc = ord.filter((_, i) => !fora.has(i));
+    console.log('::notice title=Bonificações tratadas como desdobramento::' + (achadas.length ? achadas.length + ': ' + achadas.slice(0, 30).join(' · ') : 'nenhuma'));
+  } catch (e) { console.log('::notice title=Bonificações::erro ' + e.message); }
+  localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
+  const serie = await G.calcular({ aportes: aportesCalc, proventos: ent.proventos || [], rendaFixa: [], precosExtra, _semGravar: true });
   // dias ignorados pelo motor por falta de preço (cobertura), por ano
   try { const ig = {}; for (let i = 1; i < serie.length; i++) { const a0 = serie[i - 1].cobertura ?? 1, a1 = serie[i].cobertura ?? 1; if (Math.abs(a1 - a0) > 0.001 || a1 < 0.8) { const y = serie[i].d.slice(0, 4); ig[y] = (ig[y] || 0) + 1; } }
     console.log('::notice title=Dias ignorados por falta de preço::' + (Object.keys(ig).map(y => y + ': ' + ig[y]).join(' · ') || 'nenhum')); } catch (e) {}
