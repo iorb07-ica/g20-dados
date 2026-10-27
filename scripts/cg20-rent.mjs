@@ -21,6 +21,7 @@ import admin from 'firebase-admin';
 
 const MOTOR_URL = process.env.MOTOR_URL || 'https://g20hub.com/assets/g20-rent.js';   // o motor único, direto do site (já é público)
 const RAIZ = path.join(path.dirname(new URL(import.meta.url).pathname), '..');
+const CACHE_ARQ = path.join(RAIZ, 'dados', 'cg20', 'precos-cache.json.gz');
 const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
@@ -44,6 +45,13 @@ async function carregarMotor() {
     key: i => Object.keys(mem)[i] || null, get length() { return Object.keys(mem).length; }, clear: () => { for (const k in mem) delete mem[k]; }
   };
   globalThis.G20Ind = { get: (k, d) => d };
+  // 28/10/2026: HISTÓRICO DE PREÇOS GUARDADO. O robô começa com os preços que guardou na rodada anterior
+  // (dados/cg20/precos-cache.json.gz) e o motor só busca os dias novos, como faz no navegador. Assim o
+  // passado não muda de uma rodada para outra (antes oscilava ~2 pontos conforme o servidor de preços).
+  try { const buf = fs.readFileSync(CACHE_ARQ); const o = JSON.parse(zlib.gunzipSync(buf).toString('utf8'));
+    let n = 0; for (const k in o) { mem[k] = o[k]; n++; } console.log(`Histórico de preços guardado: ${n} séries.`); }
+  catch (e) { console.log('Sem histórico de preços guardado: busca tudo nesta rodada.'); }
+  globalThis.__g20Mem = mem;
   // o Yahoo recusa pedidos sem cara de navegador: o robô se apresenta como um
   const _f = globalThis.fetch;
   // e o nosso proxy (g20-proxy) só atende pedidos que vêm do site: o robô se identifica como o site
@@ -366,12 +374,22 @@ async function main() {
     } catch (e) { console.log('::notice title=Ago/19 a out/21::erro ' + e.message); }
     const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
     nota('Quem mais tirou (desde o início)', L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
-    log('Modo diagnóstico: nada gravado.'); return; }
+    salvarCachePrecos(); log('Modo diagnóstico: nada gravado.'); return; }
   await dados.doc('cg20Rent').set({
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
     atualizadoEm: admin.firestore.FieldValue.serverTimestamp()
   });
   log(`Gravado em users/{admin}/dados/cg20Rent em ${Math.round((Date.now() - t0) / 1000)} s.`);
+  salvarCachePrecos();
+}
+// guarda os históricos de preço (ativos e câmbio) para a próxima rodada; o workflow faz o commit
+function salvarCachePrecos() {
+  try { const mem = globalThis.__g20Mem || {}, o = {};
+    for (const k in mem) if (k.startsWith('g20_histpx_') || k === 'g20_fx_bcb_v2') o[k] = mem[k];
+    fs.mkdirSync(path.dirname(CACHE_ARQ), { recursive: true });
+    fs.writeFileSync(CACHE_ARQ, zlib.gzipSync(Buffer.from(JSON.stringify(o)), { level: 9 }));
+    log(`Histórico de preços salvo: ${Object.keys(o).length} séries, ${Math.round(fs.statSync(CACHE_ARQ).size / 1024)} KB.`);
+  } catch (e) { log('Não salvou o histórico de preços: ' + e.message); }
 }
 main().then(() => process.exit(0)).catch(e => { console.error(e); console.log('::error title=Falhou::' + String(e && e.message || e).slice(0, 300)); process.exit(1); });

@@ -30,7 +30,7 @@ on:
         required: false
         default: ''
 permissions:
-  contents: read
+  contents: write   # para guardar o histórico de preços (dados/cg20/precos-cache.json.gz)
 jobs:
   serie:
     runs-on: ubuntu-24.04
@@ -53,3 +53,12 @@ jobs:
           BRUTO: ${{ inputs.bruto }}
           AJUSTE: ${{ inputs.ajuste }}
         run: node scripts/cg20-rent.mjs
+      - name: Guardar o histórico de preços para a próxima rodada
+        if: success()
+        run: |
+          git config user.name "robo-g20"
+          git config user.email "robo-g20@users.noreply.github.com"
+          git add dados/cg20/precos-cache.json.gz
+          git diff --cached --quiet && { echo "histórico sem mudança"; exit 0; }
+          git commit -m "Carteira G20: histórico de preços do robô da rentabilidade"
+          git pull --rebase -q origin main && git push -q origin HEAD:main
