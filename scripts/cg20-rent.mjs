@@ -22,7 +22,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
+const PRINCIPAIS = ['Mês a mês 2019 (mensal/diário, %)', 'Mês a mês 2022 (mensal/diário, %)', 'Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -173,6 +173,12 @@ async function main() {
       const sg = globalThis.G20Graf.serie(cfg); const anoG = {}; let totG = 1;
       sg.linhas.forEach(l => { if (l.r == null) return; const y = l.m.slice(0, 4); anoG[y] = (anoG[y] || 1) * (1 + l.r); totG *= (1 + l.r); });
       console.log('::notice title=Motor mensal da página (aqui no robô)::total ' + ((totG - 1) * 100).toFixed(2) + '% · ' + Object.keys(anoG).sort().map(y => y + ': ' + ((anoG[y] - 1) * 100).toFixed(2) + '%').join(' · '));
+      // mês a mês nos dois motores, nos anos em que eles mais se afastam
+      try { const cv = G.curva(serie, D[0]); const fimMes = {}; cv.forEach(p => { fimMes[p.d.slice(0, 7)] = p.f; });
+        const ms = Object.keys(fimMes).sort(); const rD = {}; ms.forEach((m, i) => { if (i) rD[m] = fimMes[m] / fimMes[ms[i - 1]] - 1; });
+        const rM = {}; sg.linhas.forEach(l => { if (l.r != null) rM[l.m] = l.r; });
+        ['2019', '2022'].forEach(y => { const L = ms.filter(m => m.slice(0, 4) === y).map(m => m.slice(5) + ' ' + (rM[m] == null ? '—' : (rM[m] * 100).toFixed(1)) + '/' + (rD[m] == null ? '—' : (rD[m] * 100).toFixed(1)));
+          nota('Mês a mês ' + y + ' (mensal/diário, %)', L.join(' · ')); }); } catch (e) { nota('Mês a mês', 'erro ' + e.message); }
       // preço no fim de cada mês: guardado (página) × diário (robô), enquanto o ativo estava na carteira
       const px = globalThis._g20Precos || {}, tipoDe = {}, posMes = {};
       const ord2 = aportesCalc.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
