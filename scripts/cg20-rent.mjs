@@ -40,7 +40,14 @@ async function carregarMotor() {
   globalThis.G20Ind = { get: (k, d) => d };
   // o Yahoo recusa pedidos sem cara de navegador: o robô se apresenta como um
   const _f = globalThis.fetch;
-  globalThis.fetch = (u, o = {}) => { o = Object.assign({}, o); o.headers = Object.assign({ 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36', Accept: 'application/json,text/plain,*/*' }, o.headers || {}); return _f(u, o); };
+  // e o nosso proxy (g20-proxy) só atende pedidos que vêm do site: o robô se identifica como o site
+  globalThis.fetch = (u, o = {}) => {
+    o = Object.assign({}, o);
+    const h = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36', Accept: 'application/json,text/plain,*/*' };
+    if (/g20-proxy/.test(String(u))) { h.Origin = 'https://g20hub.com'; h.Referer = 'https://g20hub.com/carteira.html'; }
+    o.headers = Object.assign(h, o.headers || {});
+    return _f(u, o);
+  };
   const r = await fetch(MOTOR_URL + '?t=' + Date.now()); if (!r.ok) throw new Error('motor não baixou: HTTP ' + r.status);
   const src = await r.text();
   vm.runInThisContext(src, { filename: 'g20-rent.js' });
@@ -67,6 +74,8 @@ async function main() {
   }
   log(`Entrada: ${ent.aportes.length} lançamentos, ${(ent.proventos || []).length} proventos (publicada em ${ent.em || '?'})`);
   const G = await carregarMotor();
+  try { const t = await fetch('https://g20-proxy.vercel.app/api/history?symbol=PETR4.SA&range=1mo&interval=1d'); const tx = await t.text();
+    console.log(`::notice title=Teste do proxy::HTTP ${t.status} · ${tx.slice(0, 160).replace(/\s+/g, ' ')}`); } catch (e) { console.log('::notice title=Teste do proxy::erro ' + e.message); }
   // o motor confere a "assinatura" dos lançamentos pelo que está guardado no aparelho: aqui são os da Carteira G20
   localStorage.setItem('g20_rvAportes', JSON.stringify(ent.aportes)); localStorage.setItem('g20_rendaFixa', '[]');
   const serie = await G.calcular({ aportes: ent.aportes, proventos: ent.proventos || [], rendaFixa: [], _semGravar: true });
