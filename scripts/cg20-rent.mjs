@@ -22,7 +22,7 @@ const ADMIN_UID = '8xrwHHEKAmd0Us5MCyBJhtkJVBM2';
 const MODO = (process.env.MODO || 'gravar').trim();
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Mês a mês 2019 (mensal/diário, %)', 'Mês a mês 2022 (mensal/diário, %)', 'Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
+const PRINCIPAIS = ['Operações de dez/2019', 'Jul/2022: ativos com variação diferente (mensal/diário, %)', 'Mês a mês 2019 (mensal/diário, %)', 'Mês a mês 2022 (mensal/diário, %)', 'Motor mensal da página (aqui no robô)', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Ano a ano (TWR)', 'Carteira G20', 'Motor mensal', 'Bonificações tratadas como desdobramento', 'Dias ignorados por falta de preço', 'Preços'];
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
@@ -179,6 +179,18 @@ async function main() {
         const rM = {}; sg.linhas.forEach(l => { if (l.r != null) rM[l.m] = l.r; });
         ['2019', '2022'].forEach(y => { const L = ms.filter(m => m.slice(0, 4) === y).map(m => m.slice(5) + ' ' + (rM[m] == null ? '—' : (rM[m] * 100).toFixed(1)) + '/' + (rD[m] == null ? '—' : (rD[m] * 100).toFixed(1)));
           nota('Mês a mês ' + y + ' (mensal/diário, %)', L.join(' · ')); }); } catch (e) { nota('Mês a mês', 'erro ' + e.message); }
+      // as compras de dez/2019: preço lançado × fechamento do dia (fonte diária) e do mês (guardado)
+      try { const pxx = globalThis._g20Precos || {};
+        const ops = aportesCalc.filter(a => String(a.data).slice(0, 7) === '2019-12').map(a => { const t = String(a.ticker).toUpperCase(), d = String(a.data).slice(0, 10), pd = pxx[t] ? pxx[t].em(d) : null, hm = (H[simb(t, a.tipo)] || {})['2019-12'];
+          return `${d} ${a.op || 'C'} ${t} [${a.tipo}; ${a.moeda || '-'}] lançado ${(+a.preco).toFixed(2)} · fechamento do dia ${pd ? pd.toFixed(2) : '—'} · fim do mês ${hm ? (+hm).toFixed(2) : '—'}`; });
+        nota('Operações de dez/2019', ops.join(' | ') || 'nenhuma'); } catch (e) { nota('Operações de dez/2019', 'erro ' + e.message); }
+      // jul/2022: variação de cada ativo no mês nas duas fontes
+      try { const pxx = globalThis._g20Precos || {}, out = [];
+        const q2 = {}; aportesCalc.slice().sort((a, b) => String(a.data).localeCompare(String(b.data))).forEach(a => { if (String(a.data) <= '2022-06-30') { const t = String(a.ticker).toUpperCase(); q2[t] = (q2[t] || 0) + (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); } });
+        Object.keys(q2).filter(t => q2[t] > 1e-6).forEach(t => { const tp = (aportesCalc.find(a => String(a.ticker).toUpperCase() === t) || {}).tipo; const h = H[simb(t, tp)] || {};
+          const m0 = +h['2022-06'], m1 = +h['2022-07'], d0 = pxx[t] ? pxx[t].em('2022-06-30') : null, d1 = pxx[t] ? pxx[t].em('2022-07-29') : null;
+          if (m0 > 0 && m1 > 0 && d0 > 0 && d1 > 0) { const rm = m1 / m0 - 1, rd = d1 / d0 - 1; if (Math.abs(rm - rd) > 0.03) out.push(`${t} ${(rm * 100).toFixed(1)}/${(rd * 100).toFixed(1)}`); } });
+        nota('Jul/2022: ativos com variação diferente (mensal/diário, %)', out.join(' · ') || 'nenhum'); } catch (e) { nota('Jul/2022', 'erro ' + e.message); }
       // preço no fim de cada mês: guardado (página) × diário (robô), enquanto o ativo estava na carteira
       const px = globalThis._g20Precos || {}, tipoDe = {}, posMes = {};
       const ord2 = aportesCalc.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
