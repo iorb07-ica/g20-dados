@@ -115,6 +115,22 @@ async function main() {
   if (gz.length + pa.length > 950000) throw new Error('documento grande demais para o Firestore');
 
   if (MODO === 'diagnostico') {
+    // 28/10/2026: a MESMA série diária, mas medida mês a mês (como o motor mensal da página faz),
+    // para ver se a diferença é de método (data dos aportes dentro do mês) ou de dados
+    try {
+      const meses = {}; serie.forEach((p, i) => { const m = p.d.slice(0, 7); (meses[m] = meses[m] || []).push(i); });
+      const ks = Object.keys(meses).sort(); let fIni = 1, fFim = 1, fDz = 1, prevFim = null;
+      ks.forEach(m => { const idx = meses[m], a = idx[0] > 0 ? idx[0] - 1 : idx[0], b = idx[idx.length - 1];
+        const V0 = serie[a].patrimonio, V1 = serie[b].patrimonio; let F = 0, Fw = 0, P = 0; const dias = b - a || 1;
+        for (let i = a + 1; i <= b; i++){ const f = serie[i].fluxo || 0; F += f; Fw += f * (b - i) / dias; P += (serie[i].prov || 0); }
+        if (V0 + F > 0){ fIni *= (V1 + P) / (V0 + F); }            // aporte no começo do mês
+        if (V0 > 0){ fFim *= (V1 + P - F) / V0; }                   // aporte no fim do mês
+        if (V0 + Fw > 0){ fDz *= 1 + (V1 + P - V0 - F) / (V0 + Fw); } // Dietz modificado
+      });
+      console.log(`::notice title=Mesma série medida mês a mês::aporte no começo do mês ${((fIni - 1) * 100).toFixed(1)}% · no fim do mês ${((fFim - 1) * 100).toFixed(1)}% · Dietz ${((fDz - 1) * 100).toFixed(1)}% (diário: ${twrMax == null ? '—' : twrMax.toFixed(1)}%)`);
+      const p0 = serie.slice(0, 200).map(p => p.d.slice(5) + ' ' + Math.round(p.patrimonio)).filter((_, i) => i % 20 === 0);
+      console.log('::notice title=Tamanho da carteira no começo (a cada 20 dias)::' + serie.slice(0, 400).filter((_, i) => i % 25 === 0).map(p => p.d + ' ' + (p.patrimonio < 1000 ? 'menos de mil' : p.patrimonio < 10000 ? 'poucos mil' : p.patrimonio < 50000 ? 'dezenas de mil' : 'acima de 50 mil')).join(' · '));
+    } catch (e) { console.log('::notice title=Mês a mês::erro ' + e.message); }
     // 28/10/2026: período de ago/19 a out/21, onde a página e o robô se separam
     try {
       const fimJan = D.filter(d => d <= '2021-10-31').pop();
