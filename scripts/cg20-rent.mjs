@@ -30,7 +30,7 @@ const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
 const PRINCIPAIS = ['Ajuste de eventos corporativos não lançados', 'Bonificações tratadas como desdobramento', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos: registrado ÷ esperado pelas bases', 'Falhou'];
 const PRINC2 = ['Outros ativos: operações com preço fora do mercado (maior efeito primeiro)', 'Cripto: operações com preço fora do mercado (mais de 15%)', 'Quem mais tirou (desde o início)', 'Saltos diários acima de 8% até out/21', 'Dias ignorados por falta de preço', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Sem evento oficial que explique (fica como está)', 'Marcadas como subscrição (ficam como estão)', 'Carteira G20'];
-if (MODO0 === 'diagnostico2') PRINCIPAIS.splice(0, PRINCIPAIS.length, ...PRINC2);
+if (MODO0 === 'diagnostico2') PRINCIPAIS.splice(0, PRINCIPAIS.length, 'Carteira G20');
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
 
 const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || 'null');
