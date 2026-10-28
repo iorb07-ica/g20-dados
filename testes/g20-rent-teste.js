@@ -348,6 +348,11 @@
     var CLASSE = { 'BRKB': 'BRK-B', 'BRKA': 'BRK-A', 'BFB': 'BF-B', 'BFA': 'BF-A' };
     if (CLASSE[t]) return CLASSE[t];
     if (/^[A-Z]{1,5}\.[AB]$/.test(t)) return t.replace('.', '-');
+    /* 28/10/2026: empresas que trocaram de código lá fora. O Yahoo guarda o histórico inteiro no código
+       novo, e o código antigo some (FB) ou passa a ser de OUTRA empresa (GOLD virou a Barrick "B" em 2025
+       e o GOLD de hoje é outro papel: a venda de GOLD em 2021 aparecia 27% abaixo do "mercado"). */
+    var NOVO = { 'FB': 'META', 'GOLD': 'B', 'PEAK': 'DOC' };
+    if (NOVO[t]) return NOVO[t];
     return t;
   }
 
@@ -1078,6 +1083,24 @@
                     }
                     pontos = juntos;
                   } else pontos = ex.slice();
+                }
+              }
+              /* 28/10/2026: ativo SEM histórico em lugar nenhum (saiu da bolsa lá fora: STOR, CIO, SKX, BPYU...).
+                 O preço vem das próprias operações: liga uma compra/venda à seguinte em linha reta e, se ainda
+                 está na carteira, fica no último preço. Assim o ganho ou a perda entre a compra e a venda (e os
+                 proventos do período) entram na conta, em vez de o ativo ficar de fora. */
+              if (!pontos || !pontos.length) {
+                var opsTk = (opts.aportes || []).filter(function (a) { return a && String(a.ticker).toUpperCase() === tk && +a.preco > 0 && a.data && !a._bonificacao_id && !/bonifica/i.test(String(a.obs || ''))
+                  && String(a.moeda || (mapaAtivos[tk] && mapaAtivos[tk].moeda) || '').toUpperCase() === String((mapaAtivos[tk] && mapaAtivos[tk].moeda) || a.moeda || '').toUpperCase(); })   // preço na moeda em que o ativo é cotado
+                  .map(function (a) { return { d: String(a.data).slice(0, 10), c: +a.preco }; }).sort(function (a, b) { return a.d < b.d ? -1 : 1; });
+                if (opsTk.length) {
+                  var pl = [], hojeIso = iso(new Date());
+                  for (var oi = 0; oi < opsTk.length; oi++) {
+                    var o0 = opsTk[oi], o1 = opsTk[oi + 1], ate = o1 ? o1.d : hojeIso, n = Math.max(1, diasEntre(o0.d, ate));
+                    for (var k = 0; k < n; k++) { var dd = iso(new Date(Date.parse(o0.d + 'T12:00:00Z') + k * 86400000)); pl.push({ d: dd, c: o1 ? o0.c + (o1.c - o0.c) * k / n : o0.c }); }
+                  }
+                  pl.push({ d: opsTk[opsTk.length - 1].d === hojeIso ? hojeIso : hojeIso, c: opsTk[opsTk.length - 1].c });
+                  pontos = pl; try { (window._g20PrecoPelasOps = window._g20PrecoPelasOps || {})[tk] = opsTk.length; } catch (e) {}
                 }
               }
               resultados.push({ ticker: tk, pontos: pontos });

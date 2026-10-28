@@ -30,6 +30,7 @@ for (const [nome, url] of [['site', 'https://g20hub.com/assets/g20-rent.js'], ['
           const comp = doDia.map(a => { const t = String(a.ticker).toUpperCase(), c1 = px[t] ? px[t].em(d1) : null; return [t, a.op, +a.qtd, +a.preco, a.moeda || '', +a.fxRate || null, c1, fx1, a.tipo]; });
           r.dias.push([d1, serie[i - 1].patrimonio, serie[i].patrimonio, serie[i].fluxo, v0 ? mk / v0 : null, comp]); }
         doDia.forEach(a => { const t = String(a.ticker).toUpperCase(); q[t] = (q[t] || 0) + (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); }); } }
+    r.opsPreco = globalThis._g20PrecoPelasOps || null; globalThis._g20PrecoPelasOps = null;
     out.motores[nome] = r;
   } catch (e) { out.motores[nome] = { erro: String(e && e.stack || e) }; }
 }
