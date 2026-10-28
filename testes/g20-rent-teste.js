@@ -1139,7 +1139,7 @@
         window._g20FxDiag = { falhas: _fxFalhas, semNada: 0 };
         while (cursor <= fim) {
           var dISO = iso(cursor);
-          var fluxoDia = 0, fluxoRVdia = 0;
+          var fluxoDia = 0, fluxoRVdia = 0, fluxoRVmk = 0;
           /* CÂMBIO DO DIA.
              Antes: `fx || 5` — se faltasse cotação, usava 5,00 em silêncio.
              Em 2019 o dólar valia ~3,85: cair para 5,00 inflava os ativos em
@@ -1177,6 +1177,9 @@
             if (ev.moeda === 'USD') { if (!(fx > 0)) _fxSemNada++; custo = custo * (fx > 0 ? fx : 5); }
             fluxoDia += custo;
             fluxoRVdia += custo;      // separado, para variação por classe
+            /* o mesmo movimento a preço de fechamento do dia (para separar mercado × preço pago) */
+            var _pxF = precos[ev.ticker].em(dISO);
+            fluxoRVmk += (_pxF > 0 && !ev.mov && !ev.semPreco) ? ev.qtd * _pxF * ((mapaAtivos[ev.ticker] && mapaAtivos[ev.ticker].moeda === 'USD') ? (fx > 0 ? fx : 5) : 1) : custo;   // moeda em que o ativo é cotado
             ei++;
           }
 
@@ -1239,6 +1242,7 @@
               fluxoRV: fluxoRVdia, fluxoRF: aporteRFdia,
               rv: valRV, rf: valRF, fu: valFU, fluxoFU: fluxoFUdia, cobertura: cobertura, fx: (fx > 0 ? fx : null),
               usd: valUSD,   // 27/10/2026: parte da renda variável em dólar (US$), para separar ativos × câmbio
+              fmRV: fluxoRVmk,   // 28/10/2026: compras e vendas do dia a preço de fechamento
               sx: _semPx.sort().join(',')   // 28/10/2026: ativos em carteira sem preço no dia (a curva vê quando a avaliação mudou)
             });
           }
@@ -1686,7 +1690,16 @@
       var soProv = function () { if (provR && isFinite(provR)) fator *= (1 + provR); };
       if (mudou(p0, p1)) soProv();
       else if (vIni > TWR_SALDO_MIN) {
-        var r = (val(p1) - fl - vIni) / vIni;
+        /* 28/10/2026: DIA DE APORTE EM DUAS PARTES. (1) O mercado do dia sobre o que já existia: o valor de
+           hoje menos as compras do dia A PREÇO DE FECHAMENTO (fmRV), sobre o valor de ontem. (2) A diferença
+           entre o fechamento e o preço pago nas compras do dia, sobre ontem + o dinheiro que entrou. Antes era
+           tudo sobre o valor de ontem: num aporte grande numa carteira pequena, essa diferença virava um retorno
+           enorme (+48% num dia de 2019 de uma Minha Carteira de R$ 1,4 mil que recebeu R$ 21 mil). */
+        var r;
+        if (p1.fmRV !== undefined && modo !== 'rf') {
+          var fmD = modo === 'rv' ? p1.fmRV : p1.fmRV + (fl - (p1.fluxoRV || 0)), premio = fmD - fl;
+          r = (val(p1) - fmD - vIni) / vIni + premio / (vIni + (fl > 0 ? fl : 0));
+        } else r = (val(p1) - fl - vIni) / vIni;
         if (!isFinite(r) || Math.abs(r) > TWR_TETO_DIA) soProv();
         else fator *= (1 + r + provR);
       }
