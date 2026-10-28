@@ -69,13 +69,15 @@ async function carregarMotor() {
   return globalThis.G20Rent;
 }
 
-const PERIODOS = { mes: 'mes', '6m': '6m', ano: 'ano', '12m': '12m', '5a': '5a', max: 'max' };
+// 28/10/2026: períodos novos da tela (1S, 1M, 6M, 1A, 5A, Máx.); os antigos ficam enquanto houver página velha em cache
+const PERIODOS = { '1s': '1s', '1m': '1m', '6m': '6m', '1a': '1a', '5a': '5a', max: 'max', mes: 'mes', ano: 'ano', '12m': '12m' };
 function inicioPer(D, p) {
   const u = new Date(D[D.length - 1] + 'T12:00:00Z'), a = u.getUTCFullYear(), m = u.getUTCMonth(), d = u.getUTCDate();
   const z = (y, mo, da) => new Date(Date.UTC(y, mo, da)).toISOString().slice(0, 10);
   const desde = iso => { for (let i = 0; i < D.length; i++) if (D[i] >= iso) return Math.max(0, i - 1); return 0; };
   if (p === 'mes') return desde(z(a, m, 1)); if (p === '6m') return desde(z(a, m - 6, d)); if (p === 'ano') return desde(z(a, 0, 1));
-  if (p === '12m') return desde(z(a - 1, m, d)); if (p === '5a') return desde(z(a - 5, m, d)); return 0;
+  if (p === '12m' || p === '1a') return desde(z(a - 1, m, d)); if (p === '5a') return desde(z(a - 5, m, d));
+  if (p === '1s') return desde(z(a, m, d - 7)); if (p === '1m') return desde(z(a, m - 1, d)); return 0;
 }
 
 async function main() {
@@ -379,7 +381,14 @@ async function main() {
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
     // resumo para o card do topo da página (Rentabilidade desde o início), sem precisar abrir a série
-    resumo: { twr: twrMax == null ? null : Math.round(twrMax * 100) / 100, de: D[0], ate: D[D.length - 1] },
+    // sem: o patrimônio de semana em semana no último ano (um ponto a cada 5 pregões, mais o de hoje),
+    // para o gráfico do card do topo ter o movimento do mercado sem precisar baixar a série inteira
+    resumo: { twr: twrMax == null ? null : Math.round(twrMax * 100) / 100, de: D[0], ate: D[D.length - 1], sem: (function () {
+      const ini = new Date(Date.parse(D[D.length - 1] + 'T12:00:00Z') - 365 * 864e5).toISOString().slice(0, 10), out = [];
+      // terceiro valor: a cota (rentabilidade acumulada, sem contar aportes), para o gráfico medir a variação entre dois pontos
+      const cv = G.curva(serie, D[0]) || [], cota = {}; cv.forEach(p => { cota[p.i] = p.f; });
+      for (let i = D.length - 1; i >= 0 && D[i] >= ini; i -= 5) out.unshift([D[i], Math.round(serie[i].patrimonio), cota[i] != null ? Math.round(cota[i] * 1e5) / 1e5 : null]);
+      return out; })() },
     atualizadoEm: admin.firestore.FieldValue.serverTimestamp()
   });
   log(`Gravado em users/{admin}/dados/cg20Rent em ${Math.round((Date.now() - t0) / 1000)} s.`);
