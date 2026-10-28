@@ -387,7 +387,7 @@ async function main() {
       const ini = new Date(Date.parse(D[D.length - 1] + 'T12:00:00Z') - 365 * 864e5).toISOString().slice(0, 10), out = [];
       // terceiro valor: a cota (rentabilidade acumulada, sem contar aportes), para o gráfico medir a variação entre dois pontos
       const cv = G.curva(serie, D[0]) || [], cota = {}; cv.forEach(p => { cota[p.i] = p.f; });
-      for (let i = D.length - 1; i >= 0 && D[i] >= ini; i -= 5) out.unshift([D[i], Math.round(serie[i].patrimonio), cota[i] != null ? Math.round(cota[i] * 1e5) / 1e5 : null]);
+      for (let i = D.length - 1; i >= 0 && D[i] >= ini; i -= 5) out.unshift({ d: D[i], v: Math.round(serie[i].patrimonio), f: cota[i] != null ? Math.round(cota[i] * 1e5) / 1e5 : null });   // objetos: o Firestore não aceita lista dentro de lista
       return out; })() },
     atualizadoEm: admin.firestore.FieldValue.serverTimestamp()
   });
