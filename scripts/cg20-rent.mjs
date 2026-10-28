@@ -378,6 +378,8 @@ async function main() {
   await dados.doc('cg20Rent').set({
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
+    // resumo para o card do topo da página (Rentabilidade desde o início), sem precisar abrir a série
+    resumo: { twr: twrMax == null ? null : Math.round(twrMax * 100) / 100, de: D[0], ate: D[D.length - 1] },
     atualizadoEm: admin.firestore.FieldValue.serverTimestamp()
   });
   log(`Gravado em users/{admin}/dados/cg20Rent em ${Math.round((Date.now() - t0) / 1000)} s.`);
