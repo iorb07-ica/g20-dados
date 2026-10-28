@@ -394,6 +394,25 @@ async function main() {
     const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
     nota('Quem mais tirou (desde o início)', L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
     salvarCachePrecos(); log('Modo diagnóstico: nada gravado.'); return; }
+  // 28/10/2026: VIGIA DA ENTRADA. Guarda, por ativo, um resumo do que a página publicou (contagem e somas
+  // dos lançamentos e proventos) e a rentabilidade da rodada. Na próxima rodada, se a rentabilidade mudar
+  // mais de 0,3 ponto, o resumo da rodada mostra quais ativos mudaram (só nomes e contagens; nada em reais).
+  try {
+    const imp = {}; const add = (t, k, v) => { const o = imp[t] = imp[t] || { nL: 0, q: 0, c: 0, nP: 0, p: 0 }; o[k] += v; };
+    ent.aportes.forEach(a => { const t = String(a.ticker).toUpperCase(), sg = a.op === 'V' ? -1 : 1; add(t, 'nL', 1); add(t, 'q', sg * (+a.qtd || 0)); add(t, 'c', sg * (+a.qtd || 0) * (+a.preco || 0)); });
+    (ent.proventos || []).forEach(p => { const t = String(p.ticker).toUpperCase(); add(t, 'nP', 1); add(t, 'p', +p.total || 0); });
+    const antDoc = await dados.doc('cg20EntradaVigia').get(), ant = antDoc.exists ? (antDoc.data().value || {}) : {};
+    if (ant.twr != null && twrMax != null && Math.abs(twrMax - ant.twr) > 0.3) {
+      const mud = [], todos = new Set([...Object.keys(imp), ...Object.keys(ant.imp || {})]);
+      const dif = (x, y) => Math.abs((x || 0) - (y || 0)) > Math.max(1e-6, Math.abs(y || 0) * 1e-6);
+      todos.forEach(t => { const a1 = imp[t] || {}, a0 = (ant.imp || {})[t] || {}, o = [];
+        if ((a1.nL || 0) !== (a0.nL || 0)) o.push(`lançamentos ${a0.nL || 0}→${a1.nL || 0}`); else if (dif(a1.q, a0.q) || dif(a1.c, a0.c)) o.push('lançamento alterado');
+        if ((a1.nP || 0) !== (a0.nP || 0)) o.push(`proventos ${a0.nP || 0}→${a1.nP || 0}`); else if (dif(a1.p, a0.p)) o.push('provento alterado');
+        if (o.length) mud.push(t + ' (' + o.join(', ') + ')'); });
+      console.log(`::warning title=A rentabilidade mudou::${ant.twr.toFixed(2)}% → ${twrMax.toFixed(2)}% desde a rodada de ${ant.em || '?'}. ` + (mud.length ? 'O que mudou na entrada: ' + mud.slice(0, 40).join(' · ') : 'A entrada é a mesma: a mudança veio dos preços.'));
+    }
+    if (MODO === 'gravar') await dados.doc('cg20EntradaVigia').set({ value: { imp, twr: twrMax, em: new Date().toISOString(), entradaEm: ent.em || '' } });
+  } catch (e) { console.log('::notice title=Vigia da entrada::erro ' + e.message); }
   await dados.doc('cg20Rent').set({
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
