@@ -381,13 +381,13 @@ async function main() {
     motor: 'g20rent', at: Date.now(), sig, entradaSig: ent.sig || '', n: serie.length,
     de: D[0], ate: D[D.length - 1], gz: true, d: gz, porAtivoJson: pa,
     // resumo para o card do topo da página (Rentabilidade desde o início), sem precisar abrir a série
-    // sem: o patrimônio de semana em semana no último ano (um ponto a cada 5 pregões, mais o de hoje),
+    // sem: o patrimônio dia a dia no último ano (um ponto por pregão, ~250 pontos, cerca de 12 KB),
     // para o gráfico do card do topo ter o movimento do mercado sem precisar baixar a série inteira
     resumo: { twr: twrMax == null ? null : Math.round(twrMax * 100) / 100, de: D[0], ate: D[D.length - 1], sem: (function () {
       const ini = new Date(Date.parse(D[D.length - 1] + 'T12:00:00Z') - 365 * 864e5).toISOString().slice(0, 10), out = [];
       // terceiro valor: a cota (rentabilidade acumulada, sem contar aportes), para o gráfico medir a variação entre dois pontos
       const cv = G.curva(serie, D[0]) || [], cota = {}; cv.forEach(p => { cota[p.i] = p.f; });
-      for (let i = D.length - 1; i >= 0 && D[i] >= ini; i -= 5) out.unshift({ d: D[i], v: Math.round(serie[i].patrimonio), f: cota[i] != null ? Math.round(cota[i] * 1e5) / 1e5 : null });   // objetos: o Firestore não aceita lista dentro de lista
+      for (let i = D.length - 1; i >= 0 && D[i] >= ini; i -= 1) out.unshift({ d: D[i], v: Math.round(serie[i].patrimonio), f: cota[i] != null ? Math.round(cota[i] * 1e5) / 1e5 : null });   // objetos: o Firestore não aceita lista dentro de lista
       return out; })() },
     atualizadoEm: admin.firestore.FieldValue.serverTimestamp()
   });
