@@ -382,6 +382,15 @@ async function main() {
       const saltos = []; for (let i = 1; i < serie.length && serie[i].d <= fimJan; i++) { const a0 = serie[i - 1].patrimonio, a1 = serie[i].patrimonio - (serie[i].fluxo || 0); if (a0 > 0 && Math.abs(a1 / a0 - 1) > 0.08) saltos.push(serie[i].d + ' ' + ((a1 / a0 - 1) * 100).toFixed(1) + '%'); }
       nota('Saltos diários acima de 8% até out/21', (saltos.slice(0, 25).join(' · ') || 'nenhum'));
     } catch (e) { console.log('::notice title=Ago/19 a out/21::erro ' + e.message); }
+    // 28/10/2026: ano a ano, quem mais pesou no resultado (só %): resultado do ativo ÷ (aportes + valor no início),
+    // e a fatia de cada um no resultado do ano. Serve para achar um preço ou provento errado num ano específico.
+    for (const y of (process.env.ANOS || '2021,2025').split(',')) try {
+      const ini = D.filter(d => d < y + '-01-01').pop() || D[0], fim = D.filter(d => d <= y + '-12-31').pop();
+      const lst = await G.porAtivo(ini, fim) || [], tot = lst.reduce((a, l) => a + Math.abs(l.resultado || 0), 0) || 1;
+      const ds = l => { const b = (l.aportes || 0) + (l.valorInicio || 0); return `${l.ticker} ${b > 0 ? (l.resultado / b * 100).toFixed(0) + '%' : '?'} (${(l.resultado / tot * 100).toFixed(1)}% do mov.)`; };
+      const o = lst.slice().sort((a, b) => a.resultado - b.resultado);
+      console.log(`::notice title=Ano ${y} · por ativo::piores: ` + o.slice(0, 7).map(ds).join(' · ') + ' || melhores: ' + o.slice(-9).reverse().map(ds).join(' · '));
+    } catch (e) { console.log('::notice title=Ano ' + y + '::erro ' + e.message); }
     const L = (porAtivo.max || []).slice().sort((x, y) => x.resultado - y.resultado);
     nota('Quem mais tirou (desde o início)', L.slice(0, 8).map(x => x.ticker).join(', ') + ' · quem mais somou: ' + L.slice(-8).reverse().map(x => x.ticker).join(', '));
     salvarCachePrecos(); log('Modo diagnóstico: nada gravado.'); return; }
