@@ -15,7 +15,7 @@ on:
       modo:
         description: 'Modo'
         type: choice
-        options: [gravar, diagnostico]
+        options: [gravar, diagnostico, diagnostico2]
         default: gravar
       ajuste:
         description: 'Teste: 0 desliga o ajuste de eventos corporativos (padrão: ligado)'
