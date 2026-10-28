@@ -203,7 +203,7 @@ async function main() {
   const D = serie.map(p => p.d), u = serie[serie.length - 1];
   const sem = (globalThis._g20SemCotacaoSerie || []);
   const twrMax = G.twrDesde(serie, D[0]);
-  const resumo = `Série: ${serie.length} dias, de ${D[0]} a ${D[D.length - 1]}. Rentabilidade desde o início (TWR): ${twrMax == null ? '—' : twrMax.toFixed(2) + '%'}` + (sem.length ? `. Sem cotação hoje: ${sem.join(', ')}` : '');
+  const resumo = `Série: ${serie.length} dias, de ${D[0]} a ${D[D.length - 1]}. Rentabilidade desde o início (TWR): ${twrMax == null ? '—' : twrMax.toFixed(2) + '%'}` + (sem.length ? `. Sem cotação hoje: ${sem.join(', ')}` : '') + `. Entrada: ${ent.aportes.length} lançamentos, ${(ent.proventos || []).length} proventos, publicada em ${ent.em || '?'}`;
   log(resumo); nota('Carteira G20', resumo);
 
   if (MODO === 'diagnostico') {
