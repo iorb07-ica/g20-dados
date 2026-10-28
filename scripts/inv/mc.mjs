@@ -20,6 +20,16 @@ for (const [nome, url] of [['site', 'https://g20hub.com/assets/g20-rent.js'], ['
     const D = serie.map(p => p.d), anos = [...new Set(D.map(d => d.slice(0, 4)))];
     const r = { total: G.twrDesde(serie, D[0]), anos: {}, ignorados: [], serie: serie.map(p => [p.d, Math.round(p.patrimonio), Math.round(p.fluxo || 0), Math.round(p.prov || 0), +(p.cobertura || 1).toFixed(4), p.sx === undefined ? null : p.sx]) };
     anos.forEach(y => { const ini = D.filter(d => d < y + '-01-01').pop() || D[0]; r.anos[y] = G.twrDesde(serie.filter(p => p.d <= y + '-12-31'), ini); });
+    // dias de aporte: decomposição (mercado das posições do dia anterior × diferença de preço das compras)
+    if (nome === 'teste') { const px = globalThis._g20Precos || {}, cb = globalThis._g20Cambio, ops = ap.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
+      const US = new Set(['STOCK', 'REIT', 'ETF', 'UCITS', 'CRIPTO']); const q = {}; let k = 0; r.dias = [];
+      for (let i = 1; i < serie.length; i++) { const d0 = serie[i - 1].d, d1 = serie[i].d;
+        const doDia = []; while (k < ops.length && String(ops[k].data).slice(0, 10) <= d1) { const a = ops[k++]; if (String(a.data).slice(0, 10) <= d0) { const t = String(a.ticker).toUpperCase(); q[t] = (q[t] || 0) + (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); continue; } doDia.push(a); }
+        if (doDia.length && Math.abs(serie[i].fluxo || 0) > 1) { const fx0 = cb ? cb.em(d0) : null, fx1 = cb ? cb.em(d1) : null; let mk = 0, v0 = 0;
+          for (const t in q) { if (!(q[t] > 0) || !px[t]) continue; const a0 = px[t].em(d0), a1 = px[t].em(d1); if (!(a0 > 0 && a1 > 0)) continue; const us = US.has(String((ap.find(x => String(x.ticker).toUpperCase() === t) || {}).tipo || '').toUpperCase()); v0 += q[t] * a0 * (us ? fx0 : 1); mk += q[t] * (a1 * (us ? fx1 : 1) - a0 * (us ? fx0 : 1)); }
+          const comp = doDia.map(a => { const t = String(a.ticker).toUpperCase(), c1 = px[t] ? px[t].em(d1) : null; return [t, a.op, +a.qtd, +a.preco, a.moeda || '', +a.fxRate || null, c1, fx1, a.tipo]; });
+          r.dias.push([d1, serie[i - 1].patrimonio, serie[i].patrimonio, serie[i].fluxo, v0 ? mk / v0 : null, comp]); }
+        doDia.forEach(a => { const t = String(a.ticker).toUpperCase(); q[t] = (q[t] || 0) + (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); }); } }
     out.motores[nome] = r;
   } catch (e) { out.motores[nome] = { erro: String(e && e.stack || e) }; }
 }
