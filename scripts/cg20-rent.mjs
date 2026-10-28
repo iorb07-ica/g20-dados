@@ -28,7 +28,7 @@ const MODO0 = (process.env.MODO || 'gravar').trim();
 const MODO = MODO0 === 'diagnostico2' ? 'diagnostico' : MODO0;
 const log = (...a) => console.log(...a);
 // os avisos que aparecem no resumo da rodada (o GitHub mostra só 10 por etapa): os principais vão como aviso, o resto só no registro
-const PRINCIPAIS = ['Ajuste de eventos corporativos não lançados', 'Bonificações tratadas como desdobramento', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos: registrado ÷ esperado pelas bases', 'Falhou'];
+const PRINCIPAIS = ['Proventos pagos depois da venda (entraram na conta)', 'Ajuste de eventos corporativos não lançados', 'Bonificações tratadas como desdobramento', 'Motor mensal da página (aqui no robô)', 'Ano a ano (TWR)', 'Carteira G20', 'Proventos: registrado ÷ esperado pelas bases', 'Falhou'];
 const PRINC2 = ['Outros ativos: operações com preço fora do mercado (maior efeito primeiro)', 'Cripto: operações com preço fora do mercado (mais de 15%)', 'Quem mais tirou (desde o início)', 'Saltos diários acima de 8% até out/21', 'Dias ignorados por falta de preço', 'Preços que não batem (mensal guardado ÷ diário, fim do mês, diferença acima de 12%)', 'Sem evento oficial que explique (fica como está)', 'Marcadas como subscrição (ficam como estão)', 'Carteira G20'];
 if (MODO0 === 'diagnostico2') PRINCIPAIS.splice(0, PRINCIPAIS.length, 'Carteira G20');
 function nota(t, m) { console.log((PRINCIPAIS.includes(t) ? '::notice title=' + t + '::' : '[' + t + '] ') + m); }
@@ -194,6 +194,32 @@ async function main() {
     nota('Ajuste de eventos corporativos não lançados', ajustes.length + ': ' + ajustes.slice(0, 40).join(' · '));
     localStorage.setItem('g20_rvAportes', JSON.stringify(aportesCalc));
   }
+  // 28/10/2026: PROVENTO PAGO DEPOIS DA VENDA. Quem tinha o ativo na data com (no Brasil) ou antes da data ex
+  // (lá fora) recebe o provento mesmo que venda antes do pagamento. A página deixava esses de fora (ex.: JCP da
+  // MOVI3 e da B3SA3 declarados em dez/2025 e pagos em 2026, depois da venda de fev/2026; JCP da ITSA4 pagos
+  // depois da venda de ago/2024). O robô completa pela base oficial, só esses casos, sem duplicar o que já existe.
+  const provExtra = (() => { try {
+    const BASE = path.join(RAIZ, 'dados', 'proventos'), hoje = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+    const ler = (pasta, t) => { try { return JSON.parse(fs.readFileSync(path.join(BASE, pasta, t + '.json'), 'utf8')); } catch (e) { return null; } };
+    const ops = ent.aportes.slice().sort((a, b) => String(a.data).localeCompare(String(b.data)));
+    const US = new Set(['Stock', 'REIT', 'ETF', 'UCITs', 'Cripto']), tipoDe = {}; ops.forEach(a => { tipoDe[String(a.ticker).toUpperCase()] = a.tipo; });
+    const qtdEm = (t, dia, antes) => { let q = 0; for (const a of ops) { const d = String(a.data).slice(0, 10); if (String(a.ticker).toUpperCase() !== t) continue; if (antes ? d >= dia : d > dia) break; q += (a.op === 'V' ? -1 : 1) * (+a.qtd || 0); } return q; };
+    const reg = {}; (ent.proventos || []).forEach(p => { const t = String(p.ticker).toUpperCase(); (reg[t] = reg[t] || []).push(String(p.data).slice(0, 10)); });
+    const out = [], log = [];
+    for (const t of Object.keys(tipoDe)) { if (tipoDe[t] === 'Cripto') continue;
+      const br = /\d$/.test(t) && !US.has(tipoDe[t]); const base = br ? ler('br', t) : (ler('us', t.replace('.', '-')) || ler('us', t)); if (!base) continue;
+      for (const e of (base.proventos || [])) {
+        const com = br ? e.dataCom : e.ex, pag = (br ? e.dataPag : e.pag) || com, v = +e.valor; if (!com || !pag || pag > hoje || !(v > 0)) continue;
+        const q = qtdEm(t, com, !br); if (!(q > 1e-6)) continue;          // tinha na data com
+        if (qtdEm(t, pag, false) > 1e-6) continue;                          // ainda tinha no pagamento: a página já trata
+        if ((reg[t] || []).some(d => Math.abs(Date.parse(d) - Date.parse(pag)) <= 12 * 864e5)) continue;   // já registrado
+        const liq = br ? (/JCP|JUROS/i.test(e.tipo || '') ? 0.85 : 1) : 0.7;
+        out.push({ ticker: t, data: pag, total: Math.round(q * v * liq * 1e6) / 1e6, moeda: br ? 'BRL' : 'USD', fonte: 'base-pos-venda' }); log.push(t + ' ' + pag);
+      } }
+    console.log('::notice title=Proventos pagos depois da venda (entraram na conta)::' + out.length + ': ' + log.join(' · '));
+    return out;
+  } catch (e) { console.log('::notice title=Proventos depois da venda::erro ' + e.message); return []; } })();
+  ent.proventos = (ent.proventos || []).concat(provExtra);
   const provCalc = process.env.BRUTO === '1' ? (ent.proventos || []).map(p => Object.assign({}, p, { total: p.moeda === 'USD' ? p.total / 0.7 : p.total })) : (ent.proventos || []);
   const serie = await G.calcular({ aportes: aportesCalc, proventos: provCalc, rendaFixa: [], precosExtra, _semGravar: true });
   // dias ignorados pelo motor por falta de preço (cobertura), por ano
