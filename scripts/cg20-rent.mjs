@@ -207,6 +207,10 @@ async function main() {
   log(resumo); nota('Carteira G20', resumo);
 
   if (MODO === 'diagnostico') {
+    // 28/10/2026: contagens da entrada por ano (sem valores), para achar o que mudou quando a rentabilidade muda
+    try { const ca = {}, cp = {}; ent.aportes.forEach(x => { const y = String(x.data).slice(0, 4); ca[y] = (ca[y] || 0) + 1; }); (ent.proventos || []).forEach(x => { const y = String(x.data).slice(0, 4); cp[y] = (cp[y] || 0) + 1; });
+      const ys = [...new Set([...Object.keys(ca), ...Object.keys(cp)])].sort();
+      console.log('::notice title=Entrada por ano::' + ys.map(y => y + ': ' + (ca[y] || 0) + ' lanç. / ' + (cp[y] || 0) + ' prov.').join(' · ')); } catch (e) {}
     // ano a ano (só %), para comparar com a página
     const anos = [...new Set(D.map(d => d.slice(0, 4)))];
     const linhas = anos.map(y => { const ini = D.filter(d => d < y + '-01-01').pop() || D[0]; const sub = serie.filter(p => p.d <= y + '-12-31'); const r = G.twrDesde(sub, ini); return y + ': ' + (r == null ? '—' : (r >= 0 ? '+' : '') + r.toFixed(2) + '%'); });
